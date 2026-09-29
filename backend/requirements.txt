@@ -1,0 +1,57 @@
+# CareerGPT Backend Requirements
+# Core
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+pydantic==2.7.4
+pydantic-settings==2.3.4
+
+# Database
+sqlalchemy==2.0.31
+alembic==1.13.2
+psycopg2-binary>=2.9.9
+supabase>=2.5.0
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
+
+# File handling
+pymupdf==1.24.7
+python-docx==1.1.2
+openpyxl>=3.1.0
+
+# NLP / ML
+spacy==3.7.5
+transformers==4.42.4
+torch==2.3.1
+sentence-transformers==3.0.1
+scikit-learn==1.5.1
+numpy==1.26.4
+
+# Graph
+networkx==3.3
+
+# Speech (optional)
+# openai-whisper==20231117
+# librosa==0.10.2
+
+# Vision (optional)
+# opencv-python-headless==4.10.0.84
+# mediapipe==0.10.14
+
+# LLM providers
+openai==1.35.13
+google-generativeai==0.7.2
+
+# Utilities
+httpx==0.27.0
+aiofiles==23.2.1
+python-magic==0.4.27
+Pillow==10.4.0
+redis==5.0.7
+celery==5.4.0
+pytest==8.2.2
+pytest-asyncio==0.23.7
+httpx==0.27.0

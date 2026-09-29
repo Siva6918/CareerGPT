@@ -1,0 +1,2770 @@
+[
+  {
+    "id": "ai_engineer",
+    "title": "AI Engineer",
+    "domain_id": "cse_ai_data",
+    "branch_id": "CSE",
+    "description": "Designs and builds production applications powered by LLMs, RAG architectures, neural networks, and multimodal agents.",
+    "salary_range": "\u20b98 - 25 LPA",
+    "job_family": "Artificial Intelligence & Machine Learning",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Industry standard for AI libraries, PyTorch, Hugging Face, and LangChain."
+      },
+      {
+        "name": "TypeScript",
+        "relevance": "Secondary",
+        "reason": "Crucial for building interactive client apps and full-stack AI interfaces with Vercel AI SDK."
+      },
+      {
+        "name": "C++",
+        "relevance": "Advanced",
+        "reason": "High-performance inference engines, TensorRT, and low-latency model compilation."
+      }
+    ],
+    "technologies": [
+      "PyTorch",
+      "Hugging Face",
+      "LangChain",
+      "RAG",
+      "Vector Databases",
+      "FastAPI",
+      "Docker",
+      "MLOps"
+    ],
+    "tools": [
+      "Git",
+      "GitHub Actions",
+      "Pinecone/Milvus",
+      "Weights & Biases",
+      "Ollama/vLLM"
+    ],
+    "required_skills": [
+      {
+        "id": "python_core",
+        "name": "Python Fundamentals & OOP",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "linear_algebra_stats",
+        "name": "Linear Algebra & Statistics",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "data_structures",
+        "name": "Data Structures & Algorithms",
+        "stage": "foundation",
+        "prerequisites": [
+          "python_core"
+        ]
+      },
+      {
+        "id": "numpy_pandas",
+        "name": "NumPy & Pandas Data Manipulation",
+        "stage": "core",
+        "prerequisites": [
+          "python_core"
+        ]
+      },
+      {
+        "id": "machine_learning",
+        "name": "Classical Machine Learning",
+        "stage": "core",
+        "prerequisites": [
+          "numpy_pandas",
+          "linear_algebra_stats"
+        ]
+      },
+      {
+        "id": "deep_learning",
+        "name": "Deep Learning & Neural Networks",
+        "stage": "core",
+        "prerequisites": [
+          "machine_learning"
+        ]
+      },
+      {
+        "id": "nlp_transformers",
+        "name": "Transformers & Attention Mechanism",
+        "stage": "applied",
+        "prerequisites": [
+          "deep_learning"
+        ]
+      },
+      {
+        "id": "llm_apis_prompting",
+        "name": "LLM APIs & Prompt Engineering",
+        "stage": "applied",
+        "prerequisites": [
+          "python_core"
+        ]
+      },
+      {
+        "id": "embeddings_vector_search",
+        "name": "Embeddings & Vector Databases",
+        "stage": "applied",
+        "prerequisites": [
+          "nlp_transformers"
+        ]
+      },
+      {
+        "id": "rag_architecture",
+        "name": "Retrieval Augmented Generation (RAG)",
+        "stage": "applied",
+        "prerequisites": [
+          "embeddings_vector_search",
+          "llm_apis_prompting"
+        ]
+      },
+      {
+        "id": "agentic_workflows",
+        "name": "Agentic AI Loops & Tool Calling",
+        "stage": "advanced",
+        "prerequisites": [
+          "rag_architecture"
+        ]
+      },
+      {
+        "id": "model_evaluation_safety",
+        "name": "LLM Evaluation, Guardrails & Tracing",
+        "stage": "advanced",
+        "prerequisites": [
+          "rag_architecture"
+        ]
+      },
+      {
+        "id": "ai_deployment_serving",
+        "name": "FastAPI Model Serving & Docker Containerization",
+        "stage": "advanced",
+        "prerequisites": [
+          "python_core",
+          "rag_architecture"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "End-to-End Predictive Machine Learning API",
+        "skills": [
+          "numpy_pandas",
+          "machine_learning"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Semantic Document Search Engine with Embeddings",
+        "skills": [
+          "embeddings_vector_search",
+          "python_core"
+        ],
+        "hours": 35
+      },
+      {
+        "level": "advanced",
+        "title": "Production RAG Assistant with Citation & Guardrails",
+        "skills": [
+          "rag_architecture",
+          "model_evaluation_safety"
+        ],
+        "hours": 50
+      },
+      {
+        "level": "capstone",
+        "title": "Autonomous Multi-Agent Research System with Tool Calling",
+        "skills": [
+          "agentic_workflows",
+          "ai_deployment_serving"
+        ],
+        "hours": 80
+      }
+    ],
+    "resources": [
+      {
+        "title": "roadmap.sh AI Engineer Roadmap",
+        "url": "https://roadmap.sh/ai-engineer",
+        "type": "roadmap",
+        "provider": "roadmap.sh"
+      },
+      {
+        "title": "DeepLearning.AI: Generative AI with LLMs",
+        "url": "https://www.deeplearning.ai",
+        "type": "course",
+        "provider": "DeepLearning.AI"
+      },
+      {
+        "title": "Hugging Face NLP Course",
+        "url": "https://huggingface.co/learn/nlp-course",
+        "type": "documentation",
+        "provider": "Hugging Face"
+      }
+    ],
+    "certifications": [
+      "AWS Certified Machine Learning - Specialty",
+      "TensorFlow Developer Certificate",
+      "DeepLearning.AI LLM Specialization"
+    ],
+    "assessment_topics": [
+      "Attention mechanisms vs RNNs",
+      "Chunking strategies in RAG",
+      "Vector index types (HNSW, IVFFlat)",
+      "Hallucination mitigation and evaluation metrics (ROUGE, BLEU, Ragas)"
+    ]
+  },
+  {
+    "id": "machine_learning_engineer",
+    "title": "Machine Learning Engineer",
+    "domain_id": "cse_ai_data",
+    "branch_id": "CSE",
+    "description": "Builds scalable ML pipelines, trains deep learning architectures, optimizes inference, and operationalizes models.",
+    "salary_range": "\u20b97 - 22 LPA",
+    "job_family": "Artificial Intelligence & Machine Learning",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Core language for ML research and production inference."
+      },
+      {
+        "name": "C++",
+        "relevance": "Secondary",
+        "reason": "Edge deployment, ONNX runtime, and embedded ML optimizations."
+      }
+    ],
+    "technologies": [
+      "Scikit-learn",
+      "PyTorch",
+      "TensorFlow",
+      "MLflow",
+      "Docker",
+      "Kubernetes",
+      "ONNX"
+    ],
+    "tools": [
+      "Git",
+      "DVC",
+      "Weights & Biases",
+      "AWS SageMaker",
+      "Grafana"
+    ],
+    "required_skills": [
+      {
+        "id": "python_core",
+        "name": "Python & OOP",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "stats_probability",
+        "name": "Statistics & Probability",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "data_preprocessing",
+        "name": "Feature Engineering & Data Cleaning",
+        "stage": "core",
+        "prerequisites": [
+          "python_core"
+        ]
+      },
+      {
+        "id": "supervised_unsupervised",
+        "name": "Supervised & Unsupervised Learning",
+        "stage": "core",
+        "prerequisites": [
+          "stats_probability"
+        ]
+      },
+      {
+        "id": "deep_learning_models",
+        "name": "CNNs, RNNs & Transformers",
+        "stage": "applied",
+        "prerequisites": [
+          "supervised_unsupervised"
+        ]
+      },
+      {
+        "id": "model_optimization",
+        "name": "Model Quantization & Pruning",
+        "stage": "advanced",
+        "prerequisites": [
+          "deep_learning_models"
+        ]
+      },
+      {
+        "id": "mlops_cicd",
+        "name": "MLOps Pipelines & Automated Retraining",
+        "stage": "advanced",
+        "prerequisites": [
+          "model_optimization"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Customer Churn Prediction with Scikit-learn",
+        "skills": [
+          "supervised_unsupervised"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Real-time Defect Detection using PyTorch CNN",
+        "skills": [
+          "deep_learning_models"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "End-to-End MLOps Pipeline with MLflow & DVC",
+        "skills": [
+          "mlops_cicd"
+        ],
+        "hours": 55
+      },
+      {
+        "level": "capstone",
+        "title": "Edge Inference Engine with ONNX & Triton Server",
+        "skills": [
+          "model_optimization"
+        ],
+        "hours": 75
+      }
+    ],
+    "resources": [
+      {
+        "title": "roadmap.sh Machine Learning Roadmap",
+        "url": "https://roadmap.sh/machine-learning",
+        "type": "roadmap",
+        "provider": "roadmap.sh"
+      },
+      {
+        "title": "Scikit-Learn Official User Guide",
+        "url": "https://scikit-learn.org/stable/user_guide.html",
+        "type": "documentation",
+        "provider": "Scikit-Learn"
+      }
+    ],
+    "certifications": [
+      "Google Professional Machine Learning Engineer",
+      "AWS Certified Machine Learning Specialty"
+    ],
+    "assessment_topics": [
+      "Bias-variance tradeoff",
+      "Gradient descent optimizers (Adam, SGD)",
+      "Hyperparameter tuning",
+      "Data drift & concept drift detection"
+    ]
+  },
+  {
+    "id": "data_scientist",
+    "title": "Data Scientist",
+    "domain_id": "cse_ai_data",
+    "branch_id": "CSE",
+    "description": "Translates complex datasets into statistical insights, predictive forecasting models, and executive decision frameworks.",
+    "salary_range": "\u20b96 - 18 LPA",
+    "job_family": "Data Science & Business Analytics",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Dominant language for EDA, scientific computing, and statistical modeling."
+      },
+      {
+        "name": "SQL",
+        "relevance": "Primary",
+        "reason": "Crucial for extracting, joining, and aggregating enterprise warehouse data."
+      },
+      {
+        "name": "R",
+        "relevance": "Secondary",
+        "reason": "Advanced statistical hypothesis testing and econometric analysis."
+      }
+    ],
+    "technologies": [
+      "Pandas",
+      "Scikit-learn",
+      "Statsmodels",
+      "SQL / PostgreSQL",
+      "Tableau / PowerBI"
+    ],
+    "tools": [
+      "Jupyter Lab",
+      "Git",
+      "Excel",
+      "BigQuery / Snowflake"
+    ],
+    "required_skills": [
+      {
+        "id": "python_sql_basics",
+        "name": "Python & SQL Database Querying",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "exploratory_data_analysis",
+        "name": "Exploratory Data Analysis & Visualization",
+        "stage": "core",
+        "prerequisites": [
+          "python_sql_basics"
+        ]
+      },
+      {
+        "id": "hypothesis_testing",
+        "name": "Hypothesis Testing & A/B Experimentation",
+        "stage": "core",
+        "prerequisites": [
+          "exploratory_data_analysis"
+        ]
+      },
+      {
+        "id": "predictive_modeling",
+        "name": "Regression, Classification & Clustering",
+        "stage": "applied",
+        "prerequisites": [
+          "hypothesis_testing"
+        ]
+      },
+      {
+        "id": "time_series_forecasting",
+        "name": "Time Series Forecasting (ARIMA, Prophet)",
+        "stage": "advanced",
+        "prerequisites": [
+          "predictive_modeling"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Comprehensive EDA & Dashboard on Retail Transactions",
+        "skills": [
+          "exploratory_data_analysis"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "A/B Testing Framework for Product Feature Conversions",
+        "skills": [
+          "hypothesis_testing"
+        ],
+        "hours": 35
+      },
+      {
+        "level": "advanced",
+        "title": "Financial Demand Forecasting with Time-Series Models",
+        "skills": [
+          "time_series_forecasting"
+        ],
+        "hours": 50
+      },
+      {
+        "level": "capstone",
+        "title": "Executive Decision Intelligence Platform with Automated Insights",
+        "skills": [
+          "predictive_modeling"
+        ],
+        "hours": 70
+      }
+    ],
+    "resources": [
+      {
+        "title": "roadmap.sh AI and Data Scientist Roadmap",
+        "url": "https://roadmap.sh/ai-data-scientist",
+        "type": "roadmap",
+        "provider": "roadmap.sh"
+      }
+    ],
+    "certifications": [
+      "IBM Data Science Professional Certificate",
+      "Microsoft Certified: Azure Data Scientist Associate"
+    ],
+    "assessment_topics": [
+      "P-values and significance",
+      "ANOVA and Chi-Square tests",
+      "Handling imbalanced datasets",
+      "Cross-validation techniques"
+    ]
+  },
+  {
+    "id": "backend_developer",
+    "title": "Backend Developer",
+    "domain_id": "cse_backend",
+    "branch_id": "CSE",
+    "description": "Engineers high-throughput backend services, database transactions, REST/GraphQL APIs, and background processing systems.",
+    "salary_range": "\u20b96 - 20 LPA",
+    "job_family": "Software Engineering & Distributed Systems",
+    "languages": [
+      {
+        "name": "Java",
+        "relevance": "Primary Enterprise",
+        "reason": "De facto standard in enterprise banking, microservices, and Spring ecosystem."
+      },
+      {
+        "name": "Python",
+        "relevance": "Primary Rapid/AI",
+        "reason": "FastAPI and Django provide immense developer velocity and AI integration."
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "relevance": "Primary Full-Stack",
+        "reason": "Node.js/Express ecosystem allows unified language across frontend and backend."
+      },
+      {
+        "name": "Go",
+        "relevance": "Modern Cloud",
+        "reason": "Unrivaled goroutine concurrency and microsecond startup for cloud-native microservices."
+      }
+    ],
+    "technologies": [
+      "Spring Boot",
+      "FastAPI",
+      "Node.js / Express",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "REST API",
+      "Kafka"
+    ],
+    "tools": [
+      "Postman",
+      "Git",
+      "pgAdmin",
+      "Docker Compose",
+      "Linux Bash"
+    ],
+    "required_skills": [
+      {
+        "id": "cs_fundamentals",
+        "name": "Operating Systems, Concurrency & Networking",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "backend_lang_mastery",
+        "name": "Language Syntax & OOP (Java/Python/Go)",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "relational_db",
+        "name": "PostgreSQL Schema Design, Indexing & ACID Transactions",
+        "stage": "core",
+        "prerequisites": [
+          "cs_fundamentals"
+        ]
+      },
+      {
+        "id": "rest_api_design",
+        "name": "RESTful Architecture, Status Codes & OpenAPI Specs",
+        "stage": "core",
+        "prerequisites": [
+          "backend_lang_mastery"
+        ]
+      },
+      {
+        "id": "auth_security",
+        "name": "JWT, OAuth2, Session Management & Password Hashing",
+        "stage": "applied",
+        "prerequisites": [
+          "rest_api_design"
+        ]
+      },
+      {
+        "id": "caching_performance",
+        "name": "Redis In-Memory Caching & Rate Limiting",
+        "stage": "applied",
+        "prerequisites": [
+          "relational_db"
+        ]
+      },
+      {
+        "id": "message_queues",
+        "name": "Asynchronous Task Queues & Event Streaming (RabbitMQ/Kafka)",
+        "stage": "advanced",
+        "prerequisites": [
+          "caching_performance"
+        ]
+      },
+      {
+        "id": "container_deployment",
+        "name": "Docker Containerization & CI/CD Deployment",
+        "stage": "advanced",
+        "prerequisites": [
+          "rest_api_design"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "CRUD REST API with Database Connection & Migration",
+        "skills": [
+          "backend_lang_mastery",
+          "relational_db"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Role-Based Authentication & Session Service with JWT",
+        "skills": [
+          "auth_security",
+          "rest_api_design"
+        ],
+        "hours": 35
+      },
+      {
+        "level": "advanced",
+        "title": "High-Throughput E-Commerce Inventory Service with Redis Lock",
+        "skills": [
+          "caching_performance",
+          "relational_db"
+        ],
+        "hours": 50
+      },
+      {
+        "level": "capstone",
+        "title": "Event-Driven Microservices Architecture with Kafka & Docker",
+        "skills": [
+          "message_queues",
+          "container_deployment"
+        ],
+        "hours": 80
+      }
+    ],
+    "resources": [
+      {
+        "title": "roadmap.sh Backend Developer Roadmap",
+        "url": "https://roadmap.sh/backend",
+        "type": "roadmap",
+        "provider": "roadmap.sh"
+      },
+      {
+        "title": "Spring Boot Official Guides",
+        "url": "https://spring.io/guides",
+        "type": "documentation",
+        "provider": "Spring.io"
+      },
+      {
+        "title": "PostgreSQL Tutorial & Documentation",
+        "url": "https://www.postgresql.org/docs/",
+        "type": "documentation",
+        "provider": "PostgreSQL"
+      }
+    ],
+    "certifications": [
+      "Oracle Certified Professional: Java SE Developer",
+      "AWS Certified Developer - Associate"
+    ],
+    "assessment_topics": [
+      "Database normalization vs denormalization",
+      "Indexing types (B-Tree vs Hash)",
+      "HTTP idempotency",
+      "N+1 query problem and solutions"
+    ]
+  },
+  {
+    "id": "full_stack_developer",
+    "title": "Full Stack Developer",
+    "domain_id": "cse_backend",
+    "branch_id": "CSE",
+    "description": "Constructs end-to-end web applications combining dynamic responsive user interfaces with robust backend infrastructure.",
+    "salary_range": "\u20b95 - 18 LPA",
+    "job_family": "Software Engineering & Distributed Systems",
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "relevance": "Primary",
+        "reason": "Universal language spanning React frontend and Node/Express backend."
+      },
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "Pairs React frontend with FastAPI/Django backend."
+      }
+    ],
+    "technologies": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Tailwind CSS / Vanilla CSS",
+      "REST / GraphQL"
+    ],
+    "tools": [
+      "VS Code",
+      "Git",
+      "Postman",
+      "Vite",
+      "Vercel / Render"
+    ],
+    "required_skills": [
+      {
+        "id": "html_css_js",
+        "name": "HTML5, Modern CSS & ES6+ JavaScript",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "react_fundamentals",
+        "name": "React Components, State, Hooks & Router",
+        "stage": "core",
+        "prerequisites": [
+          "html_css_js"
+        ]
+      },
+      {
+        "id": "backend_server_basics",
+        "name": "Server Creation & REST Endpoints (Node/Python)",
+        "stage": "core",
+        "prerequisites": [
+          "html_css_js"
+        ]
+      },
+      {
+        "id": "db_integration",
+        "name": "Relational/NoSQL Database Integration",
+        "stage": "applied",
+        "prerequisites": [
+          "backend_server_basics"
+        ]
+      },
+      {
+        "id": "fullstack_auth",
+        "name": "Full-Stack Authentication & State Management",
+        "stage": "applied",
+        "prerequisites": [
+          "react_fundamentals",
+          "db_integration"
+        ]
+      },
+      {
+        "id": "production_deploy",
+        "name": "Cloud Deployment, CORS, Environment Management",
+        "stage": "advanced",
+        "prerequisites": [
+          "fullstack_auth"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Interactive Task Management Dashboard with React",
+        "skills": [
+          "react_fundamentals"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Full-Stack Blog Platform with Database & Markdown",
+        "skills": [
+          "db_integration",
+          "backend_server_basics"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "Collaborative Real-Time Workspace with WebSockets",
+        "skills": [
+          "fullstack_auth"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "Multi-Tenant SaaS Application with Stripe Billing & Analytics",
+        "skills": [
+          "production_deploy"
+        ],
+        "hours": 85
+      }
+    ],
+    "resources": [
+      {
+        "title": "roadmap.sh Full Stack Roadmap",
+        "url": "https://roadmap.sh/full-stack",
+        "type": "roadmap",
+        "provider": "roadmap.sh"
+      }
+    ],
+    "certifications": [
+      "Meta Front-End / Full-Stack Developer Certificate",
+      "AWS Certified Cloud Practitioner"
+    ],
+    "assessment_topics": [
+      "Client-side vs Server-side rendering",
+      "CORS policy resolution",
+      "Optimistic UI updates",
+      "Database connection pooling"
+    ]
+  },
+  {
+    "id": "devops_engineer",
+    "title": "DevOps / Cloud Engineer",
+    "domain_id": "cse_devops_cloud",
+    "branch_id": "CSE",
+    "description": "Automates software delivery pipelines, manages Kubernetes clusters, provisions infrastructure with Terraform, and ensures system reliability.",
+    "salary_range": "\u20b97 - 24 LPA",
+    "job_family": "Cloud Infrastructure & Platform Engineering",
+    "languages": [
+      {
+        "name": "Bash",
+        "relevance": "Primary",
+        "reason": "Fundamental for Linux systems administration, automation, and container init scripts."
+      },
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Infrastructure automation, AWS Boto3 SDK, and custom tooling."
+      },
+      {
+        "name": "Go",
+        "relevance": "Advanced",
+        "reason": "Language of Docker, Kubernetes, Terraform, and CNCF ecosystem."
+      }
+    ],
+    "technologies": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "GitHub Actions",
+      "Jenkins",
+      "AWS / Azure",
+      "Prometheus"
+    ],
+    "tools": [
+      "Git",
+      "Helm",
+      "Ansible",
+      "Grafana",
+      "ArgoCD"
+    ],
+    "required_skills": [
+      {
+        "id": "linux_networking",
+        "name": "Linux Admin, Bash & Networking Protocols (DNS/TCP/TLS)",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "docker_containers",
+        "name": "Docker Containerization & Image Optimization",
+        "stage": "core",
+        "prerequisites": [
+          "linux_networking"
+        ]
+      },
+      {
+        "id": "cicd_pipelines",
+        "name": "CI/CD Pipeline Automation (GitHub Actions/Jenkins)",
+        "stage": "core",
+        "prerequisites": [
+          "docker_containers"
+        ]
+      },
+      {
+        "id": "cloud_foundations",
+        "name": "AWS/Azure Cloud Computing & VPC Architecture",
+        "stage": "applied",
+        "prerequisites": [
+          "linux_networking"
+        ]
+      },
+      {
+        "id": "iac_terraform",
+        "name": "Infrastructure as Code with Terraform",
+        "stage": "applied",
+        "prerequisites": [
+          "cloud_foundations"
+        ]
+      },
+      {
+        "id": "k8s_orchestration",
+        "name": "Kubernetes Cluster Management, Pods, Services & Ingress",
+        "stage": "advanced",
+        "prerequisites": [
+          "docker_containers",
+          "cloud_foundations"
+        ]
+      },
+      {
+        "id": "observability_monitoring",
+        "name": "Observability, Logs & Metrics (Prometheus / Grafana)",
+        "stage": "advanced",
+        "prerequisites": [
+          "k8s_orchestration"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Automated Docker Build & Registry Push Pipeline",
+        "skills": [
+          "docker_containers",
+          "cicd_pipelines"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Multi-Tier Infrastructure Provisioning on AWS with Terraform",
+        "skills": [
+          "iac_terraform",
+          "cloud_foundations"
+        ],
+        "hours": 35
+      },
+      {
+        "level": "advanced",
+        "title": "Zero-Downtime Kubernetes Microservices Deployment with Helm",
+        "skills": [
+          "k8s_orchestration"
+        ],
+        "hours": 50
+      },
+      {
+        "level": "capstone",
+        "title": "Enterprise GitOps Pipeline with ArgoCD, Prometheus & Auto-Scaling",
+        "skills": [
+          "observability_monitoring"
+        ],
+        "hours": 80
+      }
+    ],
+    "resources": [
+      {
+        "title": "roadmap.sh DevOps Roadmap",
+        "url": "https://roadmap.sh/devops",
+        "type": "roadmap",
+        "provider": "roadmap.sh"
+      },
+      {
+        "title": "Kubernetes Official Documentation",
+        "url": "https://kubernetes.io/docs/",
+        "type": "documentation",
+        "provider": "CNCF"
+      }
+    ],
+    "certifications": [
+      "Certified Kubernetes Administrator (CKA)",
+      "AWS Certified Solutions Architect - Associate",
+      "HashiCorp Certified: Terraform Associate"
+    ],
+    "assessment_topics": [
+      "Container layer caching",
+      "Kubernetes service types (ClusterIP, NodePort, LoadBalancer)",
+      "State drift in Terraform",
+      "Blue/green vs Canary deployment"
+    ]
+  },
+  {
+    "id": "cybersecurity_analyst",
+    "title": "Cybersecurity Analyst / Penetration Tester",
+    "domain_id": "cse_cybersecurity",
+    "branch_id": "CSE",
+    "description": "Identifies system vulnerabilities, conducts ethical penetration tests, secures web APIs, and protects infrastructure against threat actors.",
+    "salary_range": "\u20b96 - 20 LPA",
+    "job_family": "Information Security & Threat Analysis",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Scripting security tools, exploit development, and log analysis."
+      },
+      {
+        "name": "Bash",
+        "relevance": "Primary",
+        "reason": "Kali Linux operation, network reconnaissance, and payload delivery."
+      },
+      {
+        "name": "C",
+        "relevance": "Advanced",
+        "reason": "Understanding memory corruption, buffer overflows, and reverse engineering."
+      }
+    ],
+    "technologies": [
+      "Kali Linux",
+      "Burp Suite",
+      "Wireshark",
+      "Metasploit",
+      "Nmap",
+      "OWASP Top 10",
+      "Snort / Suricata"
+    ],
+    "tools": [
+      "Ghidra",
+      "John the Ripper",
+      "Hashcat",
+      "Splunk",
+      "Nessus"
+    ],
+    "required_skills": [
+      {
+        "id": "networking_protocols",
+        "name": "OSI Model, TCP/IP, DNS, Subnetting & Packet Analysis",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "linux_security_admin",
+        "name": "Linux Security Hardening & File Permissions",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "cryptography_basics",
+        "name": "Symmetric/Asymmetric Encryption, Hashing & PKI",
+        "stage": "core",
+        "prerequisites": [
+          "networking_protocols"
+        ]
+      },
+      {
+        "id": "recon_scanning",
+        "name": "Network Reconnaissance, Port Scanning & Nmap",
+        "stage": "core",
+        "prerequisites": [
+          "networking_protocols"
+        ]
+      },
+      {
+        "id": "web_app_pentest",
+        "name": "OWASP Top 10 Vulnerabilities (SQLi, XSS, CSRF, SSRF)",
+        "stage": "applied",
+        "prerequisites": [
+          "cryptography_basics"
+        ]
+      },
+      {
+        "id": "exploit_metasploit",
+        "name": "Vulnerability Assessment & Metasploit Exploitation",
+        "stage": "applied",
+        "prerequisites": [
+          "recon_scanning"
+        ]
+      },
+      {
+        "id": "siem_incident_response",
+        "name": "SOC Monitoring, Log Analysis & SIEM Dashboards",
+        "stage": "advanced",
+        "prerequisites": [
+          "web_app_pentest"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Network Traffic Analysis & Malware Packet Inspection with Wireshark",
+        "skills": [
+          "networking_protocols"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Comprehensive Web Application Penetration Test on DVWA",
+        "skills": [
+          "web_app_pentest"
+        ],
+        "hours": 35
+      },
+      {
+        "level": "advanced",
+        "title": "Automated Vulnerability Scanner Script in Python",
+        "skills": [
+          "exploit_metasploit"
+        ],
+        "hours": 50
+      },
+      {
+        "level": "capstone",
+        "title": "Corporate Network Defense Simulation with SOC SIEM Detection",
+        "skills": [
+          "siem_incident_response"
+        ],
+        "hours": 75
+      }
+    ],
+    "resources": [
+      {
+        "title": "roadmap.sh Cybersecurity Roadmap",
+        "url": "https://roadmap.sh/cyber-security",
+        "type": "roadmap",
+        "provider": "roadmap.sh"
+      },
+      {
+        "title": "OWASP Official Documentation",
+        "url": "https://owasp.org/",
+        "type": "documentation",
+        "provider": "OWASP"
+      }
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "Certified Ethical Hacker (CEH)",
+      "Offensive Security Certified Professional (OSCP)"
+    ],
+    "assessment_topics": [
+      "OWASP Top 10 prevention",
+      "Public key cryptography handshake",
+      "SQL Injection prevention via prepared statements",
+      "Firewall packet filtering rules"
+    ]
+  },
+  {
+    "id": "vlsi_design_engineer",
+    "title": "VLSI Design & Verification Engineer",
+    "domain_id": "ece_vlsi",
+    "branch_id": "ECE",
+    "description": "Designs digital logic in Verilog/SystemVerilog, simulates hardware behavior, builds UVM verification environments, and targets FPGA/ASIC.",
+    "salary_range": "\u20b97 - 24 LPA",
+    "job_family": "Semiconductor & Microelectronics Engineering",
+    "languages": [
+      {
+        "name": "Verilog",
+        "relevance": "Primary",
+        "reason": "Standard hardware description language for RTL architecture."
+      },
+      {
+        "name": "SystemVerilog",
+        "relevance": "Primary",
+        "reason": "Industry standard for advanced functional verification and design."
+      },
+      {
+        "name": "C/C++",
+        "relevance": "Secondary",
+        "reason": "Hardware-software co-verification and architectural modeling."
+      },
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "EDA scripting, test vector generation, and verification automation."
+      }
+    ],
+    "technologies": [
+      "Cadence Virtuoso",
+      "Synopsys Design Compiler",
+      "Xilinx Vivado",
+      "ModelSim",
+      "FPGA",
+      "UVM",
+      "Static Timing Analysis (STA)"
+    ],
+    "tools": [
+      "QuestaSim",
+      "GTKWave",
+      "Linux Shell",
+      "Tcl Scripting"
+    ],
+    "required_skills": [
+      {
+        "id": "digital_electronics",
+        "name": "Combinational & Sequential Logic, FSMs & Boolean Algebra",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "verilog_rtl",
+        "name": "Verilog RTL Modeling, Synthesis Guidelines & Testbenches",
+        "stage": "core",
+        "prerequisites": [
+          "digital_electronics"
+        ]
+      },
+      {
+        "id": "systemverilog_oop",
+        "name": "SystemVerilog OOP, Randomization & Assertions (SVA)",
+        "stage": "core",
+        "prerequisites": [
+          "verilog_rtl"
+        ]
+      },
+      {
+        "id": "fpga_prototyping",
+        "name": "FPGA Synthesis, Pin Mapping & Timing Constraints (Vivado)",
+        "stage": "applied",
+        "prerequisites": [
+          "verilog_rtl"
+        ]
+      },
+      {
+        "id": "uvm_methodology",
+        "name": "Universal Verification Methodology (UVM) Architecture",
+        "stage": "applied",
+        "prerequisites": [
+          "systemverilog_oop"
+        ]
+      },
+      {
+        "id": "static_timing_analysis",
+        "name": "Static Timing Analysis (Setup/Hold Time, Clock Skew)",
+        "stage": "advanced",
+        "prerequisites": [
+          "fpga_prototyping"
+        ]
+      },
+      {
+        "id": "physical_design_flow",
+        "name": "ASIC Physical Design Flow (Floorplanning, Placement, Routing)",
+        "stage": "advanced",
+        "prerequisites": [
+          "static_timing_analysis"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Configurable 32-bit ALU with Status Flags in Verilog",
+        "skills": [
+          "digital_electronics",
+          "verilog_rtl"
+        ],
+        "hours": 25
+      },
+      {
+        "level": "integrated",
+        "title": "UART Controller with Baud Rate Generator on Xilinx FPGA",
+        "skills": [
+          "fpga_prototyping",
+          "verilog_rtl"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "UVM Testbench for AXI4-Lite Protocol Verification",
+        "skills": [
+          "uvm_methodology",
+          "systemverilog_oop"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "5-Stage Pipelined RISC-V CPU Core with Hazard Unit",
+        "skills": [
+          "static_timing_analysis",
+          "verilog_rtl"
+        ],
+        "hours": 90
+      }
+    ],
+    "resources": [
+      {
+        "title": "Xilinx Vivado Design Suite User Guide",
+        "url": "https://www.xilinx.com/support/documentation.html",
+        "type": "documentation",
+        "provider": "AMD/Xilinx"
+      },
+      {
+        "title": "ASIC World: Complete Verilog Tutorial",
+        "url": "http://www.asic-world.com",
+        "type": "article",
+        "provider": "ASIC World"
+      }
+    ],
+    "certifications": [
+      "Cadence Certified SystemVerilog Associate",
+      "Synopsys Design Compiler Specialist"
+    ],
+    "assessment_topics": [
+      "Setup and hold time slack calculation",
+      "Metastability in asynchronous clock domain crossing",
+      "Blocking vs non-blocking assignments",
+      "UVM phase execution hierarchy"
+    ]
+  },
+  {
+    "id": "embedded_software_engineer",
+    "title": "Embedded Software / Firmware Engineer",
+    "domain_id": "ece_embedded",
+    "branch_id": "ECE",
+    "description": "Writes low-level firmware in Embedded C for ARM Cortex microcontrollers, configures RTOS scheduling, and drives peripheral communication.",
+    "salary_range": "\u20b95 - 18 LPA",
+    "job_family": "Embedded Systems & Hardware Engineering",
+    "languages": [
+      {
+        "name": "C",
+        "relevance": "Primary",
+        "reason": "Fundamental language for memory-constrained microcontroller programming."
+      },
+      {
+        "name": "Embedded C",
+        "relevance": "Primary",
+        "reason": "Direct hardware register manipulation, volatile pointers, and ISRs."
+      },
+      {
+        "name": "C++",
+        "relevance": "Secondary",
+        "reason": "Modern object-oriented firmware development on STM32/ESP32."
+      },
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "Serial communication testing, hardware-in-the-loop scripts."
+      }
+    ],
+    "technologies": [
+      "ARM Cortex-M",
+      "STM32",
+      "ESP32",
+      "FreeRTOS",
+      "I2C / SPI / UART",
+      "CAN Bus",
+      "BLE / Wi-Fi"
+    ],
+    "tools": [
+      "STM32CubeIDE",
+      "Keil uVision",
+      "J-Link Debugger",
+      "Logic Analyzer",
+      "Oscilloscope"
+    ],
+    "required_skills": [
+      {
+        "id": "c_pointers_memory",
+        "name": "C Pointers, Bitwise Operators, Memory Layout & Volatile",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "microcontroller_arch",
+        "name": "ARM Cortex Architecture, Registers & Clock Trees",
+        "stage": "core",
+        "prerequisites": [
+          "c_pointers_memory"
+        ]
+      },
+      {
+        "id": "peripheral_buses",
+        "name": "Bare-Metal Driver Development (GPIO, UART, SPI, I2C)",
+        "stage": "core",
+        "prerequisites": [
+          "microcontroller_arch"
+        ]
+      },
+      {
+        "id": "interrupt_handling",
+        "name": "NVIC, ISR Latency & Direct Memory Access (DMA)",
+        "stage": "applied",
+        "prerequisites": [
+          "peripheral_buses"
+        ]
+      },
+      {
+        "id": "freertos_multitasking",
+        "name": "FreeRTOS Tasks, Semaphores, Queues & Mutexes",
+        "stage": "applied",
+        "prerequisites": [
+          "interrupt_handling"
+        ]
+      },
+      {
+        "id": "iot_networking",
+        "name": "MQTT, HTTP Telemetry & Secure OTA Firmware Updates",
+        "stage": "advanced",
+        "prerequisites": [
+          "freertos_multitasking"
+        ]
+      },
+      {
+        "id": "hardware_debugging",
+        "name": "Hardware In-Circuit Debugging & Signal Analysis",
+        "stage": "advanced",
+        "prerequisites": [
+          "peripheral_buses"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Bare-Metal UART Serial Logger on STM32",
+        "skills": [
+          "c_pointers_memory",
+          "peripheral_buses"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Multi-Sensor Environmental Telemetry via I2C & OLED Display",
+        "skills": [
+          "peripheral_buses",
+          "microcontroller_arch"
+        ],
+        "hours": 35
+      },
+      {
+        "level": "advanced",
+        "title": "Preemptive FreeRTOS Motor Speed Controller with PID Loop",
+        "skills": [
+          "freertos_multitasking",
+          "interrupt_handling"
+        ],
+        "hours": 55
+      },
+      {
+        "level": "capstone",
+        "title": "Connected Industrial IoT Gateway with BLE, MQTT & Secure OTA",
+        "skills": [
+          "iot_networking",
+          "freertos_multitasking"
+        ],
+        "hours": 80
+      }
+    ],
+    "resources": [
+      {
+        "title": "Arm Learning Paths: Embedded & Microcontrollers",
+        "url": "https://learn.arm.com/learning-paths/embedded-and-microcontrollers/",
+        "type": "roadmap",
+        "provider": "Arm"
+      },
+      {
+        "title": "FreeRTOS Official Kernel Documentation",
+        "url": "https://www.freertos.org/",
+        "type": "documentation",
+        "provider": "FreeRTOS"
+      }
+    ],
+    "certifications": [
+      "Arm Certified Engineer - Cortex-M",
+      "Embedded Systems Specialization (Coursera/CU Boulder)"
+    ],
+    "assessment_topics": [
+      "Priority inversion and priority inheritance",
+      "Race conditions in ISR routines",
+      "DMA circular buffer implementation",
+      "I2C clock stretching & arbitration"
+    ]
+  },
+  {
+    "id": "power_systems_engineer",
+    "title": "Power Systems & Smart Grid Engineer",
+    "domain_id": "eee_power_energy",
+    "branch_id": "EEE",
+    "description": "Models transmission and distribution grids, simulates fault conditions, designs substation protection schemes, and integrates solar/wind sources.",
+    "salary_range": "\u20b95 - 16 LPA",
+    "job_family": "Electrical & Energy Systems Engineering",
+    "languages": [
+      {
+        "name": "MATLAB",
+        "relevance": "Primary",
+        "reason": "Power flow analysis, dynamic grid stability, and control algorithms."
+      },
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "Grid data analytics, renewable generation forecasting, and PyPSA modeling."
+      }
+    ],
+    "technologies": [
+      "MATLAB/Simulink",
+      "ETAP",
+      "PSCAD",
+      "PowerWorld",
+      "SCADA",
+      "Protective Relaying (SEL)",
+      "Smart Inverters"
+    ],
+    "tools": [
+      "SimPowerSystems",
+      "AutoCAD Electrical",
+      "LabVIEW"
+    ],
+    "required_skills": [
+      {
+        "id": "electrical_circuit_theory",
+        "name": "Three-Phase Power, Phasors, Impedance & Power Factor",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "power_flow_analysis",
+        "name": "Load Flow Studies (Newton-Raphson, Gauss-Seidel)",
+        "stage": "core",
+        "prerequisites": [
+          "electrical_circuit_theory"
+        ]
+      },
+      {
+        "id": "fault_analysis",
+        "name": "Symmetrical Components & Symmetrical/Unsymmetrical Faults",
+        "stage": "core",
+        "prerequisites": [
+          "power_flow_analysis"
+        ]
+      },
+      {
+        "id": "protection_relays",
+        "name": "Overcurrent, Differential & Distance Protection Coordination",
+        "stage": "applied",
+        "prerequisites": [
+          "fault_analysis"
+        ]
+      },
+      {
+        "id": "renewable_grid_integration",
+        "name": "Solar PV & Wind Turbine Grid Synchronization (MPPT)",
+        "stage": "applied",
+        "prerequisites": [
+          "power_flow_analysis"
+        ]
+      },
+      {
+        "id": "smart_grid_scada",
+        "name": "Substation Automation, IEC 61850 & SCADA Protocols",
+        "stage": "advanced",
+        "prerequisites": [
+          "protection_relays"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Load Flow Analysis of IEEE 14-Bus System in ETAP",
+        "skills": [
+          "power_flow_analysis"
+        ],
+        "hours": 25
+      },
+      {
+        "level": "integrated",
+        "title": "Overcurrent and Distance Relay Coordination Scheme",
+        "skills": [
+          "protection_relays",
+          "fault_analysis"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "Grid-Tied Solar Inverter Simulation with MPPT Algorithm",
+        "skills": [
+          "renewable_grid_integration"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "Microgrid Islanding & Black Start Simulation with BESS",
+        "skills": [
+          "smart_grid_scada",
+          "renewable_grid_integration"
+        ],
+        "hours": 80
+      }
+    ],
+    "resources": [
+      {
+        "title": "MathWorks: Simscape Electrical Documentation",
+        "url": "https://www.mathworks.com/products/simscape-electrical.html",
+        "type": "documentation",
+        "provider": "MathWorks"
+      },
+      {
+        "title": "IEEE Power & Energy Society Student Resources",
+        "url": "https://www.ieee-pes.org/",
+        "type": "article",
+        "provider": "IEEE PES"
+      }
+    ],
+    "certifications": [
+      "ETAP Certified Power Systems Specialist",
+      "IEEE Power Engineering Professional Certificate"
+    ],
+    "assessment_topics": [
+      "Per-unit system calculations",
+      "Relay time-current characteristic curves",
+      "Voltage stability index calculation",
+      "Harmonic mitigation and THD standards"
+    ]
+  },
+  {
+    "id": "ev_powertrain_engineer",
+    "title": "EV Powertrain & Drives Engineer",
+    "domain_id": "eee_power_energy",
+    "branch_id": "EEE",
+    "description": "Designs electric vehicle traction inverters, motor drive controllers (BLDC/PMSM), and battery management systems (BMS).",
+    "salary_range": "\u20b96 - 19 LPA",
+    "job_family": "Electrical & Energy Systems Engineering",
+    "languages": [
+      {
+        "name": "C",
+        "relevance": "Primary",
+        "reason": "Firmware implementation for motor control DSPs and BMS controllers."
+      },
+      {
+        "name": "MATLAB",
+        "relevance": "Primary",
+        "reason": "Field-oriented control (FOC) simulation and battery cell modeling."
+      }
+    ],
+    "technologies": [
+      "Field-Oriented Control (FOC)",
+      "SVPWM",
+      "Lithium-Ion BMS",
+      "DC-DC Converters",
+      "CAN Bus",
+      "Simulink"
+    ],
+    "tools": [
+      "TI C2000 DSP",
+      "Ansys Maxwell",
+      "dSPACE"
+    ],
+    "required_skills": [
+      {
+        "id": "power_electronics_devices",
+        "name": "MOSFETs, IGBTs, Buck-Boost Converters & Inverter Topologies",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "electric_machine_theory",
+        "name": "PMSM, BLDC & Induction Motor Operating Principles",
+        "stage": "core",
+        "prerequisites": [
+          "power_electronics_devices"
+        ]
+      },
+      {
+        "id": "foc_motor_control",
+        "name": "Field-Oriented Control (Clarke/Park Transform) & SVPWM",
+        "stage": "applied",
+        "prerequisites": [
+          "electric_machine_theory"
+        ]
+      },
+      {
+        "id": "bms_algorithm_design",
+        "name": "BMS State-of-Charge (SoC), State-of-Health (SoH) & Balancing",
+        "stage": "applied",
+        "prerequisites": [
+          "power_electronics_devices"
+        ]
+      },
+      {
+        "id": "thermal_fault_management",
+        "name": "EV Inverter Thermal Analysis & Overvoltage Protection",
+        "stage": "advanced",
+        "prerequisites": [
+          "foc_motor_control"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Closed-Loop DC Motor Speed Control with H-Bridge",
+        "skills": [
+          "power_electronics_devices"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Field-Oriented Control Simulation for PMSM in Simulink",
+        "skills": [
+          "foc_motor_control"
+        ],
+        "hours": 45
+      },
+      {
+        "level": "advanced",
+        "title": "BMS Cell Balancing & SoC Estimation with Extended Kalman Filter",
+        "skills": [
+          "bms_algorithm_design"
+        ],
+        "hours": 65
+      },
+      {
+        "level": "capstone",
+        "title": "Complete 48V EV Traction Inverter Prototype with CAN Telemetry",
+        "skills": [
+          "foc_motor_control",
+          "thermal_fault_management"
+        ],
+        "hours": 90
+      }
+    ],
+    "resources": [
+      {
+        "title": "TI Motor Drive & Control Solutions",
+        "url": "https://www.ti.com/motor-drivers/",
+        "type": "documentation",
+        "provider": "Texas Instruments"
+      }
+    ],
+    "certifications": [
+      "MathWorks Certified MATLAB Associate",
+      "Automotive Functional Safety (ISO 26262) Foundation"
+    ],
+    "assessment_topics": [
+      "Clarke and Park transformations",
+      "Space vector modulation switching sequence",
+      "Coulomb counting vs Kalman filtering for SoC",
+      "Thermal runaway prevention in battery packs"
+    ]
+  },
+  {
+    "id": "mechanical_design_engineer",
+    "title": "Mechanical Design Engineer",
+    "domain_id": "mech_design_cad",
+    "branch_id": "MECH",
+    "description": "Creates production-ready 3D mechanical components, detailed engineering drawings with GD&T, and verifies structural integrity using FEA.",
+    "salary_range": "\u20b94.5 - 15 LPA",
+    "job_family": "Mechanical Design & Simulation Engineering",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "Parametric CAD scripting, batch simulation automation, and design optimization."
+      },
+      {
+        "name": "MATLAB",
+        "relevance": "Secondary",
+        "reason": "Dynamic vibration modeling and kinematic analysis."
+      }
+    ],
+    "technologies": [
+      "SolidWorks",
+      "CATIA",
+      "AutoCAD",
+      "Creo Parametric",
+      "ANSYS Mechanical",
+      "GD&T (ASME Y14.5)",
+      "DFM / DFA"
+    ],
+    "tools": [
+      "Fusion 360",
+      "HyperMesh",
+      "Abaqus"
+    ],
+    "required_skills": [
+      {
+        "id": "engineering_graphics_gdt",
+        "name": "Engineering Drawing, Projection & GD&T Tolerancing",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "mechanics_materials",
+        "name": "Stress-Strain, Beam Deflection, Torsion & Failure Theories",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "parametric_3d_cad",
+        "name": "Part Modeling, Sweeps, Lofts & Complex Surfaces",
+        "stage": "core",
+        "prerequisites": [
+          "engineering_graphics_gdt"
+        ]
+      },
+      {
+        "id": "assembly_drafting",
+        "name": "Assembly Constraints, Interference Checks & BOM Generation",
+        "stage": "core",
+        "prerequisites": [
+          "parametric_3d_cad"
+        ]
+      },
+      {
+        "id": "finite_element_analysis",
+        "name": "Meshing Quality, Linear Static & Modal FEA Simulation",
+        "stage": "applied",
+        "prerequisites": [
+          "mechanics_materials",
+          "parametric_3d_cad"
+        ]
+      },
+      {
+        "id": "dfm_dfa_optimization",
+        "name": "Design for Manufacturing (Sheet Metal, Injection Molding, Casting)",
+        "stage": "applied",
+        "prerequisites": [
+          "assembly_drafting"
+        ]
+      },
+      {
+        "id": "fatigue_thermal_sim",
+        "name": "Non-Linear FEA, Fatigue Life Prediction & Thermal Stresses",
+        "stage": "advanced",
+        "prerequisites": [
+          "finite_element_analysis"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Parametric Gearbox Housing with Detailed 2D Drawing & GD&T",
+        "skills": [
+          "parametric_3d_cad",
+          "engineering_graphics_gdt"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Automotive Suspension Control Arm Structural Optimization in FEA",
+        "skills": [
+          "finite_element_analysis",
+          "mechanics_materials"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "Multi-Part Robotic Gripper Assembly with DFM & Motion Analysis",
+        "skills": [
+          "dfm_dfa_optimization",
+          "assembly_drafting"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "Weight-Reduced EV Battery Enclosure with Crash Simulation & Modal FEA",
+        "skills": [
+          "fatigue_thermal_sim",
+          "dfm_dfa_optimization"
+        ],
+        "hours": 85
+      }
+    ],
+    "resources": [
+      {
+        "title": "Autodesk Certified Professional Learning Pathway",
+        "url": "https://www.autodesk.com/certification",
+        "type": "documentation",
+        "provider": "Autodesk"
+      },
+      {
+        "title": "SolidWorks Official Tutorials",
+        "url": "https://www.solidworks.com",
+        "type": "documentation",
+        "provider": "Dassault Syst\u00e8mes"
+      }
+    ],
+    "certifications": [
+      "Certified SOLIDWORKS Associate / Professional (CSWA/CSWP)",
+      "ANSYS Certified Associate - Mechanical FEA"
+    ],
+    "assessment_topics": [
+      "Maximum distortion energy (Von Mises) criterion",
+      "Mesh convergence criteria",
+      "True position vs coordinate tolerancing",
+      "Sheet metal bend allowance calculation"
+    ]
+  },
+  {
+    "id": "structural_engineer",
+    "title": "Structural Design Engineer",
+    "domain_id": "civil_structural",
+    "branch_id": "CIVIL",
+    "description": "Designs reinforced concrete and structural steel frameworks, performs seismic/wind load calculations, and coordinates BIM workflows.",
+    "salary_range": "\u20b94.5 - 16 LPA",
+    "job_family": "Civil & Infrastructure Engineering",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "Structural calculation automation, section property analysis, and Revit Dynamo scripting."
+      }
+    ],
+    "technologies": [
+      "ETABS",
+      "STAAD.Pro",
+      "AutoCAD",
+      "Revit Structure",
+      "SAP2000",
+      "SAFE",
+      "IS 456 / IS 1893 / ACI 318 Codes"
+    ],
+    "tools": [
+      "Tekla Structures",
+      "Navisworks",
+      "MS Excel"
+    ],
+    "required_skills": [
+      {
+        "id": "structural_analysis_mechanics",
+        "name": "Bending Moments, Shear Forces, Deflections & Indeterminate Beams",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "rcc_design_basics",
+        "name": "Limit State Design of Slabs, Beams, Columns & Footings",
+        "stage": "core",
+        "prerequisites": [
+          "structural_analysis_mechanics"
+        ]
+      },
+      {
+        "id": "steel_design_basics",
+        "name": "Steel Member Design (Tension, Compression, Welded/Bolted Connections)",
+        "stage": "core",
+        "prerequisites": [
+          "structural_analysis_mechanics"
+        ]
+      },
+      {
+        "id": "etabs_modeling",
+        "name": "3D Multi-Story Building Modeling & Gravity Load Distribution",
+        "stage": "applied",
+        "prerequisites": [
+          "rcc_design_basics"
+        ]
+      },
+      {
+        "id": "seismic_wind_analysis",
+        "name": "Equivalent Static & Response Spectrum Earthquake Analysis",
+        "stage": "applied",
+        "prerequisites": [
+          "etabs_modeling"
+        ]
+      },
+      {
+        "id": "bim_revit_modeling",
+        "name": "BIM Coordination, Clash Detection & Structural Detailing (Revit)",
+        "stage": "advanced",
+        "prerequisites": [
+          "etabs_modeling"
+        ]
+      },
+      {
+        "id": "foundation_safe_design",
+        "name": "Combined Footing, Mat/Raft Foundation Analysis with SAFE",
+        "stage": "advanced",
+        "prerequisites": [
+          "seismic_wind_analysis"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Design and Detailing of Continuous G+1 RCC Frame to IS 456",
+        "skills": [
+          "rcc_design_basics"
+        ],
+        "hours": 25
+      },
+      {
+        "level": "integrated",
+        "title": "G+10 Commercial Building Seismic Analysis in ETABS to IS 1893",
+        "skills": [
+          "etabs_modeling",
+          "seismic_wind_analysis"
+        ],
+        "hours": 45
+      },
+      {
+        "level": "advanced",
+        "title": "Industrial Peaked Steel Warehouse Design in STAAD.Pro with Wind Loads",
+        "skills": [
+          "steel_design_basics",
+          "structural_analysis_mechanics"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "Full BIM-Coordinated High-Rise with Raft Foundation Design & Clash Detection",
+        "skills": [
+          "bim_revit_modeling",
+          "foundation_safe_design"
+        ],
+        "hours": 85
+      }
+    ],
+    "resources": [
+      {
+        "title": "CSI ETABS Official Training Resources",
+        "url": "https://www.csiamerica.com/products/etabs",
+        "type": "documentation",
+        "provider": "Computers & Structures, Inc."
+      },
+      {
+        "title": "Bentley STAAD.Pro Fundamentals",
+        "url": "https://www.bentley.com",
+        "type": "documentation",
+        "provider": "Bentley Systems"
+      }
+    ],
+    "certifications": [
+      "Autodesk Certified Professional: Revit for Structural Design",
+      "CSI Certified Structural Modeling Specialist"
+    ],
+    "assessment_topics": [
+      "Ductile detailing to IS 13920",
+      "Response reduction factor and importance factor calculation",
+      "Story drift limits",
+      "P-Delta second order effects"
+    ]
+  },
+  {
+    "id": "process_engineer",
+    "title": "Process Design & Simulation Engineer",
+    "domain_id": "chem_process",
+    "branch_id": "CHEM",
+    "description": "Performs mass and energy balances, sizes separation units and heat exchangers, and simulates dynamic chemical plants in Aspen Plus.",
+    "salary_range": "\u20b95 - 16 LPA",
+    "job_family": "Chemical & Process Engineering",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "Process optimization, kinetic fitting, and thermodynamic property prediction."
+      },
+      {
+        "name": "MATLAB",
+        "relevance": "Secondary",
+        "reason": "Non-linear ODE solving for batch and continuous reactors."
+      }
+    ],
+    "technologies": [
+      "Aspen Plus",
+      "Aspen HYSYS",
+      "CHEMCAD",
+      "DWSIM",
+      "AutoCAD Plant 3D",
+      "HAZOP / Safety Instrumented Systems"
+    ],
+    "tools": [
+      "MS Excel / VBA",
+      "HTRI Xchanger Suite"
+    ],
+    "required_skills": [
+      {
+        "id": "mass_energy_balance",
+        "name": "Stoichiometry, Recycle Streams & Mass/Energy Balances",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "thermodynamics_phase_equilibria",
+        "name": "VLE, Equation of State (Peng-Robinson, NRTL) & Fugacity",
+        "stage": "core",
+        "prerequisites": [
+          "mass_energy_balance"
+        ]
+      },
+      {
+        "id": "heat_exchanger_sizing",
+        "name": "LMTD, Effectiveness-NTU & Shell-and-Tube Exchanger Design",
+        "stage": "core",
+        "prerequisites": [
+          "mass_energy_balance"
+        ]
+      },
+      {
+        "id": "distillation_separation",
+        "name": "McCabe-Thiele Method, Reflux Ratio & Column Sizing",
+        "stage": "applied",
+        "prerequisites": [
+          "thermodynamics_phase_equilibria"
+        ]
+      },
+      {
+        "id": "aspen_flowsheeting",
+        "name": "Flowsheet Simulation, Stream Convergence & Sensitivity Analysis (Aspen)",
+        "stage": "applied",
+        "prerequisites": [
+          "distillation_separation"
+        ]
+      },
+      {
+        "id": "process_control_hazop",
+        "name": "Feedback Control Loops, P&ID Development & HAZOP Matrix",
+        "stage": "advanced",
+        "prerequisites": [
+          "aspen_flowsheeting"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Binary Ethanol-Water Distillation Mass and Energy Balance",
+        "skills": [
+          "mass_energy_balance"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Rigorous Shell-and-Tube Heat Exchanger Sizing in HTRI",
+        "skills": [
+          "heat_exchanger_sizing"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "Complete Methanol Synthesis Flowsheet in Aspen Plus with Recycle",
+        "skills": [
+          "aspen_flowsheeting"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "Industrial Ammonia Plant Digital Twin with P&ID and HAZOP Safety Study",
+        "skills": [
+          "process_control_hazop",
+          "aspen_flowsheeting"
+        ],
+        "hours": 85
+      }
+    ],
+    "resources": [
+      {
+        "title": "AspenTech Official Documentation & Learning",
+        "url": "https://www.aspentech.com",
+        "type": "documentation",
+        "provider": "AspenTech"
+      },
+      {
+        "title": "AIChE Student & Young Professional Resources",
+        "url": "https://www.aiche.org",
+        "type": "article",
+        "provider": "AIChE"
+      }
+    ],
+    "certifications": [
+      "Aspen Plus Certified User",
+      "T\u00dcV Functional Safety Engineer (Hazop/SIS)"
+    ],
+    "assessment_topics": [
+      "Thermodynamic fluid package selection",
+      "Azeotropic distillation break mechanisms",
+      "Pressure relief valve sizing criteria",
+      "P&ID symbology to ISA 5.1"
+    ]
+  },
+  {
+    "id": "bioinformatics_scientist",
+    "title": "Bioinformatics & Computational Biologist",
+    "domain_id": "biotech_bioinformatics",
+    "branch_id": "BIOTECH",
+    "description": "Analyzes genomic sequencing data, builds automated Nextflow variant pipelines, models macromolecular structures, and interprets biomarkers.",
+    "salary_range": "\u20b95.5 - 18 LPA",
+    "job_family": "Bioinformatics & Life Sciences Technology",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Biopython, machine learning on protein sequences, and data science."
+      },
+      {
+        "name": "R",
+        "relevance": "Primary",
+        "reason": "Bioconductor ecosystem, differential expression, and statistical genomics."
+      },
+      {
+        "name": "Bash",
+        "relevance": "Primary",
+        "reason": "Linux cluster environment, HPC job scripts, and pipe command chaining."
+      }
+    ],
+    "technologies": [
+      "Biopython",
+      "Bioconductor",
+      "BLAST",
+      "Nextflow",
+      "GROMACS",
+      "PyMOL",
+      "Docker",
+      "GATK"
+    ],
+    "tools": [
+      "FastQC",
+      "Samtools",
+      "BWA-MEM",
+      "IGV Genome Browser"
+    ],
+    "required_skills": [
+      {
+        "id": "molecular_genetics",
+        "name": "DNA, RNA, Transcription, Translation & Protein Structures",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "bio_scripting",
+        "name": "BioPython, FASTA/FASTQ Parsing & Bash CLI Tools",
+        "stage": "foundation",
+        "prerequisites": [
+          "molecular_genetics"
+        ]
+      },
+      {
+        "id": "sequence_alignment",
+        "name": "Pairwise & Multiple Sequence Alignment (Needleman-Wunsch, BLAST)",
+        "stage": "core",
+        "prerequisites": [
+          "bio_scripting"
+        ]
+      },
+      {
+        "id": "ngs_variant_calling",
+        "name": "Quality Trimming, Read Mapping & Variant Calling (GATK / Samtools)",
+        "stage": "core",
+        "prerequisites": [
+          "sequence_alignment"
+        ]
+      },
+      {
+        "id": "rnaseq_deseq2",
+        "name": "Differential Gene Expression Analysis in R with DESeq2",
+        "stage": "applied",
+        "prerequisites": [
+          "ngs_variant_calling"
+        ]
+      },
+      {
+        "id": "protein_docking_pymol",
+        "name": "3D Protein Homology Modeling & Ligand Docking (AutoDock / PyMOL)",
+        "stage": "applied",
+        "prerequisites": [
+          "molecular_genetics"
+        ]
+      },
+      {
+        "id": "scalable_workflows",
+        "name": "Reproducible Genomic Pipelines with Nextflow & Docker",
+        "stage": "advanced",
+        "prerequisites": [
+          "ngs_variant_calling"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "Automated FASTQ Quality Audit and BLAST Sequence Matcher",
+        "skills": [
+          "bio_scripting",
+          "sequence_alignment"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "RNA-Seq Differential Expression Pipeline for Cancer Biomarkers",
+        "skills": [
+          "rnaseq_deseq2"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "Structure-Based Drug Discovery & Virtual Screening with AutoDock Vina",
+        "skills": [
+          "protein_docking_pymol"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "Cloud-Native Nextflow Pipeline for Whole Exome Variant Discovery",
+        "skills": [
+          "scalable_workflows",
+          "ngs_variant_calling"
+        ],
+        "hours": 85
+      }
+    ],
+    "resources": [
+      {
+        "title": "Bioconductor Official Course & Vignettes",
+        "url": "https://www.bioconductor.org/help/course-materials/",
+        "type": "documentation",
+        "provider": "Bioconductor"
+      },
+      {
+        "title": "NCBI Education & Training Guides",
+        "url": "https://www.ncbi.nlm.nih.gov/home/learn/",
+        "type": "documentation",
+        "provider": "NCBI"
+      }
+    ],
+    "certifications": [
+      "Genomic Data Science Specialization (Johns Hopkins / Coursera)",
+      "EMBL-EBI Bio-Curator Professional Certification"
+    ],
+    "assessment_topics": [
+      "Phred quality score interpretation",
+      "False discovery rate (FDR / Benjamini-Hochberg) correction",
+      "VCF format parsing and annotations",
+      "Force field selection in GROMACS"
+    ]
+  },
+  {
+    "id": "aerospace_engineer",
+    "title": "Aerodynamics & Flight Dynamics Engineer",
+    "domain_id": "aero_flight_systems",
+    "branch_id": "AERO",
+    "description": "Simulates 3D aerodynamic flow over aircraft wings, models 6-DOF flight equations, designs autopilot controllers, and calculates propulsion thrust.",
+    "salary_range": "\u20b96 - 20 LPA",
+    "job_family": "Aerospace & Defense Systems",
+    "languages": [
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Flight data processing, aerodynamic parameter estimation, and optimization."
+      },
+      {
+        "name": "MATLAB",
+        "relevance": "Primary",
+        "reason": "Simulink flight dynamics blocksets, state-space stability, and autopilot loops."
+      },
+      {
+        "name": "C++",
+        "relevance": "Secondary",
+        "reason": "PX4 flight stack firmware and mission guidance algorithms."
+      }
+    ],
+    "technologies": [
+      "ANSYS Fluent",
+      "OpenFOAM",
+      "XFOIL / XFLR5",
+      "MATLAB/Simulink",
+      "Nastran/Patran",
+      "PX4 Autopilot",
+      "STK"
+    ],
+    "tools": [
+      "CATIA Aero",
+      "Mission Planner",
+      "QGroundControl"
+    ],
+    "required_skills": [
+      {
+        "id": "fluid_gas_dynamics",
+        "name": "Incompressible & Compressible Flow, Shock Waves & Boundary Layers",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "airfoil_aerodynamics",
+        "name": "Airfoil Lift/Drag Polars, Stall Characteristics & XFOIL Analysis",
+        "stage": "core",
+        "prerequisites": [
+          "fluid_gas_dynamics"
+        ]
+      },
+      {
+        "id": "cfd_fluent_simulation",
+        "name": "3D Wing CFD Meshing, Turbulence Models (k-omega SST) & Post-Processing",
+        "stage": "core",
+        "prerequisites": [
+          "airfoil_aerodynamics"
+        ]
+      },
+      {
+        "id": "flight_mechanics_stability",
+        "name": "Aircraft Longitudinal/Lateral Static & Dynamic Stability Modes",
+        "stage": "applied",
+        "prerequisites": [
+          "fluid_gas_dynamics"
+        ]
+      },
+      {
+        "id": "flight_control_simulink",
+        "name": "Autopilot Control Law Design (PID, LQR) in Simulink",
+        "stage": "applied",
+        "prerequisites": [
+          "flight_mechanics_stability"
+        ]
+      },
+      {
+        "id": "rocket_propulsion_sizing",
+        "name": "Solid/Liquid Rocket Motor Thrust, Specific Impulse & Nozzle Expansion",
+        "stage": "advanced",
+        "prerequisites": [
+          "fluid_gas_dynamics"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "2D NACA 0012 Airfoil Compressible Flow Validation in XFOIL",
+        "skills": [
+          "airfoil_aerodynamics"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "3D Swept-Wing Boundary Layer & Induced Drag CFD in ANSYS Fluent",
+        "skills": [
+          "cfd_fluent_simulation"
+        ],
+        "hours": 45
+      },
+      {
+        "level": "advanced",
+        "title": "Full 6-DOF Aircraft Autonomous Pitch/Roll Autopilot in Simulink",
+        "skills": [
+          "flight_control_simulink"
+        ],
+        "hours": 60
+      },
+      {
+        "level": "capstone",
+        "title": "Autonomous VTOL UAV Mission Controller with Real-Time SITL in Gazebo",
+        "skills": [
+          "flight_control_simulink",
+          "cfd_fluent_simulation"
+        ],
+        "hours": 90
+      }
+    ],
+    "resources": [
+      {
+        "title": "NASA Technical Reports & Aerospace Open Resources",
+        "url": "https://ntrs.nasa.gov/",
+        "type": "documentation",
+        "provider": "NASA"
+      },
+      {
+        "title": "AIAA Journal of Aircraft & Aerospace Education",
+        "url": "https://www.aiaa.org",
+        "type": "article",
+        "provider": "AIAA"
+      }
+    ],
+    "certifications": [
+      "AIAA Certified Aerospace Professional",
+      "ANSYS Certified Associate - Fluent CFD"
+    ],
+    "assessment_topics": [
+      "Prandtl-Glauert compressibility correction",
+      "Phugoid and Dutch roll oscillation modes",
+      "Shock wave formation over supercritical airfoils",
+      "Nozzle chocked flow conditions"
+    ]
+  },
+  {
+    "id": "automotive_embedded_engineer",
+    "title": "Automotive Embedded & AUTOSAR Engineer",
+    "domain_id": "auto_vehicle_systems",
+    "branch_id": "AUTO",
+    "description": "Develops automotive ECU firmware conforming to AUTOSAR standards, implements CAN/LIN protocols, and validates functional safety.",
+    "salary_range": "\u20b96 - 19 LPA",
+    "job_family": "Automotive & Mobility Engineering",
+    "languages": [
+      {
+        "name": "C",
+        "relevance": "Primary",
+        "reason": "Automotive MISRA-C compliant firmware for vehicle control units."
+      },
+      {
+        "name": "C++",
+        "relevance": "Secondary",
+        "reason": "AUTOSAR Adaptive platform and ADAS high-compute algorithms."
+      },
+      {
+        "name": "Python",
+        "relevance": "Secondary",
+        "reason": "Diagnostic test scripting, CAN log parsing, and test automation."
+      }
+    ],
+    "technologies": [
+      "AUTOSAR Classic/Adaptive",
+      "CAN / CAN-FD / LIN",
+      "Vector CANoe",
+      "MATLAB/Stateflow",
+      "ISO 26262",
+      "dSPACE"
+    ],
+    "tools": [
+      "CANalyzer",
+      "Lauterbach Debugger",
+      "CAPL Scripting"
+    ],
+    "required_skills": [
+      {
+        "id": "misra_c_standards",
+        "name": "MISRA C Coding Standards & ECU Memory Architecture",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "can_network_protocol",
+        "name": "CAN 2.0 / CAN-FD Frame Arbitration, Error Frames & Transceivers",
+        "stage": "core",
+        "prerequisites": [
+          "misra_c_standards"
+        ]
+      },
+      {
+        "id": "autosar_architecture",
+        "name": "AUTOSAR Layered Architecture (BSW, MCAL, RTE & Application SWC)",
+        "stage": "core",
+        "prerequisites": [
+          "misra_c_standards"
+        ]
+      },
+      {
+        "id": "uds_diagnostics",
+        "name": "Unified Diagnostic Services (UDS / ISO 14229) & OBD-II",
+        "stage": "applied",
+        "prerequisites": [
+          "can_network_protocol"
+        ]
+      },
+      {
+        "id": "canoe_capl_simulation",
+        "name": "Hardware-in-the-Loop Network Simulation & CAPL Automation (CANoe)",
+        "stage": "applied",
+        "prerequisites": [
+          "can_network_protocol"
+        ]
+      },
+      {
+        "id": "functional_safety_iso26262",
+        "name": "ISO 26262 Functional Safety, HARA, ASIL Derivation & Safety Mechanisms",
+        "stage": "advanced",
+        "prerequisites": [
+          "autosar_architecture"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "CAN Bus Telemetry Node with Arduino and MCP2515 Transceiver",
+        "skills": [
+          "can_network_protocol"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "UDS Diagnostic Stack Implementation in MISRA C",
+        "skills": [
+          "uds_diagnostics",
+          "misra_c_standards"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "AUTOSAR Software Component for Electronic Throttle Control",
+        "skills": [
+          "autosar_architecture"
+        ],
+        "hours": 65
+      },
+      {
+        "level": "capstone",
+        "title": "Automated Vehicle HIL Test Suite with CANoe, Fault Injection & Safety Interlocks",
+        "skills": [
+          "canoe_capl_simulation",
+          "functional_safety_iso26262"
+        ],
+        "hours": 85
+      }
+    ],
+    "resources": [
+      {
+        "title": "Vector Academy: Automotive Networking & AUTOSAR",
+        "url": "https://www.vector.com/int/en/training/",
+        "type": "documentation",
+        "provider": "Vector Informatik"
+      },
+      {
+        "title": "AUTOSAR Official Specifications",
+        "url": "https://www.autosar.org/standards",
+        "type": "documentation",
+        "provider": "AUTOSAR Consortium"
+      }
+    ],
+    "certifications": [
+      "Vector Certified CANoe Professional",
+      "Automotive Functional Safety Professional (ISO 26262)"
+    ],
+    "assessment_topics": [
+      "CAN bit timing and bit stuffing rules",
+      "RTE event mapping in AUTOSAR",
+      "ASIL decomposition principles",
+      "UDS service identifiers (0x22, 0x2E, 0x19)"
+    ]
+  },
+  {
+    "id": "robotics_engineer",
+    "title": "Robotics & Autonomous Systems Engineer",
+    "domain_id": "robotics_automation",
+    "branch_id": "ROBOTICS",
+    "description": "Programs autonomous robots with ROS2, implements kinematics and path planning algorithms, and integrates sensor perception.",
+    "salary_range": "\u20b96 - 22 LPA",
+    "job_family": "Robotics & Autonomous Systems",
+    "languages": [
+      {
+        "name": "C++",
+        "relevance": "Primary",
+        "reason": "Real-time robotics nodes, ROS2 lifecycle management, and high-speed computation."
+      },
+      {
+        "name": "Python",
+        "relevance": "Primary",
+        "reason": "Rapid prototyping, computer vision integration with OpenCV, and machine learning."
+      },
+      {
+        "name": "MATLAB",
+        "relevance": "Secondary",
+        "reason": "Kinematic parameter derivation, trajectory interpolation, and robot simulation."
+      }
+    ],
+    "technologies": [
+      "ROS2 (Humble/Iron)",
+      "Gazebo Simulator",
+      "OpenCV",
+      "MoveIt",
+      "SLAM / Cartographer",
+      "Nav2",
+      "SolidWorks"
+    ],
+    "tools": [
+      "RViz",
+      "Linux Ubuntu",
+      "LiDAR Drivers",
+      "Depth Cameras (RealSense)"
+    ],
+    "required_skills": [
+      {
+        "id": "robot_kinematics",
+        "name": "Forward/Inverse Kinematics, Denavit-Hartenberg (DH) & Jacobians",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "ros2_middleware",
+        "name": "ROS2 Nodes, Topics, Services, Actions, Parameters & QoS",
+        "stage": "foundation",
+        "prerequisites": []
+      },
+      {
+        "id": "computer_vision_opencv",
+        "name": "Color Filtering, Contours, Feature Matching & Pose Estimation (OpenCV)",
+        "stage": "core",
+        "prerequisites": [
+          "ros2_middleware"
+        ]
+      },
+      {
+        "id": "robot_simulation_urdf",
+        "name": "Robot Modeling (URDF/Xacro), Physics Simulation in Gazebo & RViz",
+        "stage": "core",
+        "prerequisites": [
+          "robot_kinematics",
+          "ros2_middleware"
+        ]
+      },
+      {
+        "id": "slam_navigation",
+        "name": "2D/3D LiDAR SLAM, Costmaps & Autonomous Navigation (Nav2)",
+        "stage": "applied",
+        "prerequisites": [
+          "robot_simulation_urdf"
+        ]
+      },
+      {
+        "id": "manipulation_motion_planning",
+        "name": "Manipulator Trajectory Planning & Collision Avoidance (MoveIt)",
+        "stage": "advanced",
+        "prerequisites": [
+          "robot_kinematics",
+          "robot_simulation_urdf"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "level": "guided",
+        "title": "2-Link Planar Arm Inverse Kinematics Visualizer in Python",
+        "skills": [
+          "robot_kinematics"
+        ],
+        "hours": 20
+      },
+      {
+        "level": "integrated",
+        "title": "Visual Object Tracking & Servo Gimbal with OpenCV & Arduino",
+        "skills": [
+          "computer_vision_opencv"
+        ],
+        "hours": 40
+      },
+      {
+        "level": "advanced",
+        "title": "Autonomous Mobile Robot SLAM & Waypoint Navigation in Gazebo",
+        "skills": [
+          "slam_navigation"
+        ],
+        "hours": 65
+      },
+      {
+        "level": "capstone",
+        "title": "Industrial 6-DOF Pick-and-Place Workcell with MoveIt, Vision & ROS2",
+        "skills": [
+          "manipulation_motion_planning",
+          "computer_vision_opencv"
+        ],
+        "hours": 90
+      }
+    ],
+    "resources": [
+      {
+        "title": "ROS 2 Official Documentation",
+        "url": "https://docs.ros.org/en/humble/",
+        "type": "documentation",
+        "provider": "Open Robotics"
+      },
+      {
+        "title": "OpenCV Tutorials & Documentation",
+        "url": "https://docs.opencv.org/",
+        "type": "documentation",
+        "provider": "OpenCV"
+      }
+    ],
+    "certifications": [
+      "Open Robotics Certified ROS 2 Developer",
+      "FANUC / KUKA Robotics Programming Certificate"
+    ],
+    "assessment_topics": [
+      "Singularity in serial manipulators",
+      "Quaternion representation of spatial orientation",
+      "Dijkstra vs A* vs TEB local planner",
+      "URDF transmission and joint limit declarations"
+    ]
+  }
+]

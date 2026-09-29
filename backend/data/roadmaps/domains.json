@@ -1,0 +1,114 @@
+[
+  {
+    "id": "cse_ai_data",
+    "name": "AI & Data Science",
+    "branch_id": "CSE",
+    "description": "Machine learning, statistical analysis, deep learning, NLP, computer vision, and generative AI models.",
+    "roadmap_source": "roadmap.sh AI Engineer / AI & Data Scientist",
+    "role_count": 3
+  },
+  {
+    "id": "cse_backend",
+    "name": "Backend Engineering",
+    "branch_id": "CSE",
+    "description": "Scalable server architectures, high-concurrency APIs, distributed databases, caching, and secure authentication.",
+    "roadmap_source": "roadmap.sh Backend Developer",
+    "role_count": 2
+  },
+  {
+    "id": "cse_devops_cloud",
+    "name": "DevOps & Cloud Computing",
+    "branch_id": "CSE",
+    "description": "Continuous integration, infrastructure as code, Kubernetes cluster orchestration, and resilient cloud architecture.",
+    "roadmap_source": "roadmap.sh DevOps",
+    "role_count": 1
+  },
+  {
+    "id": "cse_cybersecurity",
+    "name": "Cybersecurity & Ethical Hacking",
+    "branch_id": "CSE",
+    "description": "Network penetration testing, vulnerability assessment, cryptography, web application security, and incident response.",
+    "roadmap_source": "roadmap.sh Cyber Security & NIST NICE Framework",
+    "role_count": 1
+  },
+  {
+    "id": "ece_vlsi",
+    "name": "VLSI Design & Verification",
+    "branch_id": "ECE",
+    "description": "Digital ASIC synthesis, FPGA prototyping, SystemVerilog verification, UVM testbenches, and physical design timing closure.",
+    "roadmap_source": "O*NET 17-2072.00 Electronics Engineers + Cadence/Synopsys Pathways",
+    "role_count": 1
+  },
+  {
+    "id": "ece_embedded",
+    "name": "Embedded Systems & IoT",
+    "branch_id": "ECE",
+    "description": "Microcontroller firmware, real-time operating systems (FreeRTOS), serial communication buses, and IoT cloud telemetry.",
+    "roadmap_source": "Arm Learning Paths & IEEE Embedded Systems Standards",
+    "role_count": 1
+  },
+  {
+    "id": "eee_power_energy",
+    "name": "Power Systems & Renewable Energy",
+    "branch_id": "EEE",
+    "description": "Grid stability, transmission simulation, protection relays, renewable energy integration, and smart metering.",
+    "roadmap_source": "O*NET 17-2071.00 Electrical Engineers + MathWorks Power Systems Learning Path",
+    "role_count": 2
+  },
+  {
+    "id": "mech_design_cad",
+    "name": "Design & CAD/CAM / FEA",
+    "branch_id": "MECH",
+    "description": "3D parametric modeling, assembly drafting, GD&T, finite element structural analysis, and CNC toolpath generation.",
+    "roadmap_source": "O*NET 17-2141.00 Mechanical Engineers + Autodesk Official Learning Pathways",
+    "role_count": 1
+  },
+  {
+    "id": "civil_structural",
+    "name": "Structural Engineering & BIM",
+    "branch_id": "CIVIL",
+    "description": "Reinforced concrete and steel structural design, seismic analysis, foundation calculations, and 3D BIM coordination.",
+    "roadmap_source": "O*NET 17-2051.00 Civil Engineers + IS/Eurocode Design Codes",
+    "role_count": 1
+  },
+  {
+    "id": "chem_process",
+    "name": "Process Engineering & Plant Design",
+    "branch_id": "CHEM",
+    "description": "Chemical thermodynamics, separation kinetics, process simulation in Aspen Plus, reactor design, and HAZOP plant safety.",
+    "roadmap_source": "O*NET 17-2041.00 Chemical Engineers + AIChE Standards",
+    "role_count": 1
+  },
+  {
+    "id": "biotech_bioinformatics",
+    "name": "Bioinformatics & Bioprocess",
+    "branch_id": "BIOTECH",
+    "description": "Computational genomics, NGS data pipelines, molecular docking, bioprocess bioreactor optimization, and protein engineering.",
+    "roadmap_source": "O*NET 19-1029.01 Bioinformatics Scientists + NCBI / EMBL-EBI Frameworks",
+    "role_count": 1
+  },
+  {
+    "id": "aero_flight_systems",
+    "name": "Aerodynamics & Flight Systems",
+    "branch_id": "AERO",
+    "description": "Supersonic/subsonic CFD aerodynamics, rocket propulsion, flight dynamics, structural aeroelasticity, and autonomous UAV flight control.",
+    "roadmap_source": "O*NET 17-2011.00 Aerospace Engineers + NASA / AIAA Frameworks",
+    "role_count": 1
+  },
+  {
+    "id": "auto_vehicle_systems",
+    "name": "Automotive Engineering & Connected Vehicles",
+    "branch_id": "AUTO",
+    "description": "EV powertrain integration, chassis dynamics, AUTOSAR firmware architectures, CAN/LIN vehicle networks, and ADAS perception.",
+    "roadmap_source": "O*NET 17-2141.02 Automotive Engineers + AUTOSAR & ISO 26262 Standards",
+    "role_count": 1
+  },
+  {
+    "id": "robotics_automation",
+    "name": "Robotics & Industrial Automation",
+    "branch_id": "ROBOTICS",
+    "description": "Multi-axis manipulator kinematics, ROS2 framework, computer vision sensor fusion, LiDAR SLAM, and Siemens PLC industrial lines.",
+    "roadmap_source": "O*NET 17-2199.08 Robotics Engineers + Open Robotics ROS2 Framework",
+    "role_count": 1
+  }
+]

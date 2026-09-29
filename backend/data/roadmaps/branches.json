@@ -1,0 +1,72 @@
+[
+  {
+    "id": "CSE",
+    "name": "Computer Science & Engineering / IT",
+    "short_name": "CSE / IT",
+    "icon": "\ud83d\udcbb",
+    "description": "Software architecture, distributed systems, algorithms, artificial intelligence, and cloud platforms."
+  },
+  {
+    "id": "ECE",
+    "name": "Electronics & Communication Engineering",
+    "short_name": "ECE",
+    "icon": "\ud83d\udce1",
+    "description": "VLSI silicon design, embedded microcontrollers, signal processing, RF, and wireless telecommunications."
+  },
+  {
+    "id": "EEE",
+    "name": "Electrical & Electronics Engineering",
+    "short_name": "EEE",
+    "icon": "\u26a1",
+    "description": "Power systems, renewable grids, electric vehicle motor drives, power electronics, and industrial control."
+  },
+  {
+    "id": "MECH",
+    "name": "Mechanical Engineering",
+    "short_name": "Mechanical",
+    "icon": "\u2699\ufe0f",
+    "description": "CAD product design, finite element analysis, computational fluid dynamics, robotics, and manufacturing."
+  },
+  {
+    "id": "CIVIL",
+    "name": "Civil Engineering",
+    "short_name": "Civil",
+    "icon": "\ud83c\udfd7\ufe0f",
+    "description": "Structural analysis, geotechnical foundations, transportation planning, BIM modeling, and environmental hydrology."
+  },
+  {
+    "id": "CHEM",
+    "name": "Chemical Engineering",
+    "short_name": "Chemical",
+    "icon": "\ud83e\uddea",
+    "description": "Process modeling, petrochemical separation, polymer synthesis, Aspen simulation, and plant safety."
+  },
+  {
+    "id": "BIOTECH",
+    "name": "Biotechnology / Biomedical Engineering",
+    "short_name": "Biotech / Biomedical",
+    "icon": "\ud83e\uddec",
+    "description": "Computational genomics, bioinformatics pipelines, bioprocess optimization, and medical device instrumentation."
+  },
+  {
+    "id": "AERO",
+    "name": "Aerospace / Aeronautical Engineering",
+    "short_name": "Aerospace",
+    "icon": "\u2708\ufe0f",
+    "description": "Aerodynamics CFD, rocket propulsion, flight dynamics, structural aeroelasticity, and satellite orbital mechanics."
+  },
+  {
+    "id": "AUTO",
+    "name": "Automobile / Automotive Engineering",
+    "short_name": "Automobile",
+    "icon": "\ud83d\ude97",
+    "description": "EV powertrain architectures, vehicle dynamics, AUTOSAR embedded firmware, ADAS sensor stacks, and BIW crash safety."
+  },
+  {
+    "id": "ROBOTICS",
+    "name": "Mechatronics / Robotics & Automation",
+    "short_name": "Mechatronics / Robotics",
+    "icon": "\ud83e\udd16",
+    "description": "Multi-disciplinary robotics, kinematics, sensor fusion, PLC/SCADA automation, and autonomous navigation with ROS."
+  }
+]

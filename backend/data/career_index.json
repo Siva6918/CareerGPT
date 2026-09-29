@@ -1,0 +1,1948 @@
+{
+  "CSE": {
+    "Web Development": {
+      "tracks": [
+        {
+          "title": "Frontend Developer",
+          "languages": [
+            "JavaScript",
+            "TypeScript"
+          ],
+          "technologies": [
+            "HTML",
+            "CSS",
+            "React",
+            "Next.js",
+            "Angular",
+            "Vue"
+          ]
+        },
+        {
+          "title": "Backend Developer",
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "Go"
+          ],
+          "technologies": [
+            "Spring Boot",
+            "Django",
+            "Flask",
+            "Node.js",
+            "Express",
+            "REST",
+            "GraphQL"
+          ]
+        },
+        {
+          "title": "Full Stack Developer",
+          "languages": [
+            "JavaScript",
+            "TypeScript",
+            "Java",
+            "Python"
+          ],
+          "technologies": [
+            "React/Next.js",
+            "Node/Express",
+            "Spring Boot",
+            "Django",
+            "PostgreSQL",
+            "MongoDB"
+          ]
+        },
+        {
+          "title": "API / Integration Developer",
+          "languages": [
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Java"
+          ],
+          "technologies": [
+            "REST",
+            "GraphQL",
+            "WebSockets",
+            "OAuth2"
+          ]
+        }
+      ],
+      "career_family": "Web Development"
+    },
+    "Data & AI": {
+      "tracks": [
+        {
+          "title": "Data Analyst",
+          "languages": [
+            "Python",
+            "SQL",
+            "R"
+          ],
+          "technologies": [
+            "Excel",
+            "SQL",
+            "Power BI",
+            "Pandas",
+            "statistics"
+          ]
+        },
+        {
+          "title": "Data Scientist",
+          "languages": [
+            "Python",
+            "R",
+            "SQL"
+          ],
+          "technologies": [
+            "NumPy",
+            "Pandas",
+            "scikit-learn",
+            "statistics",
+            "visualization"
+          ]
+        },
+        {
+          "title": "Machine Learning Engineer",
+          "languages": [
+            "Python",
+            "C++"
+          ],
+          "technologies": [
+            "scikit-learn",
+            "PyTorch/TensorFlow",
+            "ML pipelines",
+            "deployment"
+          ]
+        },
+        {
+          "title": "AI / GenAI Engineer",
+          "languages": [
+            "Python"
+          ],
+          "technologies": [
+            "LLMs",
+            "embeddings",
+            "RAG",
+            "agents",
+            "vector DB",
+            "evaluation",
+            "APIs"
+          ]
+        },
+        {
+          "title": "Data Engineer",
+          "languages": [
+            "Python",
+            "SQL",
+            "Java",
+            "Scala"
+          ],
+          "technologies": [
+            "ETL",
+            "Spark",
+            "Airflow",
+            "Kafka",
+            "warehouses",
+            "cloud"
+          ]
+        },
+        {
+          "title": "MLOps Engineer",
+          "languages": [
+            "Python",
+            "Bash"
+          ],
+          "technologies": [
+            "Docker",
+            "Kubernetes",
+            "CI/CD",
+            "model serving",
+            "monitoring"
+          ]
+        },
+        {
+          "title": "BI Analyst",
+          "languages": [
+            "SQL",
+            "Python",
+            "DAX"
+          ],
+          "technologies": [
+            "Power BI",
+            "data modeling",
+            "DAX"
+          ]
+        }
+      ],
+      "career_family": "Data & AI"
+    },
+    "Cloud / DevOps / SRE": {
+      "tracks": [
+        {
+          "title": "DevOps Engineer",
+          "languages": [
+            "Bash",
+            "Python",
+            "Go"
+          ],
+          "technologies": [
+            "Linux",
+            "Git",
+            "Docker",
+            "Kubernetes",
+            "CI/CD",
+            "Terraform",
+            "cloud"
+          ]
+        },
+        {
+          "title": "Cloud Engineer",
+          "languages": [
+            "Python",
+            "Bash",
+            "PowerShell"
+          ],
+          "technologies": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "IAM",
+            "compute",
+            "storage",
+            "networking"
+          ]
+        },
+        {
+          "title": "Site Reliability Engineer",
+          "languages": [
+            "Python",
+            "Go",
+            "Bash"
+          ],
+          "technologies": [
+            "Observability",
+            "SLO/SLA",
+            "incident response",
+            "automation"
+          ]
+        },
+        {
+          "title": "DevSecOps Engineer",
+          "languages": [
+            "Python",
+            "Bash"
+          ],
+          "technologies": [
+            "CI/CD security",
+            "SAST/DAST",
+            "containers",
+            "secrets",
+            "cloud security"
+          ]
+        }
+      ],
+      "career_family": "Cloud / DevOps / SRE"
+    },
+    "Cybersecurity": {
+      "tracks": [
+        {
+          "title": "Security Analyst",
+          "languages": [
+            "Python",
+            "Bash"
+          ],
+          "technologies": [
+            "Linux",
+            "networking",
+            "SIEM",
+            "incident response",
+            "threat analysis"
+          ]
+        },
+        {
+          "title": "Penetration Tester",
+          "languages": [
+            "Python",
+            "Bash"
+          ],
+          "technologies": [
+            "Kali",
+            "Burp Suite",
+            "Nmap",
+            "Metasploit",
+            "OWASP"
+          ]
+        },
+        {
+          "title": "Application Security Engineer",
+          "languages": [
+            "Python",
+            "JavaScript",
+            "Java"
+          ],
+          "technologies": [
+            "OWASP",
+            "SAST/DAST",
+            "secure SDLC",
+            "API security"
+          ]
+        },
+        {
+          "title": "Cloud Security Engineer",
+          "languages": [
+            "Python",
+            "Bash"
+          ],
+          "technologies": [
+            "IAM",
+            "cloud security",
+            "containers"
+          ]
+        }
+      ],
+      "career_family": "Cybersecurity"
+    },
+    "Core CS": {
+      "tracks": [
+        {
+          "title": "DSA / Problem Solving Engineer",
+          "languages": [
+            "C++",
+            "Java",
+            "Python"
+          ],
+          "technologies": [
+            "DSA",
+            "complexity",
+            "problem solving"
+          ]
+        },
+        {
+          "title": "Systems / OS Engineer",
+          "languages": [
+            "C",
+            "C++",
+            "Rust"
+          ],
+          "technologies": [
+            "OS",
+            "processes",
+            "memory",
+            "concurrency",
+            "Linux"
+          ]
+        },
+        {
+          "title": "Network Engineer",
+          "languages": [
+            "Python",
+            "Bash"
+          ],
+          "technologies": [
+            "TCP/IP",
+            "routing",
+            "switching",
+            "DNS",
+            "HTTP",
+            "Wireshark"
+          ]
+        },
+        {
+          "title": "Database Engineer",
+          "languages": [
+            "SQL",
+            "Python",
+            "Java"
+          ],
+          "technologies": [
+            "PostgreSQL",
+            "MySQL",
+            "indexing",
+            "transactions"
+          ]
+        },
+        {
+          "title": "QA / Test Engineer",
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript"
+          ],
+          "technologies": [
+            "Selenium/Playwright",
+            "API testing",
+            "CI"
+          ]
+        },
+        {
+          "title": "Software Architect",
+          "languages": [
+            "Java",
+            "C#",
+            "TypeScript",
+            "Python"
+          ],
+          "technologies": [
+            "Architecture",
+            "design patterns",
+            "distributed systems"
+          ]
+        }
+      ],
+      "career_family": "Core CS"
+    },
+    "Mobile": {
+      "tracks": [
+        {
+          "title": "Android Developer",
+          "languages": [
+            "Kotlin",
+            "Java"
+          ],
+          "technologies": [
+            "Android SDK",
+            "Jetpack",
+            "Compose",
+            "REST",
+            "Room"
+          ]
+        },
+        {
+          "title": "iOS Developer",
+          "languages": [
+            "Swift"
+          ],
+          "technologies": [
+            "SwiftUI",
+            "UIKit",
+            "networking",
+            "persistence"
+          ]
+        },
+        {
+          "title": "Cross-Platform Mobile Developer",
+          "languages": [
+            "Dart",
+            "TypeScript"
+          ],
+          "technologies": [
+            "Flutter / React Native",
+            "APIs",
+            "state management"
+          ]
+        }
+      ],
+      "career_family": "Mobile"
+    },
+    "Game / XR": {
+      "tracks": [
+        {
+          "title": "Game Developer",
+          "languages": [
+            "C#",
+            "C++"
+          ],
+          "technologies": [
+            "Unity",
+            "Unreal",
+            "game math",
+            "physics",
+            "rendering"
+          ]
+        },
+        {
+          "title": "AR/VR Developer",
+          "languages": [
+            "C#",
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "Unity/Unreal",
+            "XR",
+            "3D math",
+            "computer vision"
+          ]
+        }
+      ],
+      "career_family": "Game / XR"
+    },
+    "Blockchain / Web3": {
+      "tracks": [
+        {
+          "title": "Blockchain Developer",
+          "languages": [
+            "Solidity",
+            "Rust",
+            "JavaScript"
+          ],
+          "technologies": [
+            "Smart contracts",
+            "EVM",
+            "wallets",
+            "Web3 APIs"
+          ]
+        },
+        {
+          "title": "Smart Contract Security Engineer",
+          "languages": [
+            "Solidity",
+            "Rust"
+          ],
+          "technologies": [
+            "Auditing",
+            "vulnerabilities",
+            "testing"
+          ]
+        }
+      ],
+      "career_family": "Blockchain / Web3"
+    },
+    "UX / Product": {
+      "tracks": [
+        {
+          "title": "UX Designer",
+          "languages": [
+            "HTML",
+            "CSS + design tools"
+          ],
+          "technologies": [
+            "User research",
+            "wireframes",
+            "prototyping",
+            "usability"
+          ]
+        },
+        {
+          "title": "Product Designer",
+          "languages": [
+            "HTML",
+            "CSS + design tools"
+          ],
+          "technologies": [
+            "UX",
+            "UI",
+            "design systems",
+            "product thinking"
+          ]
+        },
+        {
+          "title": "Product Manager",
+          "languages": [
+            "SQL",
+            "analytics basics"
+          ],
+          "technologies": [
+            "Product discovery",
+            "metrics",
+            "roadmaps"
+          ]
+        }
+      ],
+      "career_family": "UX / Product"
+    },
+    "Emerging AI": {
+      "tracks": [
+        {
+          "title": "AI Red Team / AI Security",
+          "languages": [
+            "Python"
+          ],
+          "technologies": [
+            "LLM security",
+            "prompt attacks",
+            "evaluation",
+            "threat modeling"
+          ]
+        },
+        {
+          "title": "Forward Deployed Engineer",
+          "languages": [
+            "Python",
+            "TypeScript"
+          ],
+          "technologies": [
+            "Customer-facing engineering",
+            "APIs",
+            "data",
+            "deployment"
+          ]
+        }
+      ],
+      "career_family": "Emerging AI"
+    }
+  },
+  "ECE": {
+    "VLSI / Semiconductor": {
+      "tracks": [
+        {
+          "title": "RTL Design Engineer",
+          "languages": [
+            "Verilog",
+            "SystemVerilog",
+            "C++"
+          ],
+          "technologies": [
+            "RTL",
+            "digital design",
+            "simulation",
+            "verification"
+          ]
+        },
+        {
+          "title": "Verification Engineer",
+          "languages": [
+            "SystemVerilog",
+            "Python",
+            "C++"
+          ],
+          "technologies": [
+            "UVM",
+            "assertions",
+            "coverage"
+          ]
+        },
+        {
+          "title": "Physical Design Engineer",
+          "languages": [
+            "TCL",
+            "Python"
+          ],
+          "technologies": [
+            "ASIC flow",
+            "synthesis",
+            "STA",
+            "P&R"
+          ]
+        },
+        {
+          "title": "FPGA Engineer",
+          "languages": [
+            "Verilog",
+            "VHDL",
+            "C"
+          ],
+          "technologies": [
+            "FPGA",
+            "Vivado",
+            "timing",
+            "AXI"
+          ]
+        }
+      ],
+      "career_family": "VLSI / Semiconductor"
+    },
+    "Embedded / IoT": {
+      "tracks": [
+        {
+          "title": "Embedded Systems Engineer",
+          "languages": [
+            "C",
+            "C++"
+          ],
+          "technologies": [
+            "MCUs",
+            "ARM",
+            "RTOS",
+            "drivers",
+            "peripherals"
+          ]
+        },
+        {
+          "title": "IoT Engineer",
+          "languages": [
+            "C",
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "ESP32",
+            "STM32",
+            "Raspberry Pi",
+            "MQTT",
+            "sensors"
+          ]
+        },
+        {
+          "title": "Firmware Engineer",
+          "languages": [
+            "C",
+            "C++"
+          ],
+          "technologies": [
+            "Drivers",
+            "bootloaders",
+            "memory",
+            "interrupts",
+            "RTOS"
+          ]
+        }
+      ],
+      "career_family": "Embedded / IoT"
+    },
+    "Signal / Image Processing": {
+      "tracks": [
+        {
+          "title": "Signal Processing Engineer",
+          "languages": [
+            "MATLAB",
+            "Python",
+            "C++"
+          ],
+          "technologies": [
+            "DSP",
+            "transforms",
+            "filtering",
+            "sampling"
+          ]
+        },
+        {
+          "title": "Computer Vision Engineer",
+          "languages": [
+            "Python",
+            "C++"
+          ],
+          "technologies": [
+            "OpenCV",
+            "image processing",
+            "deep vision"
+          ]
+        }
+      ],
+      "career_family": "Signal / Image Processing"
+    },
+    "Communication / RF": {
+      "tracks": [
+        {
+          "title": "RF / Microwave Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "RF",
+            "antennas",
+            "propagation",
+            "EM"
+          ]
+        },
+        {
+          "title": "Wireless / 5G Engineer",
+          "languages": [
+            "Python",
+            "C++",
+            "MATLAB"
+          ],
+          "technologies": [
+            "5G/6G",
+            "OFDM",
+            "MIMO",
+            "protocols"
+          ]
+        },
+        {
+          "title": "Optical Communication Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Fiber optics",
+            "photonics",
+            "modulation"
+          ]
+        }
+      ],
+      "career_family": "Communication / RF"
+    },
+    "Robotics / Control": {
+      "tracks": [
+        {
+          "title": "Robotics Engineer",
+          "languages": [
+            "C++",
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Kinematics",
+            "control",
+            "ROS",
+            "sensors"
+          ]
+        },
+        {
+          "title": "Control Systems Engineer",
+          "languages": [
+            "MATLAB",
+            "Simulink",
+            "C"
+          ],
+          "technologies": [
+            "Control theory",
+            "PID",
+            "state space"
+          ]
+        }
+      ],
+      "career_family": "Robotics / Control"
+    }
+  },
+  "EEE": {
+    "Power Systems / Smart Grid": {
+      "tracks": [
+        {
+          "title": "Power Systems Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Load flow",
+            "stability",
+            "protection",
+            "smart grid"
+          ]
+        },
+        {
+          "title": "Smart Grid Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "DER",
+            "demand response",
+            "SCADA",
+            "analytics"
+          ]
+        },
+        {
+          "title": "Protection Engineer",
+          "languages": [
+            "MATLAB",
+            "ETAP"
+          ],
+          "technologies": [
+            "Relays",
+            "faults",
+            "coordination"
+          ]
+        }
+      ],
+      "career_family": "Power Systems / Smart Grid"
+    },
+    "Renewable Energy": {
+      "tracks": [
+        {
+          "title": "Renewable Energy Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Solar",
+            "wind",
+            "hybrid systems",
+            "storage"
+          ]
+        },
+        {
+          "title": "Solar PV Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "PV modeling",
+            "MPPT",
+            "system design"
+          ]
+        }
+      ],
+      "career_family": "Renewable Energy"
+    },
+    "EV / Battery": {
+      "tracks": [
+        {
+          "title": "EV Systems Engineer",
+          "languages": [
+            "MATLAB",
+            "Simulink",
+            "C"
+          ],
+          "technologies": [
+            "EV architecture",
+            "motors",
+            "power electronics"
+          ]
+        },
+        {
+          "title": "Battery / BMS Engineer",
+          "languages": [
+            "MATLAB",
+            "Python",
+            "C"
+          ],
+          "technologies": [
+            "SOC/SOH",
+            "BMS",
+            "thermal management"
+          ]
+        }
+      ],
+      "career_family": "EV / Battery"
+    },
+    "Power Electronics / Drives": {
+      "tracks": [
+        {
+          "title": "Power Electronics Engineer",
+          "languages": [
+            "MATLAB",
+            "Simulink",
+            "C"
+          ],
+          "technologies": [
+            "Converters",
+            "inverters",
+            "PWM"
+          ]
+        },
+        {
+          "title": "Motor Drives Engineer",
+          "languages": [
+            "MATLAB",
+            "Simulink"
+          ],
+          "technologies": [
+            "Machines",
+            "drives",
+            "control",
+            "VFDs"
+          ]
+        }
+      ],
+      "career_family": "Power Electronics / Drives"
+    },
+    "Industrial Automation": {
+      "tracks": [
+        {
+          "title": "PLC/SCADA Engineer",
+          "languages": [
+            "Ladder",
+            "Structured Text"
+          ],
+          "technologies": [
+            "PLC",
+            "HMI",
+            "SCADA",
+            "industrial networks"
+          ]
+        },
+        {
+          "title": "Instrumentation & Control Engineer",
+          "languages": [
+            "C",
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Sensors",
+            "control loops",
+            "DCS/PLC"
+          ]
+        }
+      ],
+      "career_family": "Industrial Automation"
+    }
+  },
+  "Mechanical": {
+    "Design / CAD / CAM": {
+      "tracks": [
+        {
+          "title": "Mechanical Design Engineer",
+          "languages": [
+            "Python",
+            "MATLAB",
+            "C++"
+          ],
+          "technologies": [
+            "CAD",
+            "GD&T",
+            "design calculations"
+          ]
+        },
+        {
+          "title": "CAD Engineer",
+          "languages": [
+            "N",
+            "A",
+            "Python optional"
+          ],
+          "technologies": [
+            "AutoCAD",
+            "SolidWorks",
+            "CATIA",
+            "Creo",
+            "NX"
+          ]
+        },
+        {
+          "title": "CAM / CNC Engineer",
+          "languages": [
+            "G-code",
+            "M-code"
+          ],
+          "technologies": [
+            "CAM",
+            "CNC",
+            "tooling",
+            "machining"
+          ]
+        }
+      ],
+      "career_family": "Design / CAD / CAM"
+    },
+    "Manufacturing / Industrial": {
+      "tracks": [
+        {
+          "title": "Manufacturing Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Process planning",
+            "CNC",
+            "quality",
+            "lean"
+          ]
+        },
+        {
+          "title": "Industrial Engineer",
+          "languages": [
+            "Python",
+            "R",
+            "Excel"
+          ],
+          "technologies": [
+            "Operations research",
+            "productivity",
+            "Six Sigma"
+          ]
+        },
+        {
+          "title": "Quality Engineer",
+          "languages": [
+            "Python",
+            "Excel",
+            "Minitab"
+          ],
+          "technologies": [
+            "SPC",
+            "Six Sigma",
+            "root-cause analysis"
+          ]
+        }
+      ],
+      "career_family": "Manufacturing / Industrial"
+    },
+    "Thermal / Fluid / HVAC": {
+      "tracks": [
+        {
+          "title": "Thermal Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Thermodynamics",
+            "heat transfer",
+            "CFD"
+          ]
+        },
+        {
+          "title": "CFD Engineer",
+          "languages": [
+            "Python",
+            "C++",
+            "MATLAB"
+          ],
+          "technologies": [
+            "ANSYS Fluent",
+            "OpenFOAM",
+            "meshing"
+          ]
+        },
+        {
+          "title": "HVAC Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Psychrometrics",
+            "load calculations",
+            "HVAC"
+          ]
+        }
+      ],
+      "career_family": "Thermal / Fluid / HVAC"
+    },
+    "Robotics / Mechatronics": {
+      "tracks": [
+        {
+          "title": "Mechatronics Engineer",
+          "languages": [
+            "C",
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "Sensors",
+            "actuators",
+            "PLC",
+            "control"
+          ]
+        },
+        {
+          "title": "Robotics Engineer",
+          "languages": [
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "ROS",
+            "kinematics",
+            "planning"
+          ]
+        }
+      ],
+      "career_family": "Robotics / Mechatronics"
+    },
+    "Automotive / EV": {
+      "tracks": [
+        {
+          "title": "Automotive Engineer",
+          "languages": [
+            "MATLAB",
+            "Python",
+            "C++"
+          ],
+          "technologies": [
+            "Vehicle dynamics",
+            "powertrain",
+            "EV",
+            "ADAS"
+          ]
+        },
+        {
+          "title": "EV Mechanical Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Thermal",
+            "battery pack",
+            "vehicle integration"
+          ]
+        }
+      ],
+      "career_family": "Automotive / EV"
+    }
+  },
+  "Civil": {
+    "Structural": {
+      "tracks": [
+        {
+          "title": "Structural Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Structural analysis",
+            "RCC",
+            "steel",
+            "seismic design"
+          ]
+        },
+        {
+          "title": "Structural BIM Engineer",
+          "languages": [
+            "Python optional"
+          ],
+          "technologies": [
+            "Revit",
+            "STAAD.Pro",
+            "ETABS",
+            "Tekla"
+          ]
+        }
+      ],
+      "career_family": "Structural"
+    },
+    "Geotechnical": {
+      "tracks": [
+        {
+          "title": "Geotechnical Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Soil mechanics",
+            "foundations",
+            "PLAXIS"
+          ]
+        }
+      ],
+      "career_family": "Geotechnical"
+    },
+    "Transportation": {
+      "tracks": [
+        {
+          "title": "Transportation Engineer",
+          "languages": [
+            "Python",
+            "R"
+          ],
+          "technologies": [
+            "Traffic engineering",
+            "highways",
+            "transport planning"
+          ]
+        }
+      ],
+      "career_family": "Transportation"
+    },
+    "Environmental / Water": {
+      "tracks": [
+        {
+          "title": "Environmental Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Water/wastewater",
+            "air pollution"
+          ]
+        },
+        {
+          "title": "Water Resources Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Hydrology",
+            "hydraulics",
+            "HEC-RAS"
+          ]
+        }
+      ],
+      "career_family": "Environmental / Water"
+    },
+    "Construction / BIM": {
+      "tracks": [
+        {
+          "title": "Construction Manager",
+          "languages": [
+            "Excel",
+            "Python optional"
+          ],
+          "technologies": [
+            "Planning",
+            "contracts",
+            "Primavera P6"
+          ]
+        },
+        {
+          "title": "BIM Engineer",
+          "languages": [
+            "Python optional"
+          ],
+          "technologies": [
+            "Revit",
+            "Navisworks",
+            "BIM coordination"
+          ]
+        }
+      ],
+      "career_family": "Construction / BIM"
+    },
+    "Surveying / GIS": {
+      "tracks": [
+        {
+          "title": "GIS Engineer",
+          "languages": [
+            "Python",
+            "R"
+          ],
+          "technologies": [
+            "ArcGIS/QGIS",
+            "spatial analysis",
+            "remote sensing"
+          ]
+        },
+        {
+          "title": "Surveying Engineer",
+          "languages": [
+            "Python optional"
+          ],
+          "technologies": [
+            "Total Station",
+            "GPS",
+            "surveying computations"
+          ]
+        }
+      ],
+      "career_family": "Surveying / GIS"
+    }
+  },
+  "Chemical": {
+    "Process Design": {
+      "tracks": [
+        {
+          "title": "Process Design Engineer",
+          "languages": [
+            "Python",
+            "MATLAB",
+            "VBA"
+          ],
+          "technologies": [
+            "Material/energy balances",
+            "PFD/P&ID",
+            "simulation"
+          ]
+        },
+        {
+          "title": "Process Simulation Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Aspen Plus/HYSYS",
+            "thermodynamics"
+          ]
+        }
+      ],
+      "career_family": "Process Design"
+    },
+    "Process Safety / Environmental": {
+      "tracks": [
+        {
+          "title": "Process Safety Engineer",
+          "languages": [
+            "Python",
+            "Excel"
+          ],
+          "technologies": [
+            "HAZOP",
+            "PHA",
+            "risk analysis"
+          ]
+        },
+        {
+          "title": "Environmental Process Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Emissions",
+            "wastewater"
+          ]
+        }
+      ],
+      "career_family": "Process Safety / Environmental"
+    },
+    "Petroleum / Energy": {
+      "tracks": [
+        {
+          "title": "Petroleum Process Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Refining",
+            "separation",
+            "optimization"
+          ]
+        },
+        {
+          "title": "Hydrogen / Energy Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Hydrogen",
+            "electrolysis",
+            "energy systems"
+          ]
+        }
+      ],
+      "career_family": "Petroleum / Energy"
+    },
+    "Process Control": {
+      "tracks": [
+        {
+          "title": "Chemical Process Control Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Dynamic systems",
+            "PID",
+            "DCS/PLC"
+          ]
+        }
+      ],
+      "career_family": "Process Control"
+    }
+  },
+  "Biotechnology": {
+    "Bioinformatics": {
+      "tracks": [
+        {
+          "title": "Bioinformatics Engineer",
+          "languages": [
+            "Python",
+            "R",
+            "Perl"
+          ],
+          "technologies": [
+            "BLAST",
+            "Biopython",
+            "NGS",
+            "pipelines"
+          ]
+        },
+        {
+          "title": "Computational Biology Analyst",
+          "languages": [
+            "Python",
+            "R"
+          ],
+          "technologies": [
+            "Genomics",
+            "molecular data"
+          ]
+        }
+      ],
+      "career_family": "Bioinformatics"
+    },
+    "Drug Discovery": {
+      "tracks": [
+        {
+          "title": "Computational Drug Discovery Scientist",
+          "languages": [
+            "Python",
+            "R"
+          ],
+          "technologies": [
+            "Docking",
+            "molecular modeling",
+            "cheminformatics"
+          ]
+        }
+      ],
+      "career_family": "Drug Discovery"
+    },
+    "Bioprocess": {
+      "tracks": [
+        {
+          "title": "Bioprocess Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Bioreactors",
+            "kinetics",
+            "process optimization"
+          ]
+        }
+      ],
+      "career_family": "Bioprocess"
+    },
+    "Biomedical": {
+      "tracks": [
+        {
+          "title": "Biomedical Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Medical devices",
+            "biosignals",
+            "imaging"
+          ]
+        },
+        {
+          "title": "Medical Imaging Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "DICOM",
+            "MRI/CT",
+            "image processing"
+          ]
+        }
+      ],
+      "career_family": "Biomedical"
+    }
+  },
+  "Aerospace": {
+    "Aerodynamics / CFD": {
+      "tracks": [
+        {
+          "title": "Aerospace CFD Engineer",
+          "languages": [
+            "Python",
+            "MATLAB",
+            "C++"
+          ],
+          "technologies": [
+            "Aerodynamics",
+            "CFD",
+            "meshing"
+          ]
+        },
+        {
+          "title": "Aerodynamics Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Airfoils",
+            "compressible flow"
+          ]
+        }
+      ],
+      "career_family": "Aerodynamics / CFD"
+    },
+    "Propulsion": {
+      "tracks": [
+        {
+          "title": "Propulsion Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Gas turbines",
+            "rockets",
+            "combustion"
+          ]
+        }
+      ],
+      "career_family": "Propulsion"
+    },
+    "Flight Mechanics / Control": {
+      "tracks": [
+        {
+          "title": "Flight Controls Engineer",
+          "languages": [
+            "MATLAB",
+            "Simulink",
+            "C++"
+          ],
+          "technologies": [
+            "Dynamics",
+            "control",
+            "autopilot"
+          ]
+        }
+      ],
+      "career_family": "Flight Mechanics / Control"
+    },
+    "Structures": {
+      "tracks": [
+        {
+          "title": "Aerospace Structures Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Stress",
+            "composites",
+            "FEM"
+          ]
+        }
+      ],
+      "career_family": "Structures"
+    },
+    "Avionics / UAV / Space": {
+      "tracks": [
+        {
+          "title": "Avionics Engineer",
+          "languages": [
+            "C",
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "Embedded",
+            "navigation",
+            "RTOS"
+          ]
+        },
+        {
+          "title": "UAV / Drone Engineer",
+          "languages": [
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "PX4/ArduPilot",
+            "ROS",
+            "control"
+          ]
+        },
+        {
+          "title": "Space Systems Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Mission analysis",
+            "systems engineering"
+          ]
+        }
+      ],
+      "career_family": "Avionics / UAV / Space"
+    }
+  },
+  "Automotive": {
+    "Vehicle Dynamics / Design": {
+      "tracks": [
+        {
+          "title": "Vehicle Dynamics Engineer",
+          "languages": [
+            "MATLAB",
+            "Python"
+          ],
+          "technologies": [
+            "Vehicle dynamics",
+            "handling",
+            "braking"
+          ]
+        }
+      ],
+      "career_family": "Vehicle Dynamics / Design"
+    },
+    "EV / Hybrid": {
+      "tracks": [
+        {
+          "title": "EV Systems Engineer",
+          "languages": [
+            "MATLAB",
+            "Simulink",
+            "C++"
+          ],
+          "technologies": [
+            "Powertrain",
+            "battery",
+            "motors",
+            "controls"
+          ]
+        }
+      ],
+      "career_family": "EV / Hybrid"
+    },
+    "ADAS / Autonomous": {
+      "tracks": [
+        {
+          "title": "ADAS Engineer",
+          "languages": [
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "Perception",
+            "LiDAR/radar/camera",
+            "sensor fusion"
+          ]
+        },
+        {
+          "title": "Autonomous Driving Engineer",
+          "languages": [
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "Planning",
+            "localization",
+            "perception",
+            "ROS"
+          ]
+        }
+      ],
+      "career_family": "ADAS / Autonomous"
+    },
+    "Automotive Embedded": {
+      "tracks": [
+        {
+          "title": "Automotive Embedded Engineer",
+          "languages": [
+            "C",
+            "C++"
+          ],
+          "technologies": [
+            "CAN/LIN",
+            "AUTOSAR",
+            "RTOS",
+            "diagnostics"
+          ]
+        }
+      ],
+      "career_family": "Automotive Embedded"
+    },
+    "Manufacturing / Quality": {
+      "tracks": [
+        {
+          "title": "Automotive Manufacturing Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Manufacturing",
+            "quality",
+            "lean"
+          ]
+        }
+      ],
+      "career_family": "Manufacturing / Quality"
+    }
+  },
+  "Mechatronics": {
+    "Robotics": {
+      "tracks": [
+        {
+          "title": "Robotics Engineer",
+          "languages": [
+            "C++",
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "ROS",
+            "kinematics",
+            "planning",
+            "control"
+          ]
+        },
+        {
+          "title": "Robot Software Engineer",
+          "languages": [
+            "C++",
+            "Python"
+          ],
+          "technologies": [
+            "ROS2",
+            "SLAM",
+            "navigation",
+            "perception"
+          ]
+        }
+      ],
+      "career_family": "Robotics"
+    },
+    "Automation": {
+      "tracks": [
+        {
+          "title": "Automation Engineer",
+          "languages": [
+            "Ladder",
+            "Structured Text",
+            "C"
+          ],
+          "technologies": [
+            "PLC",
+            "HMI",
+            "industrial networks"
+          ]
+        }
+      ],
+      "career_family": "Automation"
+    }
+  },
+  "Instrumentation": {
+    "Instrumentation": {
+      "tracks": [
+        {
+          "title": "Instrumentation Engineer",
+          "languages": [
+            "C",
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Sensors",
+            "transducers",
+            "DAQ",
+            "signal conditioning"
+          ]
+        }
+      ],
+      "career_family": "Instrumentation"
+    },
+    "Control & Automation": {
+      "tracks": [
+        {
+          "title": "Control Engineer",
+          "languages": [
+            "MATLAB",
+            "Simulink",
+            "C"
+          ],
+          "technologies": [
+            "PID",
+            "state space",
+            "PLC/DCS"
+          ]
+        }
+      ],
+      "career_family": "Control & Automation"
+    }
+  },
+  "Metallurgy": {
+    "Materials Engineering": {
+      "tracks": [
+        {
+          "title": "Materials Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Materials characterization",
+            "phase diagrams",
+            "mechanics"
+          ]
+        },
+        {
+          "title": "Metallurgy Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Heat treatment",
+            "failure analysis"
+          ]
+        }
+      ],
+      "career_family": "Materials Engineering"
+    }
+  },
+  "Mining": {
+    "Mining Engineering": {
+      "tracks": [
+        {
+          "title": "Mining Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Mine planning",
+            "geomechanics",
+            "surveying",
+            "safety"
+          ]
+        },
+        {
+          "title": "Mining Data / Automation Engineer",
+          "languages": [
+            "Python"
+          ],
+          "technologies": [
+            "Mining analytics",
+            "sensors",
+            "automation"
+          ]
+        }
+      ],
+      "career_family": "Mining Engineering"
+    }
+  },
+  "Textile": {
+    "Textile Engineering": {
+      "tracks": [
+        {
+          "title": "Textile Process Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Fiber",
+            "yarn",
+            "fabric",
+            "process optimization"
+          ]
+        },
+        {
+          "title": "Textile Quality Engineer",
+          "languages": [
+            "Python",
+            "Excel"
+          ],
+          "technologies": [
+            "Testing",
+            "quality",
+            "statistics"
+          ]
+        }
+      ],
+      "career_family": "Textile Engineering"
+    }
+  },
+  "Agricultural": {
+    "Agricultural Engineering": {
+      "tracks": [
+        {
+          "title": "Agricultural Automation Engineer",
+          "languages": [
+            "Python",
+            "C++"
+          ],
+          "technologies": [
+            "Sensors",
+            "IoT",
+            "precision agriculture"
+          ]
+        },
+        {
+          "title": "Food Process Engineer",
+          "languages": [
+            "Python",
+            "MATLAB"
+          ],
+          "technologies": [
+            "Food processing",
+            "quality",
+            "process control"
+          ]
+        }
+      ],
+      "career_family": "Agricultural Engineering"
+    }
+  }
+}

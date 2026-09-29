@@ -1,0 +1,140 @@
+[
+  {
+    "source_id": "roadmap_sh",
+    "name": "roadmap.sh",
+    "type": "developer_community_standards",
+    "url": "https://roadmap.sh/",
+    "coverage": [
+      "Software Development",
+      "Web",
+      "AI",
+      "Data",
+      "DevOps",
+      "Cybersecurity",
+      "Mobile"
+    ],
+    "description": "Community-driven developer roadmaps, role guides, and project tracks."
+  },
+  {
+    "source_id": "onet",
+    "name": "O*NET OnLine",
+    "type": "occupational_taxonomy",
+    "url": "https://www.onetonline.org/",
+    "coverage": [
+      "All Engineering Disciplines",
+      "Work Activities",
+      "Skills",
+      "Knowledge",
+      "Tools & Technology"
+    ],
+    "description": "U.S. Department of Labor occupational database defining job families and skill requirements."
+  },
+  {
+    "source_id": "esco",
+    "name": "European Skills, Competences, Qualifications and Occupations (ESCO)",
+    "type": "occupational_taxonomy",
+    "url": "https://esco.ec.europa.eu/",
+    "coverage": [
+      "Engineering Occupations",
+      "Transversal Skills",
+      "Industry Competencies"
+    ],
+    "description": "European Commission multilingual classification of skills and occupations."
+  },
+  {
+    "source_id": "nist_nice",
+    "name": "NIST NICE Cybersecurity Workforce Framework",
+    "type": "government_standard",
+    "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+    "coverage": [
+      "Cybersecurity Work Roles",
+      "Security Analysis",
+      "Incident Response",
+      "AppSec"
+    ],
+    "description": "National Initiative for Cybersecurity Education standard for cybersecurity roles."
+  },
+  {
+    "source_id": "arm_learning",
+    "name": "Arm Learning Paths",
+    "type": "vendor_official_training",
+    "url": "https://learn.arm.com/learning-paths/embedded-and-microcontrollers/",
+    "coverage": [
+      "Embedded Systems",
+      "Microcontrollers",
+      "RTOS",
+      "Edge AI",
+      "ARM Cortex"
+    ],
+    "description": "Official Arm engineering guides for embedded development and firmware."
+  },
+  {
+    "source_id": "mathworks",
+    "name": "MathWorks Documentation & Learning Pathways",
+    "type": "vendor_official_training",
+    "url": "https://www.mathworks.com/help/",
+    "coverage": [
+      "Control Systems",
+      "Signal Processing",
+      "Power Systems",
+      "Robotics",
+      "Simulink",
+      "CFD"
+    ],
+    "description": "Authoritative simulation and modeling pathways for electrical, mechanical, and aerospace."
+  },
+  {
+    "source_id": "autodesk",
+    "name": "Autodesk Learning Pathways",
+    "type": "vendor_official_training",
+    "url": "https://www.autodesk.com/certification/learning-pathways",
+    "coverage": [
+      "AutoCAD",
+      "Fusion 360",
+      "Revit",
+      "BIM",
+      "CAD/CAM",
+      "Manufacturing"
+    ],
+    "description": "Official engineering design and manufacturing standards."
+  },
+  {
+    "source_id": "esri",
+    "name": "Esri Training & ArcGIS Learning Plans",
+    "type": "vendor_official_training",
+    "url": "https://www.esri.com/training/",
+    "coverage": [
+      "Geographic Information Systems (GIS)",
+      "Spatial Analysis",
+      "Civil Remote Sensing"
+    ],
+    "description": "Geospatial mapping and infrastructure planning workflows."
+  },
+  {
+    "source_id": "siemens_sitrain",
+    "name": "Siemens SITRAIN Automation Education",
+    "type": "vendor_official_training",
+    "url": "https://www.siemens.com/global/en/products/services/industry/sitrain.html",
+    "coverage": [
+      "PLC Programming",
+      "SCADA",
+      "TIA Portal",
+      "Industrial Automation",
+      "Mechatronics"
+    ],
+    "description": "Industrial manufacturing automation and programmable logic controller standards."
+  },
+  {
+    "source_id": "cloud_official",
+    "name": "AWS / Azure / Google Cloud Official Architect Paths",
+    "type": "vendor_official_training",
+    "url": "https://aws.amazon.com/training/",
+    "coverage": [
+      "Cloud Architecture",
+      "DevOps",
+      "Containerization",
+      "MLOps"
+    ],
+    "description": "Official cloud engineering certifications and architectures."
+  }
+]

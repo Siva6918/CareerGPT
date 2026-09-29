@@ -1,0 +1,830 @@
+[
+  {
+    "id": "ai_engineer_guided",
+    "role_id": "ai_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "guided",
+    "title": "End-to-End Predictive Machine Learning API",
+    "skills": [
+      "numpy_pandas",
+      "machine_learning"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "ai_engineer_integrated",
+    "role_id": "ai_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "integrated",
+    "title": "Semantic Document Search Engine with Embeddings",
+    "skills": [
+      "embeddings_vector_search",
+      "python_core"
+    ],
+    "estimated_hours": 35
+  },
+  {
+    "id": "ai_engineer_advanced",
+    "role_id": "ai_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "advanced",
+    "title": "Production RAG Assistant with Citation & Guardrails",
+    "skills": [
+      "rag_architecture",
+      "model_evaluation_safety"
+    ],
+    "estimated_hours": 50
+  },
+  {
+    "id": "ai_engineer_capstone",
+    "role_id": "ai_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "capstone",
+    "title": "Autonomous Multi-Agent Research System with Tool Calling",
+    "skills": [
+      "agentic_workflows",
+      "ai_deployment_serving"
+    ],
+    "estimated_hours": 80
+  },
+  {
+    "id": "machine_learning_engineer_guided",
+    "role_id": "machine_learning_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "guided",
+    "title": "Customer Churn Prediction with Scikit-learn",
+    "skills": [
+      "supervised_unsupervised"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "machine_learning_engineer_integrated",
+    "role_id": "machine_learning_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "integrated",
+    "title": "Real-time Defect Detection using PyTorch CNN",
+    "skills": [
+      "deep_learning_models"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "machine_learning_engineer_advanced",
+    "role_id": "machine_learning_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "advanced",
+    "title": "End-to-End MLOps Pipeline with MLflow & DVC",
+    "skills": [
+      "mlops_cicd"
+    ],
+    "estimated_hours": 55
+  },
+  {
+    "id": "machine_learning_engineer_capstone",
+    "role_id": "machine_learning_engineer",
+    "domain_id": "cse_ai_data",
+    "level": "capstone",
+    "title": "Edge Inference Engine with ONNX & Triton Server",
+    "skills": [
+      "model_optimization"
+    ],
+    "estimated_hours": 75
+  },
+  {
+    "id": "data_scientist_guided",
+    "role_id": "data_scientist",
+    "domain_id": "cse_ai_data",
+    "level": "guided",
+    "title": "Comprehensive EDA & Dashboard on Retail Transactions",
+    "skills": [
+      "exploratory_data_analysis"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "data_scientist_integrated",
+    "role_id": "data_scientist",
+    "domain_id": "cse_ai_data",
+    "level": "integrated",
+    "title": "A/B Testing Framework for Product Feature Conversions",
+    "skills": [
+      "hypothesis_testing"
+    ],
+    "estimated_hours": 35
+  },
+  {
+    "id": "data_scientist_advanced",
+    "role_id": "data_scientist",
+    "domain_id": "cse_ai_data",
+    "level": "advanced",
+    "title": "Financial Demand Forecasting with Time-Series Models",
+    "skills": [
+      "time_series_forecasting"
+    ],
+    "estimated_hours": 50
+  },
+  {
+    "id": "data_scientist_capstone",
+    "role_id": "data_scientist",
+    "domain_id": "cse_ai_data",
+    "level": "capstone",
+    "title": "Executive Decision Intelligence Platform with Automated Insights",
+    "skills": [
+      "predictive_modeling"
+    ],
+    "estimated_hours": 70
+  },
+  {
+    "id": "backend_developer_guided",
+    "role_id": "backend_developer",
+    "domain_id": "cse_backend",
+    "level": "guided",
+    "title": "CRUD REST API with Database Connection & Migration",
+    "skills": [
+      "backend_lang_mastery",
+      "relational_db"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "backend_developer_integrated",
+    "role_id": "backend_developer",
+    "domain_id": "cse_backend",
+    "level": "integrated",
+    "title": "Role-Based Authentication & Session Service with JWT",
+    "skills": [
+      "auth_security",
+      "rest_api_design"
+    ],
+    "estimated_hours": 35
+  },
+  {
+    "id": "backend_developer_advanced",
+    "role_id": "backend_developer",
+    "domain_id": "cse_backend",
+    "level": "advanced",
+    "title": "High-Throughput E-Commerce Inventory Service with Redis Lock",
+    "skills": [
+      "caching_performance",
+      "relational_db"
+    ],
+    "estimated_hours": 50
+  },
+  {
+    "id": "backend_developer_capstone",
+    "role_id": "backend_developer",
+    "domain_id": "cse_backend",
+    "level": "capstone",
+    "title": "Event-Driven Microservices Architecture with Kafka & Docker",
+    "skills": [
+      "message_queues",
+      "container_deployment"
+    ],
+    "estimated_hours": 80
+  },
+  {
+    "id": "full_stack_developer_guided",
+    "role_id": "full_stack_developer",
+    "domain_id": "cse_backend",
+    "level": "guided",
+    "title": "Interactive Task Management Dashboard with React",
+    "skills": [
+      "react_fundamentals"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "full_stack_developer_integrated",
+    "role_id": "full_stack_developer",
+    "domain_id": "cse_backend",
+    "level": "integrated",
+    "title": "Full-Stack Blog Platform with Database & Markdown",
+    "skills": [
+      "db_integration",
+      "backend_server_basics"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "full_stack_developer_advanced",
+    "role_id": "full_stack_developer",
+    "domain_id": "cse_backend",
+    "level": "advanced",
+    "title": "Collaborative Real-Time Workspace with WebSockets",
+    "skills": [
+      "fullstack_auth"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "full_stack_developer_capstone",
+    "role_id": "full_stack_developer",
+    "domain_id": "cse_backend",
+    "level": "capstone",
+    "title": "Multi-Tenant SaaS Application with Stripe Billing & Analytics",
+    "skills": [
+      "production_deploy"
+    ],
+    "estimated_hours": 85
+  },
+  {
+    "id": "devops_engineer_guided",
+    "role_id": "devops_engineer",
+    "domain_id": "cse_devops_cloud",
+    "level": "guided",
+    "title": "Automated Docker Build & Registry Push Pipeline",
+    "skills": [
+      "docker_containers",
+      "cicd_pipelines"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "devops_engineer_integrated",
+    "role_id": "devops_engineer",
+    "domain_id": "cse_devops_cloud",
+    "level": "integrated",
+    "title": "Multi-Tier Infrastructure Provisioning on AWS with Terraform",
+    "skills": [
+      "iac_terraform",
+      "cloud_foundations"
+    ],
+    "estimated_hours": 35
+  },
+  {
+    "id": "devops_engineer_advanced",
+    "role_id": "devops_engineer",
+    "domain_id": "cse_devops_cloud",
+    "level": "advanced",
+    "title": "Zero-Downtime Kubernetes Microservices Deployment with Helm",
+    "skills": [
+      "k8s_orchestration"
+    ],
+    "estimated_hours": 50
+  },
+  {
+    "id": "devops_engineer_capstone",
+    "role_id": "devops_engineer",
+    "domain_id": "cse_devops_cloud",
+    "level": "capstone",
+    "title": "Enterprise GitOps Pipeline with ArgoCD, Prometheus & Auto-Scaling",
+    "skills": [
+      "observability_monitoring"
+    ],
+    "estimated_hours": 80
+  },
+  {
+    "id": "cybersecurity_analyst_guided",
+    "role_id": "cybersecurity_analyst",
+    "domain_id": "cse_cybersecurity",
+    "level": "guided",
+    "title": "Network Traffic Analysis & Malware Packet Inspection with Wireshark",
+    "skills": [
+      "networking_protocols"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "cybersecurity_analyst_integrated",
+    "role_id": "cybersecurity_analyst",
+    "domain_id": "cse_cybersecurity",
+    "level": "integrated",
+    "title": "Comprehensive Web Application Penetration Test on DVWA",
+    "skills": [
+      "web_app_pentest"
+    ],
+    "estimated_hours": 35
+  },
+  {
+    "id": "cybersecurity_analyst_advanced",
+    "role_id": "cybersecurity_analyst",
+    "domain_id": "cse_cybersecurity",
+    "level": "advanced",
+    "title": "Automated Vulnerability Scanner Script in Python",
+    "skills": [
+      "exploit_metasploit"
+    ],
+    "estimated_hours": 50
+  },
+  {
+    "id": "cybersecurity_analyst_capstone",
+    "role_id": "cybersecurity_analyst",
+    "domain_id": "cse_cybersecurity",
+    "level": "capstone",
+    "title": "Corporate Network Defense Simulation with SOC SIEM Detection",
+    "skills": [
+      "siem_incident_response"
+    ],
+    "estimated_hours": 75
+  },
+  {
+    "id": "vlsi_design_engineer_guided",
+    "role_id": "vlsi_design_engineer",
+    "domain_id": "ece_vlsi",
+    "level": "guided",
+    "title": "Configurable 32-bit ALU with Status Flags in Verilog",
+    "skills": [
+      "digital_electronics",
+      "verilog_rtl"
+    ],
+    "estimated_hours": 25
+  },
+  {
+    "id": "vlsi_design_engineer_integrated",
+    "role_id": "vlsi_design_engineer",
+    "domain_id": "ece_vlsi",
+    "level": "integrated",
+    "title": "UART Controller with Baud Rate Generator on Xilinx FPGA",
+    "skills": [
+      "fpga_prototyping",
+      "verilog_rtl"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "vlsi_design_engineer_advanced",
+    "role_id": "vlsi_design_engineer",
+    "domain_id": "ece_vlsi",
+    "level": "advanced",
+    "title": "UVM Testbench for AXI4-Lite Protocol Verification",
+    "skills": [
+      "uvm_methodology",
+      "systemverilog_oop"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "vlsi_design_engineer_capstone",
+    "role_id": "vlsi_design_engineer",
+    "domain_id": "ece_vlsi",
+    "level": "capstone",
+    "title": "5-Stage Pipelined RISC-V CPU Core with Hazard Unit",
+    "skills": [
+      "static_timing_analysis",
+      "verilog_rtl"
+    ],
+    "estimated_hours": 90
+  },
+  {
+    "id": "embedded_software_engineer_guided",
+    "role_id": "embedded_software_engineer",
+    "domain_id": "ece_embedded",
+    "level": "guided",
+    "title": "Bare-Metal UART Serial Logger on STM32",
+    "skills": [
+      "c_pointers_memory",
+      "peripheral_buses"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "embedded_software_engineer_integrated",
+    "role_id": "embedded_software_engineer",
+    "domain_id": "ece_embedded",
+    "level": "integrated",
+    "title": "Multi-Sensor Environmental Telemetry via I2C & OLED Display",
+    "skills": [
+      "peripheral_buses",
+      "microcontroller_arch"
+    ],
+    "estimated_hours": 35
+  },
+  {
+    "id": "embedded_software_engineer_advanced",
+    "role_id": "embedded_software_engineer",
+    "domain_id": "ece_embedded",
+    "level": "advanced",
+    "title": "Preemptive FreeRTOS Motor Speed Controller with PID Loop",
+    "skills": [
+      "freertos_multitasking",
+      "interrupt_handling"
+    ],
+    "estimated_hours": 55
+  },
+  {
+    "id": "embedded_software_engineer_capstone",
+    "role_id": "embedded_software_engineer",
+    "domain_id": "ece_embedded",
+    "level": "capstone",
+    "title": "Connected Industrial IoT Gateway with BLE, MQTT & Secure OTA",
+    "skills": [
+      "iot_networking",
+      "freertos_multitasking"
+    ],
+    "estimated_hours": 80
+  },
+  {
+    "id": "power_systems_engineer_guided",
+    "role_id": "power_systems_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "guided",
+    "title": "Load Flow Analysis of IEEE 14-Bus System in ETAP",
+    "skills": [
+      "power_flow_analysis"
+    ],
+    "estimated_hours": 25
+  },
+  {
+    "id": "power_systems_engineer_integrated",
+    "role_id": "power_systems_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "integrated",
+    "title": "Overcurrent and Distance Relay Coordination Scheme",
+    "skills": [
+      "protection_relays",
+      "fault_analysis"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "power_systems_engineer_advanced",
+    "role_id": "power_systems_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "advanced",
+    "title": "Grid-Tied Solar Inverter Simulation with MPPT Algorithm",
+    "skills": [
+      "renewable_grid_integration"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "power_systems_engineer_capstone",
+    "role_id": "power_systems_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "capstone",
+    "title": "Microgrid Islanding & Black Start Simulation with BESS",
+    "skills": [
+      "smart_grid_scada",
+      "renewable_grid_integration"
+    ],
+    "estimated_hours": 80
+  },
+  {
+    "id": "ev_powertrain_engineer_guided",
+    "role_id": "ev_powertrain_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "guided",
+    "title": "Closed-Loop DC Motor Speed Control with H-Bridge",
+    "skills": [
+      "power_electronics_devices"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "ev_powertrain_engineer_integrated",
+    "role_id": "ev_powertrain_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "integrated",
+    "title": "Field-Oriented Control Simulation for PMSM in Simulink",
+    "skills": [
+      "foc_motor_control"
+    ],
+    "estimated_hours": 45
+  },
+  {
+    "id": "ev_powertrain_engineer_advanced",
+    "role_id": "ev_powertrain_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "advanced",
+    "title": "BMS Cell Balancing & SoC Estimation with Extended Kalman Filter",
+    "skills": [
+      "bms_algorithm_design"
+    ],
+    "estimated_hours": 65
+  },
+  {
+    "id": "ev_powertrain_engineer_capstone",
+    "role_id": "ev_powertrain_engineer",
+    "domain_id": "eee_power_energy",
+    "level": "capstone",
+    "title": "Complete 48V EV Traction Inverter Prototype with CAN Telemetry",
+    "skills": [
+      "foc_motor_control",
+      "thermal_fault_management"
+    ],
+    "estimated_hours": 90
+  },
+  {
+    "id": "mechanical_design_engineer_guided",
+    "role_id": "mechanical_design_engineer",
+    "domain_id": "mech_design_cad",
+    "level": "guided",
+    "title": "Parametric Gearbox Housing with Detailed 2D Drawing & GD&T",
+    "skills": [
+      "parametric_3d_cad",
+      "engineering_graphics_gdt"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "mechanical_design_engineer_integrated",
+    "role_id": "mechanical_design_engineer",
+    "domain_id": "mech_design_cad",
+    "level": "integrated",
+    "title": "Automotive Suspension Control Arm Structural Optimization in FEA",
+    "skills": [
+      "finite_element_analysis",
+      "mechanics_materials"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "mechanical_design_engineer_advanced",
+    "role_id": "mechanical_design_engineer",
+    "domain_id": "mech_design_cad",
+    "level": "advanced",
+    "title": "Multi-Part Robotic Gripper Assembly with DFM & Motion Analysis",
+    "skills": [
+      "dfm_dfa_optimization",
+      "assembly_drafting"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "mechanical_design_engineer_capstone",
+    "role_id": "mechanical_design_engineer",
+    "domain_id": "mech_design_cad",
+    "level": "capstone",
+    "title": "Weight-Reduced EV Battery Enclosure with Crash Simulation & Modal FEA",
+    "skills": [
+      "fatigue_thermal_sim",
+      "dfm_dfa_optimization"
+    ],
+    "estimated_hours": 85
+  },
+  {
+    "id": "structural_engineer_guided",
+    "role_id": "structural_engineer",
+    "domain_id": "civil_structural",
+    "level": "guided",
+    "title": "Design and Detailing of Continuous G+1 RCC Frame to IS 456",
+    "skills": [
+      "rcc_design_basics"
+    ],
+    "estimated_hours": 25
+  },
+  {
+    "id": "structural_engineer_integrated",
+    "role_id": "structural_engineer",
+    "domain_id": "civil_structural",
+    "level": "integrated",
+    "title": "G+10 Commercial Building Seismic Analysis in ETABS to IS 1893",
+    "skills": [
+      "etabs_modeling",
+      "seismic_wind_analysis"
+    ],
+    "estimated_hours": 45
+  },
+  {
+    "id": "structural_engineer_advanced",
+    "role_id": "structural_engineer",
+    "domain_id": "civil_structural",
+    "level": "advanced",
+    "title": "Industrial Peaked Steel Warehouse Design in STAAD.Pro with Wind Loads",
+    "skills": [
+      "steel_design_basics",
+      "structural_analysis_mechanics"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "structural_engineer_capstone",
+    "role_id": "structural_engineer",
+    "domain_id": "civil_structural",
+    "level": "capstone",
+    "title": "Full BIM-Coordinated High-Rise with Raft Foundation Design & Clash Detection",
+    "skills": [
+      "bim_revit_modeling",
+      "foundation_safe_design"
+    ],
+    "estimated_hours": 85
+  },
+  {
+    "id": "process_engineer_guided",
+    "role_id": "process_engineer",
+    "domain_id": "chem_process",
+    "level": "guided",
+    "title": "Binary Ethanol-Water Distillation Mass and Energy Balance",
+    "skills": [
+      "mass_energy_balance"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "process_engineer_integrated",
+    "role_id": "process_engineer",
+    "domain_id": "chem_process",
+    "level": "integrated",
+    "title": "Rigorous Shell-and-Tube Heat Exchanger Sizing in HTRI",
+    "skills": [
+      "heat_exchanger_sizing"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "process_engineer_advanced",
+    "role_id": "process_engineer",
+    "domain_id": "chem_process",
+    "level": "advanced",
+    "title": "Complete Methanol Synthesis Flowsheet in Aspen Plus with Recycle",
+    "skills": [
+      "aspen_flowsheeting"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "process_engineer_capstone",
+    "role_id": "process_engineer",
+    "domain_id": "chem_process",
+    "level": "capstone",
+    "title": "Industrial Ammonia Plant Digital Twin with P&ID and HAZOP Safety Study",
+    "skills": [
+      "process_control_hazop",
+      "aspen_flowsheeting"
+    ],
+    "estimated_hours": 85
+  },
+  {
+    "id": "bioinformatics_scientist_guided",
+    "role_id": "bioinformatics_scientist",
+    "domain_id": "biotech_bioinformatics",
+    "level": "guided",
+    "title": "Automated FASTQ Quality Audit and BLAST Sequence Matcher",
+    "skills": [
+      "bio_scripting",
+      "sequence_alignment"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "bioinformatics_scientist_integrated",
+    "role_id": "bioinformatics_scientist",
+    "domain_id": "biotech_bioinformatics",
+    "level": "integrated",
+    "title": "RNA-Seq Differential Expression Pipeline for Cancer Biomarkers",
+    "skills": [
+      "rnaseq_deseq2"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "bioinformatics_scientist_advanced",
+    "role_id": "bioinformatics_scientist",
+    "domain_id": "biotech_bioinformatics",
+    "level": "advanced",
+    "title": "Structure-Based Drug Discovery & Virtual Screening with AutoDock Vina",
+    "skills": [
+      "protein_docking_pymol"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "bioinformatics_scientist_capstone",
+    "role_id": "bioinformatics_scientist",
+    "domain_id": "biotech_bioinformatics",
+    "level": "capstone",
+    "title": "Cloud-Native Nextflow Pipeline for Whole Exome Variant Discovery",
+    "skills": [
+      "scalable_workflows",
+      "ngs_variant_calling"
+    ],
+    "estimated_hours": 85
+  },
+  {
+    "id": "aerospace_engineer_guided",
+    "role_id": "aerospace_engineer",
+    "domain_id": "aero_flight_systems",
+    "level": "guided",
+    "title": "2D NACA 0012 Airfoil Compressible Flow Validation in XFOIL",
+    "skills": [
+      "airfoil_aerodynamics"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "aerospace_engineer_integrated",
+    "role_id": "aerospace_engineer",
+    "domain_id": "aero_flight_systems",
+    "level": "integrated",
+    "title": "3D Swept-Wing Boundary Layer & Induced Drag CFD in ANSYS Fluent",
+    "skills": [
+      "cfd_fluent_simulation"
+    ],
+    "estimated_hours": 45
+  },
+  {
+    "id": "aerospace_engineer_advanced",
+    "role_id": "aerospace_engineer",
+    "domain_id": "aero_flight_systems",
+    "level": "advanced",
+    "title": "Full 6-DOF Aircraft Autonomous Pitch/Roll Autopilot in Simulink",
+    "skills": [
+      "flight_control_simulink"
+    ],
+    "estimated_hours": 60
+  },
+  {
+    "id": "aerospace_engineer_capstone",
+    "role_id": "aerospace_engineer",
+    "domain_id": "aero_flight_systems",
+    "level": "capstone",
+    "title": "Autonomous VTOL UAV Mission Controller with Real-Time SITL in Gazebo",
+    "skills": [
+      "flight_control_simulink",
+      "cfd_fluent_simulation"
+    ],
+    "estimated_hours": 90
+  },
+  {
+    "id": "automotive_embedded_engineer_guided",
+    "role_id": "automotive_embedded_engineer",
+    "domain_id": "auto_vehicle_systems",
+    "level": "guided",
+    "title": "CAN Bus Telemetry Node with Arduino and MCP2515 Transceiver",
+    "skills": [
+      "can_network_protocol"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "automotive_embedded_engineer_integrated",
+    "role_id": "automotive_embedded_engineer",
+    "domain_id": "auto_vehicle_systems",
+    "level": "integrated",
+    "title": "UDS Diagnostic Stack Implementation in MISRA C",
+    "skills": [
+      "uds_diagnostics",
+      "misra_c_standards"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "automotive_embedded_engineer_advanced",
+    "role_id": "automotive_embedded_engineer",
+    "domain_id": "auto_vehicle_systems",
+    "level": "advanced",
+    "title": "AUTOSAR Software Component for Electronic Throttle Control",
+    "skills": [
+      "autosar_architecture"
+    ],
+    "estimated_hours": 65
+  },
+  {
+    "id": "automotive_embedded_engineer_capstone",
+    "role_id": "automotive_embedded_engineer",
+    "domain_id": "auto_vehicle_systems",
+    "level": "capstone",
+    "title": "Automated Vehicle HIL Test Suite with CANoe, Fault Injection & Safety Interlocks",
+    "skills": [
+      "canoe_capl_simulation",
+      "functional_safety_iso26262"
+    ],
+    "estimated_hours": 85
+  },
+  {
+    "id": "robotics_engineer_guided",
+    "role_id": "robotics_engineer",
+    "domain_id": "robotics_automation",
+    "level": "guided",
+    "title": "2-Link Planar Arm Inverse Kinematics Visualizer in Python",
+    "skills": [
+      "robot_kinematics"
+    ],
+    "estimated_hours": 20
+  },
+  {
+    "id": "robotics_engineer_integrated",
+    "role_id": "robotics_engineer",
+    "domain_id": "robotics_automation",
+    "level": "integrated",
+    "title": "Visual Object Tracking & Servo Gimbal with OpenCV & Arduino",
+    "skills": [
+      "computer_vision_opencv"
+    ],
+    "estimated_hours": 40
+  },
+  {
+    "id": "robotics_engineer_advanced",
+    "role_id": "robotics_engineer",
+    "domain_id": "robotics_automation",
+    "level": "advanced",
+    "title": "Autonomous Mobile Robot SLAM & Waypoint Navigation in Gazebo",
+    "skills": [
+      "slam_navigation"
+    ],
+    "estimated_hours": 65
+  },
+  {
+    "id": "robotics_engineer_capstone",
+    "role_id": "robotics_engineer",
+    "domain_id": "robotics_automation",
+    "level": "capstone",
+    "title": "Industrial 6-DOF Pick-and-Place Workcell with MoveIt, Vision & ROS2",
+    "skills": [
+      "manipulation_motion_planning",
+      "computer_vision_opencv"
+    ],
+    "estimated_hours": 90
+  }
+]

@@ -32,4 +32,4 @@ USER appuser
 EXPOSE 8000
 
 # Start server using Gunicorn and Uvicorn workers for production
-CMD ["gunicorn", "main:app", "--workers", "4", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000"]
+CMD sh -c "gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:${PORT:-8000}"

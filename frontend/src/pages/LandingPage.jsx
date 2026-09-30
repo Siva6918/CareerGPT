@@ -87,7 +87,7 @@ export default function LandingPage({ initialModal = null }) {
             }}>
               CAREER<span style={{ color: 'var(--color-primary)' }}>GPT</span>
             </span>
-            <span className="brand-subtitle font-croissant-pink" style={{ fontSize: '0.8rem', lineHeight: 1, marginTop: 1 }}>
+            <span className="brand-subtitle font-tech" style={{ fontSize: '0.8rem', lineHeight: 1, marginTop: 1 }}>
               Agentic Career Engine
             </span>
           </div>
@@ -152,7 +152,7 @@ export default function LandingPage({ initialModal = null }) {
               <span className="tag-pill tag-pink">
                 <Sparkles size={13} /> Multimodal B.Tech Placement Platform
               </span>
-              <span className="font-niconne-violet" style={{ fontSize: '1.25rem' }}>
+              <span className="font-tech" style={{ color: 'var(--color-violet)', fontWeight: 700, fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 Engineering Readiness
               </span>
             </motion.div>
@@ -206,7 +206,7 @@ export default function LandingPage({ initialModal = null }) {
                   <div className="font-tech-black" style={{ fontSize: '0.95rem' }}>
                     CareerGPT Product Tour & Architecture
                   </div>
-                  <div className="font-handwriting-yellow" style={{ fontSize: '1rem', color: '#a16207' }}>
+                  <div className="font-tech" style={{ color: '#a16207', fontSize: '0.85rem', fontWeight: 600 }}>
                     Real-time competency tracking • Intelligent roadmap generation
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export default function LandingPage({ initialModal = null }) {
         </div>
       </section>
 
-      {/* Phase 1: Resume & Profile Understanding */}
+      {/* Feature 1: Resume & Profile Understanding */}
       <section style={{ padding: '90px 24px', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '56px', alignItems: 'center' }}>
           
@@ -244,8 +244,8 @@ export default function LandingPage({ initialModal = null }) {
             viewport={bidirectionalViewport}
             variants={staggerContainer}
           >
-            <motion.span variants={labelMotion} className="font-croissant-pink" style={{ fontSize: '1.05rem', display: 'block', marginBottom: 6 }}>
-              Phase 01 • Candidate Baseline
+            <motion.span variants={labelMotion} className="font-tech" style={{ color: 'var(--color-pink)', fontWeight: 700, fontSize: '0.85rem', display: 'block', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              Feature 01 • Candidate Baseline
             </motion.span>
 
             <motion.h2 variants={headingMotion} style={{ fontSize: '2.4rem', marginBottom: 18, color: 'var(--text-primary)' }}>
@@ -267,7 +267,7 @@ export default function LandingPage({ initialModal = null }) {
         </div>
       </section>
 
-      {/* Phase 2: Dynamic Competency Graph */}
+      {/* Feature 2: Dynamic Competency Graph */}
       <section style={{ padding: '90px 24px' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '56px', alignItems: 'center' }}>
           
@@ -278,8 +278,8 @@ export default function LandingPage({ initialModal = null }) {
             variants={staggerContainer}
             style={{ order: 1 }}
           >
-            <motion.span variants={labelMotion} className="font-niconne-violet" style={{ fontSize: '1.35rem', display: 'block', marginBottom: 4 }}>
-              Phase 02 • Evidence Graph
+            <motion.span variants={labelMotion} className="font-tech" style={{ color: 'var(--color-violet)', fontWeight: 700, fontSize: '0.85rem', display: 'block', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              Feature 02 • Evidence Graph
             </motion.span>
 
             <motion.h2 variants={headingMotion} style={{ fontSize: '2.4rem', marginBottom: 18, color: 'var(--text-primary)' }}>
@@ -291,7 +291,7 @@ export default function LandingPage({ initialModal = null }) {
             </motion.p>
 
             <motion.div variants={highlightMotion} style={{ padding: '16px 20px', borderRadius: 12, background: 'var(--color-pink-soft)', border: 'var(--border-ultra-thin)' }}>
-              <p className="font-handwriting-yellow" style={{ margin: 0, fontSize: '1.1rem', color: '#9d174d' }}>
+              <p className="font-tech" style={{ margin: 0, fontSize: '0.95rem', color: '#9d174d', fontWeight: 600 }}>
                 "Important Design Rule: An unassessed skill is marked Unknown / Insufficient Evidence, never scored 0%."
               </p>
             </motion.div>
@@ -316,7 +316,7 @@ export default function LandingPage({ initialModal = null }) {
         </div>
       </section>
 
-      {/* Phase 3: Adaptive AI Mock Interview */}
+      {/* Feature 3: Adaptive AI Mock Interview */}
       <section style={{ padding: '90px 24px', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '56px', alignItems: 'center' }}>
           
@@ -343,8 +343,8 @@ export default function LandingPage({ initialModal = null }) {
             viewport={bidirectionalViewport}
             variants={staggerContainer}
           >
-            <motion.span variants={labelMotion} className="font-croissant-pink" style={{ fontSize: '1.05rem', display: 'block', marginBottom: 6 }}>
-              Phase 03 • Information Seeking Loop
+            <motion.span variants={labelMotion} className="font-tech" style={{ color: 'var(--color-pink)', fontWeight: 700, fontSize: '0.85rem', display: 'block', marginBottom: 6, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              Feature 03 • Information Seeking Loop
             </motion.span>
 
             <motion.h2 variants={headingMotion} style={{ fontSize: '2.4rem', marginBottom: 18, color: 'var(--text-primary)' }}>
@@ -364,7 +364,7 @@ export default function LandingPage({ initialModal = null }) {
         </div>
       </section>
 
-      {/* Phase 4 & 5: Gap Analysis and Career Roadmap */}
+      {/* Feature 4 & 5: Gap Analysis and Career Roadmap */}
       <section style={{ padding: '90px 24px' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '40px' }}>
           
@@ -382,7 +382,7 @@ export default function LandingPage({ initialModal = null }) {
               style={{ marginBottom: 18 }}
             />
             <div style={{ marginTop: 'auto' }}>
-              <span className="tag-pill tag-red" style={{ marginBottom: 8 }}>Phase 04</span>
+              <span className="tag-pill tag-red" style={{ marginBottom: 8 }}>Feature 04</span>
               <h3 style={{ fontSize: '1.4rem', marginBottom: 8, color: 'var(--text-primary)', fontFamily: 'var(--font-heading)' }}>
                 Skill Gap & Evidence Matrix
               </h3>
@@ -406,7 +406,7 @@ export default function LandingPage({ initialModal = null }) {
               style={{ marginBottom: 18 }}
             />
             <div style={{ marginTop: 'auto' }}>
-              <span className="tag-pill tag-green" style={{ marginBottom: 8 }}>Phase 05</span>
+              <span className="tag-pill tag-green" style={{ marginBottom: 8 }}>Feature 05</span>
               <h3 style={{ fontSize: '1.4rem', marginBottom: 8, color: 'var(--text-primary)', fontFamily: 'var(--font-heading)' }}>
                 Personalized B.Tech Roadmaps
               </h3>
@@ -419,7 +419,7 @@ export default function LandingPage({ initialModal = null }) {
         </div>
       </section>
 
-      {/* Phase 6, 7 & 8: Projects, Roles, and Continuous Development */}
+      {/* Feature 6, 7 & 8: Projects, Roles, and Continuous Development */}
       <section style={{ padding: '90px 24px', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
         <div className="container">
           
@@ -430,8 +430,8 @@ export default function LandingPage({ initialModal = null }) {
             variants={staggerContainer}
             style={{ textAlign: 'center', maxWidth: 650, margin: '0 auto 48px' }}
           >
-            <motion.span variants={labelMotion} className="font-croissant-pink" style={{ fontSize: '1.1rem' }}>
-              Phases 06, 07 & 08
+            <motion.span variants={labelMotion} className="font-tech" style={{ color: 'var(--color-pink)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              Features 06, 07 & 08
             </motion.span>
             <motion.h2 variants={headingMotion} style={{ fontSize: '2.5rem', marginTop: 4, color: 'var(--text-primary)' }}>
               PRACTICE, ROLES & LIFELONG REASSESSMENT
@@ -531,7 +531,7 @@ export default function LandingPage({ initialModal = null }) {
               boxShadow: 'var(--shadow-lg)'
             }}
           >
-            <motion.span variants={labelMotion} className="font-croissant-pink" style={{ fontSize: '1.2rem', display: 'block', marginBottom: 8 }}>
+            <motion.span variants={labelMotion} className="font-tech" style={{ color: 'var(--color-pink)', fontWeight: 700, fontSize: '0.95rem', display: 'block', marginBottom: 8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
               Ready for Your Placement Journey?
             </motion.span>
             <motion.h2 variants={headingMotion} style={{ fontSize: '2.5rem', marginBottom: 16, color: 'var(--text-primary)' }}>

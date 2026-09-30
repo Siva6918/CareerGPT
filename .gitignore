@@ -55,6 +55,7 @@ careergpt.db
 uploads/
 user_uploads/
 storage/
+!backend/storage/
 audio/
 video/
 resumes/

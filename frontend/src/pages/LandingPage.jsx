@@ -194,6 +194,7 @@ export default function LandingPage({ initialModal = null }) {
             whileInView="visible"
             viewport={bidirectionalViewport}
             variants={mediaReveal}
+            style={{ maxWidth: 540, margin: '0 auto', width: '100%' }}
           >
             <div className="card" style={{ padding: 14, borderRadius: 20 }}>
               <InteractiveVideo

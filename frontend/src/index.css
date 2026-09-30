@@ -396,8 +396,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive */
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
-  h1 { font-size: 2.2rem !important; }
-  h2 { font-size: 1.7rem !important; }
+  h1 { font-size: clamp(1.6rem, 7vw, 2.2rem) !important; line-height: 1.15 !important; }
+  h2 { font-size: clamp(1.4rem, 6vw, 1.8rem) !important; line-height: 1.25 !important; }
+  .hide-on-mobile { display: none !important; }
 }
 
 /* Professional Scroll Animations */

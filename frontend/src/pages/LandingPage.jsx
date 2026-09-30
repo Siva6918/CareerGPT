@@ -138,7 +138,7 @@ export default function LandingPage({ initialModal = null }) {
       {/* Hero Section */}
       <section className="hero-section" style={{
         minHeight: 'min(92vh, 800px)', display: 'flex', alignItems: 'center',
-        padding: 'calc(80px + 5vw) 24px 64px', position: 'relative'
+        padding: 'calc(80px + 5vw) 0 64px', position: 'relative'
       }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap: 'clamp(24px, 6vw, 48px)', alignItems: 'center' }}>
           
@@ -221,8 +221,8 @@ export default function LandingPage({ initialModal = null }) {
       </section>
 
       {/* Feature 1: Resume & Profile Understanding */}
-      <section style={{ padding: '90px 24px', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '56px', alignItems: 'center' }}>
+      <section style={{ padding: 'clamp(50px, 8vw, 90px) 0', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: 'clamp(32px, 6vw, 56px)', alignItems: 'center' }}>
           
           <motion.div
             initial="hidden"
@@ -270,8 +270,8 @@ export default function LandingPage({ initialModal = null }) {
       </section>
 
       {/* Feature 2: Dynamic Competency Graph */}
-      <section style={{ padding: '90px 24px' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '56px', alignItems: 'center' }}>
+      <section style={{ padding: 'clamp(50px, 8vw, 90px) 0' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: 'clamp(32px, 6vw, 56px)', alignItems: 'center' }}>
           
           <motion.div
             initial="hidden"
@@ -319,8 +319,8 @@ export default function LandingPage({ initialModal = null }) {
       </section>
 
       {/* Feature 3: Adaptive AI Mock Interview */}
-      <section style={{ padding: '90px 24px', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '56px', alignItems: 'center' }}>
+      <section style={{ padding: 'clamp(50px, 8vw, 90px) 0', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: 'clamp(32px, 6vw, 56px)', alignItems: 'center' }}>
           
           <motion.div
             initial="hidden"
@@ -367,8 +367,8 @@ export default function LandingPage({ initialModal = null }) {
       </section>
 
       {/* Feature 4 & 5: Gap Analysis and Career Roadmap */}
-      <section style={{ padding: '90px 24px' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '40px' }}>
+      <section style={{ padding: 'clamp(50px, 8vw, 90px) 0' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: 'clamp(24px, 6vw, 40px)' }}>
           
           <motion.div
             initial="hidden"
@@ -422,7 +422,7 @@ export default function LandingPage({ initialModal = null }) {
       </section>
 
       {/* Feature 6, 7 & 8: Projects, Roles, and Continuous Development */}
-      <section style={{ padding: '90px 24px', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
+      <section style={{ padding: 'clamp(50px, 8vw, 90px) 0', borderTop: '1px solid rgba(255,255,255,0.4)' }}>
         <div className="container">
           
           <motion.div
@@ -515,7 +515,7 @@ export default function LandingPage({ initialModal = null }) {
       </section>
 
       {/* Modern Clean Call to Action */}
-      <section style={{ padding: '90px 24px', textAlign: 'center' }}>
+      <section style={{ padding: 'clamp(50px, 8vw, 90px) 0', textAlign: 'center' }}>
         <div className="container-sm">
           <motion.div
             initial="hidden"
@@ -528,7 +528,7 @@ export default function LandingPage({ initialModal = null }) {
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
               border: '1px solid rgba(255, 255, 255, 0.5)',
-              padding: '56px 36px',
+              padding: 'clamp(32px, 6vw, 56px) clamp(20px, 4vw, 36px)',
               borderRadius: 24,
               boxShadow: 'var(--shadow-lg)'
             }}

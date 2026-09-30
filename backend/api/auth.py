@@ -45,6 +45,10 @@ class UserLogin(BaseModel):
     email: str
     password: str
 
+class GoogleLoginRequest(BaseModel):
+    token: str
+
+
 
 class Token(BaseModel):
     access_token: str
@@ -230,6 +234,48 @@ async def reset_password(req: ResetPasswordRequest, db: Session = Depends(get_db
     
     return {"message": "Password updated successfully"}
 
+
+@router.post("/google", response_model=Token)
+async def google_login(req: GoogleLoginRequest, db: Session = Depends(get_db)):
+    import httpx
+    async with httpx.AsyncClient() as client:
+        res = await client.get(
+            "https://www.googleapis.com/oauth2/v3/userinfo",
+            headers={"Authorization": f"Bearer {req.token}"}
+        )
+        if res.status_code != 200:
+            raise HTTPException(status_code=400, detail="Invalid Google token")
+        user_info = res.json()
+    
+    email = user_info.get("email")
+    full_name = user_info.get("name")
+    
+    if not email:
+        raise HTTPException(status_code=400, detail="Google account has no email")
+        
+    user = db.query(User).filter(User.email == email).first()
+    if not user:
+        user = User(
+            id=str(uuid.uuid4()),
+            email=email,
+            username=email.split("@")[0] + str(uuid.uuid4())[:4], # Ensure unique
+            hashed_password=hash_password(str(uuid.uuid4())),
+            full_name=full_name,
+            is_active=True,
+            is_verified=True
+        )
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+    
+    access_token = create_access_token({"sub": user.id})
+    return Token(
+        access_token=access_token,
+        token_type="bearer",
+        user_id=user.id,
+        username=user.username,
+        email=user.email
+    )
 
 @router.get("/me", response_model=UserOut)
 async def get_me(current_user: User = Depends(get_current_user)):

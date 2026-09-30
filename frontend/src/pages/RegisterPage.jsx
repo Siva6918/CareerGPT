@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
 import { GraduationCap, UserPlus, X, AlertCircle } from 'lucide-react';
+import { useGoogleLogin } from '@react-oauth/google';
 
 export default function RegisterModal({ onClose, onSwitchToLogin }) {
-  const { register } = useAuth();
+  const { register, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
   const [form, setForm] = useState({
     email: '', username: '', password: '', full_name: ''
@@ -28,6 +29,26 @@ export default function RegisterModal({ onClose, onSwitchToLogin }) {
       setLoading(false);
     }
   };
+
+  const handleGoogleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      setError('');
+      setLoading(true);
+      try {
+        await loginWithGoogle(tokenResponse.access_token);
+        toast.success('Account verified! Welcome to CareerGPT');
+        navigate('/profile/setup');
+      } catch (err) {
+        const msg = err.response?.data?.detail || 'Google Registration failed.';
+        setError(typeof msg === 'string' ? msg : JSON.stringify(msg));
+      } finally {
+        setLoading(false);
+      }
+    },
+    onError: () => {
+      toast.error('Google Login Failed');
+    }
+  });
 
   return (
     <div style={{
@@ -340,7 +361,7 @@ export default function RegisterModal({ onClose, onSwitchToLogin }) {
         <span style={{ position: 'relative', zIndex: 2, background: '#ffffff', padding: '0 12px', fontSize: '0.8rem', color: '#94a3b8' }}>OR</span>
       </div>
 
-      <button onClick={() => toast.error("Google Login is not configured yet. Missing API Keys.", { icon: '⚠️' })} type="button" style={{ marginTop: 20, width: '100%', padding: '12px', fontSize: '0.95rem', fontWeight: 600, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, background: '#ffffff', border: '1px solid #cbd5e1', color: '#334155', cursor: 'pointer' }}>
+      <button onClick={() => handleGoogleLogin()} type="button" style={{ marginTop: 20, width: '100%', padding: '12px', fontSize: '0.95rem', fontWeight: 600, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, background: '#ffffff', border: '1px solid #cbd5e1', color: '#334155', cursor: 'pointer' }}>
         <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
           <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>

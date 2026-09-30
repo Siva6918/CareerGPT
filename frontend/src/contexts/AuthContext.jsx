@@ -57,8 +57,19 @@ export function AuthProvider({ children }) {
     setIsDemoMode(false);
   }, []);
 
+  const loginWithGoogle = useCallback(async (token) => {
+    const res = await authAPI.googleLogin(token);
+    const { access_token, user_id, username, email } = res.data;
+    const userData = { id: user_id, username, email };
+    localStorage.setItem('careergpt_token', access_token);
+    localStorage.setItem('careergpt_user', JSON.stringify(userData));
+    setUser(userData);
+    setIsDemoMode(false);
+    return userData;
+  }, []);
+
   return (
-    <AuthContext.Provider value={{ user, loading, isDemoMode, login, register, demoLogin, logout }}>
+    <AuthContext.Provider value={{ user, loading, isDemoMode, login, register, demoLogin, logout, loginWithGoogle }}>
       {!loading && children}
     </AuthContext.Provider>
   );

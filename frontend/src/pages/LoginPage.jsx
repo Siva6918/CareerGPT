@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { authAPI } from '../services/api';
 import toast from 'react-hot-toast';
 import { GraduationCap, Eye, EyeOff, LogIn, X, AlertCircle, Key, ArrowRight } from 'lucide-react';
+import { useGoogleLogin } from '@react-oauth/google';
 
 const InputField = ({ label, type, value, onChange, placeholder, id }) => (
   <div>
@@ -38,7 +39,7 @@ const InputField = ({ label, type, value, onChange, placeholder, id }) => (
 );
 
 export default function LoginModal({ onClose, onSwitchToRegister }) {
-  const { login } = useAuth();
+  const { login, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
   const [mode, setMode] = useState('login'); // login | forgot | reset
   const [form, setForm] = useState({ email: '', password: '', otp: '', newPassword: '' });
@@ -103,9 +104,25 @@ export default function LoginModal({ onClose, onSwitchToRegister }) {
     }
   };
 
-  const handleGoogleLogin = () => {
-    toast.error("Google Login is not configured yet. Missing API Keys.", { icon: '⚠️' });
-  };
+  const handleGoogleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      setError('');
+      setLoading(true);
+      try {
+        await loginWithGoogle(tokenResponse.access_token);
+        toast.success('Welcome back!');
+        navigate('/dashboard');
+      } catch (err) {
+        const msg = err.response?.data?.detail || 'Google Login failed.';
+        setError(typeof msg === 'string' ? msg : JSON.stringify(msg));
+      } finally {
+        setLoading(false);
+      }
+    },
+    onError: () => {
+      toast.error('Google Login Failed');
+    }
+  });
 
   return (
     <div style={{

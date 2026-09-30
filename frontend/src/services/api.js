@@ -46,6 +46,7 @@ export const authAPI = {
   getMe: () => api.get('/auth/me'),
   forgotPassword: (email) => api.post('/auth/forgot-password', { email }),
   resetPassword: (email, otp, new_password) => api.post('/auth/reset-password', { email, otp, new_password }),
+  googleLogin: (token) => api.post('/auth/google', { token }),
 };
 
 // ── Profile ────────────────────────────────────────────────

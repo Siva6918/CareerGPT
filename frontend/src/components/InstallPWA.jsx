@@ -8,9 +8,9 @@ export default function InstallPWA() {
   const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
-    // Check if user has already dismissed or installed
-    const hasPrompted = localStorage.getItem('careergpt_pwa_prompted');
-    if (hasPrompted) return;
+    // Only check if already running in standalone mode (installed)
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    if (isStandalone) return;
 
     // Detect iOS
     const isIosDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -18,15 +18,14 @@ export default function InstallPWA() {
     
     if (isIosDevice && !isStandalone) {
       setIsIOS(true);
-      // Slight delay for first time user experience
-      setTimeout(() => setShowPrompt(true), 3000);
+      setTimeout(() => setShowPrompt(true), 500); // Fast visibility
     }
 
     // Listen for Chrome/Android install prompt
     const handleBeforeInstallPrompt = (e) => {
       e.preventDefault();
       setDeferredPrompt(e);
-      setTimeout(() => setShowPrompt(true), 3000);
+      setTimeout(() => setShowPrompt(true), 500); // Fast visibility
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -50,7 +49,6 @@ export default function InstallPWA() {
 
   const closePrompt = () => {
     setShowPrompt(false);
-    localStorage.setItem('careergpt_pwa_prompted', 'true');
   };
 
   if (!showPrompt) return null;

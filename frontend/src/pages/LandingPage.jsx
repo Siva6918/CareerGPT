@@ -34,7 +34,8 @@ export default function LandingPage({ initialModal = null }) {
   const [authModal, setAuthModal] = useState(initialModal);
 
   useEffect(() => {
-    fetch('http://localhost:8000/health')
+    const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    fetch(`${apiBase}/health`)
       .then(r => r.json())
       .then(data => setBackendStatus(data))
       .catch(() => setBackendStatus({ status: 'offline' }));

@@ -175,17 +175,35 @@ export default function LoginModal({ onClose, onSwitchToRegister }) {
         </div>
 
         <div>
-          <label style={{
-            display: 'block',
-            fontSize: '0.78rem',
-            fontFamily: 'var(--font-tech)',
-            fontWeight: 700,
-            color: '#334155',
-            letterSpacing: '0.04em',
-            marginBottom: 6
-          }}>
-            PASSWORD
-          </label>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+            <label style={{
+              display: 'block',
+              fontSize: '0.78rem',
+              fontFamily: 'var(--font-tech)',
+              fontWeight: 700,
+              color: '#334155',
+              letterSpacing: '0.04em'
+            }}>
+              PASSWORD
+            </label>
+            <button 
+              type="button" 
+              onClick={() => {
+                if (!form.email) {
+                  toast.error("Please enter your email address first.");
+                  return;
+                }
+                toast.success("Password reset instructions sent to " + form.email);
+              }}
+              style={{
+                background: 'none', border: 'none', padding: 0,
+                fontSize: '0.78rem', color: '#ea580c', cursor: 'pointer',
+                fontFamily: 'var(--font-body)', fontWeight: 600
+              }}
+            >
+              Forgot password?
+            </button>
+          </div>
           <div style={{ position: 'relative' }}>
             <input
               type={showPassword ? 'text' : 'password'}

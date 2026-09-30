@@ -142,6 +142,16 @@ class UserProfile(Base):
     user = relationship("User", back_populates="profile")
 
 
+class PasswordResetToken(Base):
+    __tablename__ = "password_reset_tokens"
+    id = Column(String, primary_key=True, default=gen_uuid)
+    email = Column(String, index=True)
+    otp = Column(String)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    expires_at = Column(DateTime(timezone=True))
+    is_used = Column(Boolean, default=False)
+
+
 # ─────────────────────────────────────────────────────────────
 # RESUME
 # ─────────────────────────────────────────────────────────────

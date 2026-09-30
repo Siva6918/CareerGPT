@@ -32,6 +32,15 @@ class UserRegister(BaseModel):
     full_name: Optional[str] = None
 
 
+class ForgotPasswordRequest(BaseModel):
+    email: EmailStr
+
+class ResetPasswordRequest(BaseModel):
+    email: EmailStr
+    otp: str
+    new_password: str
+
+
 class UserLogin(BaseModel):
     email: str
     password: str
@@ -158,6 +167,68 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = 
         username=user.username,
         email=user.email
     )
+
+
+@router.post("/forgot-password")
+async def forgot_password(req: ForgotPasswordRequest, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.email == req.email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="No account exists with this email")
+    
+    import random
+    otp = str(random.randint(100000, 999999))
+    
+    from models.models import PasswordResetToken
+    db.query(PasswordResetToken).filter(PasswordResetToken.email == req.email).update({"is_used": True})
+    
+    reset_token = PasswordResetToken(
+        email=req.email,
+        otp=otp,
+        expires_at=datetime.now(timezone.utc) + timedelta(minutes=10)
+    )
+    db.add(reset_token)
+    db.commit()
+    
+    import httpx
+    import os
+    resend_api_key = os.getenv("RESEND_API_KEY")
+    if resend_api_key:
+        async with httpx.AsyncClient() as client:
+            await client.post(
+                "https://api.resend.com/emails",
+                headers={"Authorization": f"Bearer {resend_api_key}"},
+                json={
+                    "from": os.getenv("EMAIL_FROM", "onboarding@resend.dev"),
+                    "to": req.email,
+                    "subject": "CareerGPT - Password Reset OTP",
+                    "html": f"<p>Your password reset OTP is: <strong>{otp}</strong></p><p>It will expire in 10 minutes.</p>"
+                }
+            )
+            
+    return {"message": "OTP sent to your email"}
+
+@router.post("/reset-password")
+async def reset_password(req: ResetPasswordRequest, db: Session = Depends(get_db)):
+    from models.models import PasswordResetToken
+    token_record = db.query(PasswordResetToken).filter(
+        PasswordResetToken.email == req.email,
+        PasswordResetToken.otp == req.otp,
+        PasswordResetToken.is_used == False,
+        PasswordResetToken.expires_at > datetime.now(timezone.utc)
+    ).first()
+    
+    if not token_record:
+        raise HTTPException(status_code=400, detail="Invalid or expired OTP")
+        
+    user = db.query(User).filter(User.email == req.email).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+        
+    user.hashed_password = hash_password(req.new_password)
+    token_record.is_used = True
+    db.commit()
+    
+    return {"message": "Password updated successfully"}
 
 
 @router.get("/me", response_model=UserOut)

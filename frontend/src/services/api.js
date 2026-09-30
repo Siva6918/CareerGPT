@@ -44,6 +44,8 @@ export const authAPI = {
   },
   demoLogin: () => api.post('/auth/demo-login'),
   getMe: () => api.get('/auth/me'),
+  forgotPassword: (email) => api.post('/auth/forgot-password', { email }),
+  resetPassword: (email, otp, new_password) => api.post('/auth/reset-password', { email, otp, new_password }),
 };
 
 // ── Profile ────────────────────────────────────────────────

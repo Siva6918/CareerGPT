@@ -135,12 +135,12 @@ export default function LandingPage({ initialModal = null }) {
         </div>
       </nav>
 
-      {/* Hero Section (Bidirectional Motion: Down & Up) */}
-      <section style={{
-        minHeight: '92vh', display: 'flex', alignItems: 'center',
-        padding: '120px 24px 64px', position: 'relative'
+      {/* Hero Section */}
+      <section className="hero-section" style={{
+        minHeight: 'min(92vh, 800px)', display: 'flex', alignItems: 'center',
+        padding: 'calc(80px + 5vw) 24px 64px', position: 'relative'
       }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap: '48px', alignItems: 'center' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap: 'clamp(24px, 6vw, 48px)', alignItems: 'center' }}>
           
           <motion.div
             initial="hidden"
@@ -157,10 +157,10 @@ export default function LandingPage({ initialModal = null }) {
               </span>
             </motion.div>
             
-            <motion.h1 variants={headingMotion} style={{ fontSize: 'clamp(2rem, 8vw, 4.4rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: 16, color: 'var(--text-primary)' }}>
+            <motion.h1 variants={headingMotion} style={{ fontSize: 'clamp(1.75rem, 8vw, 4.4rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: 16, color: 'var(--text-primary)' }}>
               Agentic AI-Based <br/>
               <span className="font-oswald-blue">Career Mentoring</span> & <br/>
-              <span className="font-fascinate-orange">Placement Readiness</span>
+              <span className="font-tech" style={{ color: 'var(--color-orange)', letterSpacing: '-0.02em', textTransform: 'uppercase' }}>Placement Readiness</span>
             </motion.h1>
 
             <motion.p variants={bodyMotion} style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 28, maxWidth: 580 }}>
@@ -171,12 +171,14 @@ export default function LandingPage({ initialModal = null }) {
               <button
                 onClick={() => setAuthModal('register')}
                 className="btn btn-primary btn-lg"
+                style={{ flex: '1 1 auto', textAlign: 'center', justifyContent: 'center' }}
               >
-                Start Free Career Evaluation <ArrowRight size={18} />
+                Start Evaluation <ArrowRight size={18} />
               </button>
               <button
                 onClick={() => setAuthModal('login')}
                 className="btn btn-secondary btn-lg"
+                style={{ flex: '1 1 auto', textAlign: 'center', justifyContent: 'center' }}
               >
                 Sign In to Portal
               </button>

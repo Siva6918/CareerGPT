@@ -14,7 +14,6 @@ export default function InstallPWA() {
 
     // Detect iOS
     const isIosDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
     
     if (isIosDevice && !isStandalone) {
       setIsIOS(true);

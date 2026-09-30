@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'careergpt-logo.jpg', 'icons.svg'],
+      includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
         name: 'CareerGPT',
         short_name: 'CareerGPT',
@@ -18,15 +18,15 @@ export default defineConfig({
         orientation: 'portrait',
         icons: [
           {
-            src: '/careergpt-logo.jpg',
+            src: '/pwa-192x192.png',
             sizes: '192x192',
-            type: 'image/jpeg',
+            type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: '/careergpt-logo.jpg',
+            src: '/pwa-512x512.png',
             sizes: '512x512',
-            type: 'image/jpeg',
+            type: 'image/png',
             purpose: 'any maskable'
           }
         ]

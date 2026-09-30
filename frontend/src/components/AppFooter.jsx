@@ -5,6 +5,7 @@ import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 export default function AppFooter() {
   return (
     <footer 
+      className="app-footer-wrapper"
       style={{
         background: '#ea580c', // Solid orange for logged-in consistency
         color: '#ffffff',

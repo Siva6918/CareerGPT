@@ -64,9 +64,10 @@ export default function InstallPWA() {
         style={{
           position: 'fixed',
           bottom: 24,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '90%',
+          left: 0,
+          right: 0,
+          margin: '0 auto',
+          width: '92%',
           maxWidth: 400,
           background: '#ffffff',
           borderRadius: 16,

@@ -526,3 +526,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Hide Footer in PWA Standalone Mode */
+@media (display-mode: standalone) {
+  .app-main-content {
+    padding-bottom: 92px !important; /* Keep padding for bottom dock */
+  }
+  .app-footer-wrapper {
+    display: none !important;
+  }
+}
+

@@ -18,14 +18,15 @@ export default function InstallPWA() {
     
     if (isIosDevice && !isStandalone) {
       setIsIOS(true);
-      setTimeout(() => setShowPrompt(true), 500); // Fast visibility
+      setTimeout(() => setShowPrompt(true), 500); 
+    } else if (!isStandalone) {
+      setTimeout(() => setShowPrompt(true), 500); 
     }
 
     // Listen for Chrome/Android install prompt
     const handleBeforeInstallPrompt = (e) => {
       e.preventDefault();
       setDeferredPrompt(e);
-      setTimeout(() => setShowPrompt(true), 500); // Fast visibility
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -43,6 +44,8 @@ export default function InstallPWA() {
         console.log('User accepted the install prompt');
       }
       setDeferredPrompt(null);
+    } else {
+      alert("To install the app, tap your browser's menu (⋮) and select 'Install app' or 'Add to Home screen'.");
     }
     closePrompt();
   };

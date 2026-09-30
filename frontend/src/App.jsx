@@ -20,6 +20,7 @@ import AppLayout from './layouts/AppLayout';
 import GlobalBackground from './components/GlobalBackground';
 
 import ProfileGate from './components/ProfileGate';
+import InstallPWA from './components/InstallPWA';
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth();
@@ -49,6 +50,7 @@ export default function App() {
             duration: 4000,
           }}
         />
+        <InstallPWA />
         <Routes>
           {/* Public routes */}
           <Route path="/" element={<LandingPage />} />

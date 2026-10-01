@@ -40,19 +40,19 @@ export default function CareerIntelligencePage() {
   const { readiness, top_gaps, projects, next_action } = data;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 4vw, 32px)' }}>
       
       {/* HEADER */}
       <motion.section initial="hidden" whileInView="visible" viewport={bidirectionalViewport} variants={cardFadeUp}>
         <div style={{ background: 'linear-gradient(135deg, rgba(249,115,22,0.1), rgba(255,255,255,1))', borderRadius: '20px', padding: '32px', border: '1px solid rgba(249,115,22,0.2)' }}>
-          <h1 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading)', margin: '0 0 8px 0' }}>
+          <h1 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', fontFamily: 'var(--font-heading)', margin: '0 0 8px 0' }}>
             Good morning, {user?.full_name || user?.username || 'Engineer'} 👋
           </h1>
           <p style={{ color: '#64748b', fontSize: '1.1rem', margin: 0 }}>Your career intelligence dashboard</p>
         </div>
       </motion.section>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(12px, 3vw, 24px)' }}>
         
         {/* TARGET & READINESS */}
         <motion.div initial="hidden" whileInView="visible" viewport={bidirectionalViewport} variants={cardFadeUp} className="card">
@@ -137,7 +137,7 @@ export default function CareerIntelligencePage() {
           <h2 style={{ margin: 0, fontFamily: 'var(--font-heading)', fontSize: '1.6rem' }}>Recommended Projects</h2>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(12px, 3vw, 24px)' }}>
           {projects && projects.length > 0 ? (
             projects.map((proj, idx) => (
               <div key={idx} className="card" style={{ borderTop: '4px solid #8b5cf6' }}>

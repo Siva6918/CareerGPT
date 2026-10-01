@@ -141,7 +141,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(16px, 4vw, 32px)' }}>
 
       {/* 1. Hero Candidate Overview Banner */}
       <motion.section
@@ -152,11 +152,11 @@ export default function DashboardPage() {
         className="card card-noborder"
         style={{
           background: 'linear-gradient(135deg, #ffffff 0%, #fff7ed 100%)',
-          padding: '32px 36px',
+          padding: 'clamp(16px, 4vw, 32px) clamp(16px, 4vw, 36px)',
           borderRadius: 20
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 'clamp(12px, 3vw, 24px)' }}>
           <div style={{ maxWidth: 680 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
               <span className="tag-pill tag-orange">
@@ -168,7 +168,7 @@ export default function DashboardPage() {
             </div>
 
             <h2 style={{
-              fontSize: '2.2rem',
+              fontSize: 'clamp(1.5rem, 4vw, 2.2rem)',
               fontWeight: 800,
               fontFamily: 'var(--font-heading)',
               color: '#0f172a',
@@ -237,7 +237,7 @@ export default function DashboardPage() {
                 </defs>
               </svg>
               <div style={{ position: 'absolute', textAlign: 'center' }}>
-                <span className="font-tech-black" style={{ fontSize: '1.75rem', fontWeight: 800 }}>
+                <span className="font-tech-black" style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', fontWeight: 800 }}>
                   {readinessScore}%
                 </span>
               </div>
@@ -562,7 +562,7 @@ export default function DashboardPage() {
         whileInView="visible"
         viewport={bidirectionalViewport}
         variants={staggerContainer}
-        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}
+        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'clamp(10px, 2.5vw, 20px)' }}
       >
         {/* Card 1: Verified Skills */}
         <motion.div variants={statMotion} className="card" style={{ borderLeft: '4px solid var(--color-blue)' }}>
@@ -622,7 +622,7 @@ export default function DashboardPage() {
       </motion.section>
 
       {/* 4. Real Competency Graph & Recent Interview Sections */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', gap: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', gap: 'clamp(12px, 3vw, 24px)' }}>
         
         {/* Left: Competency Topology Status */}
         <motion.section

@@ -292,7 +292,7 @@ export default function LandingPage({ initialModal = null }) {
               Skills are nodes in a directed prerequisite network. Each node tracks its current competency state (Strong, Demonstrated, Developing, Emerging, Unknown) alongside a Bayesian uncertainty score.
             </motion.p>
 
-            <motion.div variants={highlightMotion} style={{ padding: '16px 20px', borderRadius: 12, background: 'var(--color-pink-soft)', border: 'var(--border-ultra-thin)' }}>
+            <motion.div variants={highlightMotion} style={{ padding: 'clamp(10px, 2.5vw, 16px) clamp(10px, 2.5vw, 20px)', borderRadius: 12, background: 'var(--color-pink-soft)', border: 'var(--border-ultra-thin)' }}>
               <p className="font-tech" style={{ margin: 0, fontSize: '0.95rem', color: '#9d174d', fontWeight: 600 }}>
                 "Important Design Rule: An unassessed skill is marked Unknown / Insufficient Evidence, never scored 0%."
               </p>
@@ -376,7 +376,7 @@ export default function LandingPage({ initialModal = null }) {
             viewport={bidirectionalViewport}
             variants={cardSlideLeft}
             className="card"
-            style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: 24 }}
+            style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: 'clamp(12px, 3vw, 24px)' }}
           >
             <InteractiveImage
               src="/media/gap_analysis.jpg"
@@ -400,7 +400,7 @@ export default function LandingPage({ initialModal = null }) {
             viewport={bidirectionalViewport}
             variants={cardSlideRight}
             className="card"
-            style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: 24 }}
+            style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: 'clamp(12px, 3vw, 24px)' }}
           >
             <InteractiveImage
               src="/media/roadmap_preview.jpg"
@@ -435,7 +435,7 @@ export default function LandingPage({ initialModal = null }) {
             <motion.span variants={labelMotion} className="font-tech" style={{ color: 'var(--color-pink)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
               Features 06, 07 & 08
             </motion.span>
-            <motion.h2 variants={headingMotion} style={{ fontSize: '2.5rem', marginTop: 4, color: 'var(--text-primary)' }}>
+            <motion.h2 variants={headingMotion} style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', marginTop: 4, color: 'var(--text-primary)' }}>
               PRACTICE, ROLES & LIFELONG REASSESSMENT
             </motion.h2>
             <motion.p variants={bodyMotion} style={{ fontSize: '1.05rem', color: 'var(--text-secondary)' }}>
@@ -443,7 +443,7 @@ export default function LandingPage({ initialModal = null }) {
             </motion.p>
           </motion.div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 24 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 'clamp(12px, 3vw, 24px)' }}>
             
             <motion.div
               initial="hidden"
@@ -536,7 +536,7 @@ export default function LandingPage({ initialModal = null }) {
             <motion.span variants={labelMotion} className="font-tech" style={{ color: 'var(--color-pink)', fontWeight: 700, fontSize: '0.95rem', display: 'block', marginBottom: 8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
               Ready for Your Placement Journey?
             </motion.span>
-            <motion.h2 variants={headingMotion} style={{ fontSize: '2.5rem', marginBottom: 16, color: 'var(--text-primary)' }}>
+            <motion.h2 variants={headingMotion} style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', marginBottom: 16, color: 'var(--text-primary)' }}>
               Accelerate Your B.Tech Placement Readiness
             </motion.h2>
             <motion.p variants={bodyMotion} style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', maxWidth: 540, margin: '0 auto 28px', lineHeight: 1.6 }}>
@@ -568,7 +568,7 @@ export default function LandingPage({ initialModal = null }) {
         <div style={{
           position: 'fixed', inset: 0, zIndex: 1000,
           background: 'rgba(15, 23, 42, 0.75)', backdropFilter: 'blur(8px)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24
+          display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(12px, 3vw, 24px)'
         }}>
           {authModal === 'login' ? (
             <LoginModal 

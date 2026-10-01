@@ -252,7 +252,7 @@ export default function RoadmapPage() {
           padding: '30px 36px'
         }}
       >
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 24, alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 'clamp(12px, 3vw, 24px)', alignItems: 'center' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
               <span className="tag-pill tag-orange">
@@ -284,7 +284,7 @@ export default function RoadmapPage() {
             background: '#ffffff',
             border: '1px solid #fed7aa',
             borderRadius: 16,
-            padding: '20px 24px',
+            padding: 'clamp(12px, 3vw, 20px) clamp(12px, 3vw, 24px)',
             display: 'flex',
             flexDirection: 'column',
             gap: 12,
@@ -327,7 +327,7 @@ export default function RoadmapPage() {
         viewport={bidirectionalViewport}
         variants={cardFadeUp}
         className="card"
-        style={{ background: '#ffffff', borderRadius: 20, padding: '24px 28px' }}
+        style={{ background: '#ffffff', borderRadius: 20, padding: 'clamp(12px, 3vw, 24px) clamp(12px, 3vw, 28px)' }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
           <h4 style={{ fontSize: '1.05rem', fontFamily: 'var(--font-heading)', color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: 8, fontWeight: 700 }}>
@@ -463,7 +463,7 @@ export default function RoadmapPage() {
           viewport={bidirectionalViewport}
           variants={cardFadeUp}
           className="card"
-          style={{ background: '#ffffff', borderRadius: 20, padding: '24px 28px' }}
+          style={{ background: '#ffffff', borderRadius: 20, padding: 'clamp(12px, 3vw, 24px) clamp(12px, 3vw, 28px)' }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18, borderBottom: '1px solid #f1f5f9', paddingBottom: 12 }}>
             <div>
@@ -628,7 +628,7 @@ export default function RoadmapPage() {
 
               {/* Accordion Stage Body */}
               {isExpanded && (
-                <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+                <div style={{ padding: 'clamp(12px, 3vw, 20px) clamp(12px, 3vw, 24px)', display: 'flex', flexDirection: 'column', gap: 14 }}>
                   {skills.map((item, idx) => {
                     const gap = GAP_COLORS[item.gap_severity] || GAP_COLORS.unknown;
 
@@ -639,7 +639,7 @@ export default function RoadmapPage() {
                           display: 'flex',
                           flexDirection: 'column',
                           gap: 10,
-                          padding: '16px 20px',
+                          padding: 'clamp(10px, 2.5vw, 16px) clamp(10px, 2.5vw, 20px)',
                           background: item.gap_severity === 'satisfied' ? '#f0fdf4' : 'var(--bg-surface-subtle)',
                           borderRadius: 12,
                           border: `1px solid ${item.gap_severity === 'satisfied' ? '#bbf7d0' : '#e2e8f0'}`
@@ -748,7 +748,7 @@ export default function RoadmapPage() {
           viewport={bidirectionalViewport}
           variants={cardFadeUp}
           className="card"
-          style={{ background: '#f8fafc', borderRadius: 16, padding: '20px 24px', border: '1px solid #e2e8f0' }}
+          style={{ background: '#f8fafc', borderRadius: 16, padding: 'clamp(12px, 3vw, 20px) clamp(12px, 3vw, 24px)', border: '1px solid #e2e8f0' }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
             <ShieldCheck size={18} color="#16a34a" />

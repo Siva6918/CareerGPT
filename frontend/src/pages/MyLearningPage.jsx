@@ -346,7 +346,7 @@ function AddGoalModal({ onClose, onAdd }) {
         style={{
           background: '#fff',
           borderRadius: '20px',
-          padding: '28px',
+          padding: 'clamp(16px, 4vw, 28px)',
           width: '100%',
           maxWidth: '480px',
           maxHeight: '85vh',

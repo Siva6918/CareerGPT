@@ -36,7 +36,7 @@ export default function AppFooter() {
               <GraduationCap size={20} color="#ea580c" />
             </div>
             <div>
-              <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.5rem', lineHeight: 1 }}>
+              <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 'clamp(1.15rem, 3.5vw, 1.5rem)', lineHeight: 1 }}>
                 <span style={{ color: '#ffffff' }}>CAREER</span><span style={{ color: '#fde047' }}>GPT</span>
               </div>
               <div className="font-niconne" style={{ fontSize: '1.05rem', color: '#67e8f9', marginTop: 2 }}>

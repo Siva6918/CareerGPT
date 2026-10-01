@@ -90,7 +90,7 @@ export default function ReportPage() {
           <ArrowLeft size={20} color="var(--text-secondary)" />
         </button>
         <div>
-          <h2 style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: '2.5rem', fontFamily: 'var(--font-heading)' }}>
+          <h2 style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', fontFamily: 'var(--font-heading)' }}>
             <BarChart3 size={32} color="var(--color-accent)" />
             INTERVIEW REPORT
           </h2>
@@ -108,7 +108,7 @@ export default function ReportPage() {
       {/* Readiness Gauge */}
       <div className="glass-card" style={{ marginBottom: 32, textAlign: 'center', padding: 48 }}>
         <h4 className="text-tech" style={{ marginBottom: 40, fontSize: '1.2rem', color: '#fff' }}>PLACEMENT READINESS SCORE</h4>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 48, flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(20px, 5vw, 48px)', flexWrap: 'wrap' }}>
           <RadiusBar value={readinessScore} color={readinessColor} label="OVERALL" />
           {readiness?.components && (
             <>
@@ -140,7 +140,7 @@ export default function ReportPage() {
       </div>
 
       {/* Competency Summary Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 24, marginBottom: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 'clamp(12px, 3vw, 24px)', marginBottom: 24 }}>
         {/* Assessed Skills */}
         <div className="glass-card" style={{ padding: 32 }}>
           <h4 className="text-tech" style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 12, color: '#fff', fontSize: '1.1rem' }}>
@@ -152,7 +152,7 @@ export default function ReportPage() {
             return (
               <div key={i} className="animate-fade-up" style={{
                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                padding: '16px 20px', marginBottom: 12,
+                padding: 'clamp(10px, 2.5vw, 16px) clamp(10px, 2.5vw, 20px)', marginBottom: 12,
                 background: colors.bg, border: `1px solid ${colors.border}`,
                 borderRadius: 12, animationDelay: `${i * 0.05}s`
               }}>
@@ -180,7 +180,7 @@ export default function ReportPage() {
           </h4>
           {(competency_summary?.unknown || []).map((skill, i) => (
             <div key={i} className="animate-fade-up" style={{
-              padding: '16px 20px', marginBottom: 12,
+              padding: 'clamp(10px, 2.5vw, 16px) clamp(10px, 2.5vw, 20px)', marginBottom: 12,
               background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)',
               borderRadius: 12, animationDelay: `${i * 0.05}s`
             }}>
@@ -204,12 +204,12 @@ export default function ReportPage() {
       {skill_gaps && (
         <div className="glass-card" style={{ padding: 32 }}>
           <h4 className="text-tech" style={{ marginBottom: 24, color: '#fff', fontSize: '1.1rem' }}>EVIDENCE COVERAGE</h4>
-          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 'clamp(12px, 3vw, 24px)', flexWrap: 'wrap' }}>
             {[
               { label: 'SKILLS ASSESSED', val: skill_gaps.assessed, total: skill_gaps.total_required, color: 'var(--color-accent)' },
               { label: 'UNKNOWN SKILLS', val: skill_gaps.unknown, total: skill_gaps.total_required, color: '#9ca3af' },
             ].map(({ label, val, total, color }) => (
-              <div key={label} style={{ flex: 1, minWidth: 200, background: 'rgba(255,255,255,0.02)', padding: 24, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+              <div key={label} style={{ flex: 1, minWidth: 'min(200px, 100%)', background: 'rgba(255,255,255,0.02)', padding: 'clamp(12px, 3vw, 24px)', borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
                   <span className="text-tech" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{label}</span>
                   <span className="text-tech" style={{ fontSize: '1rem', fontWeight: 800, color }}>{val}/{total}</span>

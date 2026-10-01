@@ -348,7 +348,7 @@ export default function AppLayout() {
       </AnimatePresence>
 
       {/* ── Main Page Content ── */}
-      <main className="app-main-content" style={{ flex: 1, padding: '28px', maxWidth: 1440, width: '100%', margin: '0 auto' }}>
+      <main className="app-main-content" style={{ flex: 1, padding: 'clamp(16px, 4vw, 28px)', maxWidth: 1440, width: '100%', margin: '0 auto' }}>
         <Outlet />
       </main>
 

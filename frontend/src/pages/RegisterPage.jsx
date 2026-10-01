@@ -53,10 +53,10 @@ export default function RegisterModal({ onClose, onSwitchToLogin }) {
   return (
     <div style={{
       width: '100%',
-      maxWidth: 460,
+      maxWidth: 'min(460px, 100vw)',
       background: '#ffffff',
       borderRadius: 24,
-      padding: '36px 36px',
+      padding: 'clamp(16px, 4vw, 36px)',
       position: 'relative',
       boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(15, 23, 42, 0.08)',
       animation: 'fadeUp 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
@@ -111,7 +111,7 @@ export default function RegisterModal({ onClose, onSwitchToLogin }) {
           <GraduationCap size={30} color="#ea580c" />
         </div>
         <h1 style={{
-          fontSize: '1.75rem',
+          fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
           fontWeight: 800,
           color: '#0f172a',
           margin: '0 0 6px',

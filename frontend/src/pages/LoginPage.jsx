@@ -117,7 +117,7 @@ export default function LoginModal({ onClose, onSwitchToRegister }) {
         }}>
           <GraduationCap size={30} color="#ea580c" />
         </div>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-heading)' }}>
+        <h1 style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', fontWeight: 800, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-heading)' }}>
           {mode === 'login' ? 'SIGN IN' : mode === 'forgot' ? 'RESET PASSWORD' : 'NEW PASSWORD'}
         </h1>
         <p style={{ fontSize: '0.875rem', color: '#64748b', margin: 0, fontFamily: 'var(--font-body)' }}>
@@ -137,7 +137,18 @@ export default function LoginModal({ onClose, onSwitchToRegister }) {
       {mode === 'login' && (
         <>
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-            <InputField label="EMAIL ADDRESS" type="email" value={form.email} onChange={(e) => setForm(p => ({...p, email: e.target.value}))} placeholder="you@example.com" />
+            <div>
+              <label style={{ display: 'block', fontSize: '0.78rem', fontFamily: 'var(--font-tech)', fontWeight: 700, color: '#334155', letterSpacing: '0.04em', marginBottom: 4 }}>
+                EMAIL ADDRESS
+              </label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                value={form.email}
+                onChange={(e) => setForm(p => ({...p, email: e.target.value}))}
+                style={{ width: '100%', padding: '10px 14px', fontSize: '0.92rem', background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 10, outline: 'none', boxSizing: 'border-box' }}
+              />
+            </div>
             
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
@@ -189,7 +200,18 @@ export default function LoginModal({ onClose, onSwitchToRegister }) {
 
       {mode === 'forgot' && (
         <form onSubmit={handleForgotPassword} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-          <InputField label="EMAIL ADDRESS" type="email" value={form.email} onChange={(e) => setForm(p => ({...p, email: e.target.value}))} placeholder="you@example.com" />
+          <div>
+            <label style={{ display: 'block', fontSize: '0.78rem', fontFamily: 'var(--font-tech)', fontWeight: 700, color: '#334155', letterSpacing: '0.04em', marginBottom: 4 }}>
+              EMAIL ADDRESS
+            </label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              value={form.email}
+              onChange={(e) => setForm(p => ({...p, email: e.target.value}))}
+              style={{ width: '100%', padding: '10px 14px', fontSize: '0.92rem', background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 10, outline: 'none', boxSizing: 'border-box' }}
+            />
+          </div>
           <button type="submit" disabled={loading} style={{ marginTop: 8, width: '100%', padding: '14px', fontSize: '0.95rem', fontWeight: 700, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: '#0f172a', border: 'none', color: '#ffffff', cursor: loading ? 'not-allowed' : 'pointer' }}>
             <Key size={18} /> {loading ? 'SENDING OTP...' : 'SEND OTP'}
           </button>
@@ -201,8 +223,30 @@ export default function LoginModal({ onClose, onSwitchToRegister }) {
 
       {mode === 'reset' && (
         <form onSubmit={handleResetPassword} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-          <InputField label="ENTER OTP" type="text" value={form.otp} onChange={(e) => setForm(p => ({...p, otp: e.target.value}))} placeholder="123456" />
-          <InputField label="NEW PASSWORD" type="password" value={form.newPassword} onChange={(e) => setForm(p => ({...p, newPassword: e.target.value}))} placeholder="••••••••" />
+          <div>
+            <label style={{ display: 'block', fontSize: '0.78rem', fontFamily: 'var(--font-tech)', fontWeight: 700, color: '#334155', letterSpacing: '0.04em', marginBottom: 4 }}>
+              ENTER OTP
+            </label>
+            <input
+              type="text"
+              placeholder="123456"
+              value={form.otp}
+              onChange={(e) => setForm(p => ({...p, otp: e.target.value}))}
+              style={{ width: '100%', padding: '10px 14px', fontSize: '0.92rem', background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 10, outline: 'none', boxSizing: 'border-box' }}
+            />
+          </div>
+          <div>
+            <label style={{ display: 'block', fontSize: '0.78rem', fontFamily: 'var(--font-tech)', fontWeight: 700, color: '#334155', letterSpacing: '0.04em', marginBottom: 4 }}>
+              NEW PASSWORD
+            </label>
+            <input
+              type="password"
+              placeholder="••••••••"
+              value={form.newPassword}
+              onChange={(e) => setForm(p => ({...p, newPassword: e.target.value}))}
+              style={{ width: '100%', padding: '10px 14px', fontSize: '0.92rem', background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 10, outline: 'none', boxSizing: 'border-box' }}
+            />
+          </div>
           <button type="submit" disabled={loading} style={{ marginTop: 8, width: '100%', padding: '14px', fontSize: '0.95rem', fontWeight: 700, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', border: 'none', color: '#ffffff', cursor: loading ? 'not-allowed' : 'pointer' }}>
             <ArrowRight size={18} /> {loading ? 'UPDATING...' : 'UPDATE PASSWORD'}
           </button>

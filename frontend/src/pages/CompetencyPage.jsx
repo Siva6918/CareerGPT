@@ -71,7 +71,7 @@ export default function CompetencyPage() {
         className="card card-noborder"
         style={{ background: '#ffffff', borderRadius: 20 }}
       >
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 24, alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 'clamp(12px, 3vw, 24px)', alignItems: 'center' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
               <span className="tag-pill tag-pink">
@@ -102,7 +102,7 @@ export default function CompetencyPage() {
             background: '#f8fafc',
             border: '1px solid #e2e8f0',
             borderRadius: 16,
-            padding: '20px 24px',
+            padding: 'clamp(12px, 3vw, 20px) clamp(12px, 3vw, 24px)',
             display: 'flex',
             flexDirection: 'column',
             gap: 12
@@ -154,7 +154,7 @@ export default function CompetencyPage() {
           <div style={{ fontSize: '0.75rem', color: 'var(--text-subtle)', fontFamily: 'var(--font-tech)', fontWeight: 700 }}>
             TRACKED SKILLS
           </div>
-          <div className="font-tech-black" style={{ fontSize: '2rem', margin: '4px 0' }}>
+          <div className="font-tech-black" style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2rem)', margin: '4px 0' }}>
             {nodes.length}
           </div>
           <div className="font-oswald-blue" style={{ fontSize: '0.85rem' }}>
@@ -166,7 +166,7 @@ export default function CompetencyPage() {
           <div style={{ fontSize: '0.75rem', color: 'var(--text-subtle)', fontFamily: 'var(--font-tech)', fontWeight: 700 }}>
             AVERAGE CERTAINTY
           </div>
-          <div className="font-tech-black" style={{ fontSize: '2rem', margin: '4px 0' }}>
+          <div className="font-tech-black" style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2rem)', margin: '4px 0' }}>
             {avgCertainty}%
           </div>
           <div className="font-croissant-pink" style={{ fontSize: '0.85rem' }}>
@@ -178,7 +178,7 @@ export default function CompetencyPage() {
           <div style={{ fontSize: '0.75rem', color: 'var(--text-subtle)', fontFamily: 'var(--font-tech)', fontWeight: 700 }}>
             DEMONSTRATED+
           </div>
-          <div className="font-tech-black" style={{ fontSize: '2rem', margin: '4px 0' }}>
+          <div className="font-tech-black" style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2rem)', margin: '4px 0' }}>
             {(stateCounts.demonstrated || 0) + (stateCounts.strong || 0)}
           </div>
           <div className="font-tech-green" style={{ fontSize: '0.85rem' }}>
@@ -190,7 +190,7 @@ export default function CompetencyPage() {
           <div style={{ fontSize: '0.75rem', color: 'var(--text-subtle)', fontFamily: 'var(--font-tech)', fontWeight: 700 }}>
             NEEDS ASSESSMENT
           </div>
-          <div className="font-tech-black" style={{ fontSize: '2rem', margin: '4px 0' }}>
+          <div className="font-tech-black" style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2rem)', margin: '4px 0' }}>
             {stateCounts.unknown || 0}
           </div>
           <div className="font-handwriting-yellow" style={{ fontSize: '1.1rem' }}>

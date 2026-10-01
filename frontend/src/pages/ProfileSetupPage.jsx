@@ -205,7 +205,7 @@ export default function ProfileSetupPage() {
   };
 
   return (
-    <div style={{ maxWidth: 860, margin: '0 auto', padding: '40px clamp(12px, 3vw, 24px) 80px' }}>
+    <div style={{ maxWidth: 'min(860px, 100vw)', margin: '0 auto', padding: '40px clamp(12px, 3vw, 24px) 80px' }}>
       
       {/* Page Title & Breadcrumb */}
       <div style={{ marginBottom: 32, textAlign: 'center' }}>
@@ -226,7 +226,7 @@ export default function ProfileSetupPage() {
           <Sparkles size={14} /> CANDIDATE PROFILE CALIBRATION
         </div>
         <h1 style={{
-          fontSize: '2.2rem',
+          fontSize: 'clamp(1.5rem, 4vw, 2.2rem)',
           fontFamily: 'var(--font-heading)',
           color: '#0f172a',
           margin: '0 0 8px'
@@ -687,7 +687,7 @@ export default function ProfileSetupPage() {
 
               {filtered.length === 0 && (
                 <div style={{ textAlign: 'center', padding: '40px 20px', color: '#94a3b8' }}>
-                  <div style={{ fontSize: '2rem', marginBottom: 8 }}>🔍</div>
+                  <div style={{ fontSize: 'clamp(1.4rem, 4.5vw, 2rem)', marginBottom: 8 }}>🔍</div>
                   <p style={{ margin: 0 }}>No domains found for &quot;{domainSearch}&quot;</p>
                   <button type="button" onClick={() => { setDomainSearch(''); setActiveCat('All'); }}
                     style={{ marginTop: 12, padding: '8px 16px', borderRadius: 8, border: '1px solid #e2e8f0',
@@ -968,7 +968,7 @@ export default function ProfileSetupPage() {
                 background: '#ecfdf5',
                 border: '1px solid #a7f3d0',
                 borderRadius: 12,
-                padding: '16px 20px'
+                padding: 'clamp(10px, 2.5vw, 16px) clamp(10px, 2.5vw, 20px)'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, color: '#065f46', fontWeight: 700, marginBottom: 8 }}>
                   <CheckCircle size={18} color="#059669" />

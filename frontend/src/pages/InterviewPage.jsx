@@ -231,7 +231,7 @@ export default function InterviewPage() {
   // ── SETUP PHASE ───────────────────────────────────────────
   if (phase === PHASE.SETUP) {
     return (
-      <div style={{ maxWidth: 840, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 24 }}>
+      <div style={{ maxWidth: 'min(840px, 100vw)', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 3vw, 24px)' }}>
         
         {/* Banner with Interview UI Media Preview */}
         <motion.div
@@ -242,7 +242,7 @@ export default function InterviewPage() {
           className="card card-noborder"
           style={{ background: '#ffffff', borderRadius: 20 }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(12px, 3vw, 24px)', alignItems: 'center' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
                 <span className="tag-pill tag-violet">
@@ -264,11 +264,11 @@ export default function InterviewPage() {
               background: '#f8fafc',
               border: '1px solid #e2e8f0',
               borderRadius: 14,
-              padding: '16px 20px',
+              padding: 'clamp(10px, 2.5vw, 16px) clamp(10px, 2.5vw, 20px)',
               display: 'flex',
               flexDirection: 'column',
               gap: 8,
-              minWidth: 260
+              minWidth: 'min(260px, 100%)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981' }} />
@@ -373,7 +373,7 @@ export default function InterviewPage() {
   // ── COMPLETED PHASE ───────────────────────────────────────
   if (phase === PHASE.COMPLETED) {
     return (
-      <div style={{ maxWidth: 840, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 24 }}>
+      <div style={{ maxWidth: 'min(840px, 100vw)', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 3vw, 24px)' }}>
         <div className="card" style={{ textAlign: 'center', padding: '48px 32px' }}>
           <div style={{
             width: 70, height: 70, borderRadius: '50%',
@@ -383,7 +383,7 @@ export default function InterviewPage() {
           }}>
             <CheckCircle size={38} />
           </div>
-          <h2 style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', marginBottom: 6 }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.2rem)', fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', marginBottom: 6 }}>
             Interview Evaluation Completed
           </h2>
           <p className="font-croissant-pink" style={{ fontSize: '1.1rem', marginBottom: 20 }}>
@@ -426,10 +426,10 @@ export default function InterviewPage() {
     <div className="interview-container">
       
       {/* Left: Active Question & Response Area */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(10px, 2.5vw, 20px)' }}>
         
         {/* Progress Card */}
-        <div className="card" style={{ padding: '16px 20px' }}>
+        <div className="card" style={{ padding: 'clamp(10px, 2.5vw, 16px) clamp(10px, 2.5vw, 20px)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
             <span className="font-tech-black" style={{ fontSize: '0.9rem' }}>
               Question {progress.questions_asked + 1} of {progress.max_questions}

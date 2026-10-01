@@ -23,6 +23,33 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+import asyncio
+import os
+import httpx
+
+async def keep_alive_task():
+    """Background task to keep Render instance active."""
+    # Run every 14 minutes and 30 seconds
+    sleep_interval = 14 * 60 + 30
+    
+    while True:
+        await asyncio.sleep(sleep_interval)
+        try:
+            # RENDER_EXTERNAL_URL is provided by Render automatically
+            url = os.environ.get("RENDER_EXTERNAL_URL")
+            
+            if url:
+                health_url = f"{url.rstrip('/')}/health"
+                logger.info(f"Ping keep-alive endpoint: {health_url}")
+                async with httpx.AsyncClient() as client:
+                    await client.get(health_url, timeout=10.0)
+            else:
+                logger.debug("No RENDER_EXTERNAL_URL found, skipping keep-alive ping")
+        except asyncio.CancelledError:
+            break
+        except Exception as e:
+            logger.error(f"Keep-alive ping failed: {e}")
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup and shutdown events."""
@@ -38,7 +65,6 @@ async def lifespan(app: FastAPI):
     await seed_initial_data()
     
     # Initialize LLM provider
-    import asyncio
     from llm.provider import get_llm_provider
     provider = get_llm_provider()
     try:
@@ -50,9 +76,19 @@ async def lifespan(app: FastAPI):
     if settings.demo_mode:
         logger.info("*** DEMO MODE ACTIVE — Mock data will be used ***")
     
+    # Start the keep-alive task
+    keep_alive = asyncio.create_task(keep_alive_task())
+    
     logger.info("CareerGPT ready")
     yield
     logger.info("CareerGPT shutting down")
+    
+    # Cancel keep-alive task
+    keep_alive.cancel()
+    try:
+        await keep_alive
+    except asyncio.CancelledError:
+        pass
 
 
 app = FastAPI(

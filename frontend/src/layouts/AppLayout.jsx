@@ -26,9 +26,10 @@ export default function AppLayout() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Close mobile drawer on route change
+  // Close mobile drawer on route change and scroll to top
   useEffect(() => {
     setMobileMenuOpen(false);
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const handleLogout = () => {

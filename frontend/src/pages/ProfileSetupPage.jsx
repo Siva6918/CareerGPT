@@ -1056,22 +1056,6 @@ export default function ProfileSetupPage() {
             <div style={{ display: 'flex', gap: 12 }}>
               <button
                 type="button"
-                onClick={handleLoadDemoResume}
-                disabled={loading || uploadingResume}
-                style={{
-                  padding: '14px 20px',
-                  borderRadius: 10,
-                  background: '#f1f5f9',
-                  border: '1px solid #cbd5e1',
-                  color: '#475569',
-                  fontWeight: 600,
-                  cursor: loading || uploadingResume ? 'not-allowed' : 'pointer',
-                }}
-              >
-                Use Demo Resume
-              </button>
-              <button
-                type="button"
                 onClick={handleSubmit}
                 disabled={loading || !isStepValid()}
                 style={{
@@ -1081,7 +1065,6 @@ export default function ProfileSetupPage() {
                   padding: '14px 32px',
                   borderRadius: 10,
                   background: (!loading && isStepValid()) ? 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)' : '#cbd5e1',
-                  border: 'none',
                   color: '#ffffff',
                   fontWeight: 700,
                   fontSize: '0.95rem',

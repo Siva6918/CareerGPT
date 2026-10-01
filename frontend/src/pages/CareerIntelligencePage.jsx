@@ -16,7 +16,7 @@ export default function CareerIntelligencePage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const res = await api.get('/api/dashboard');
+        const res = await api.get('/api/career/dashboard');
         setData(res.data);
       } catch (err) {
         console.error('Failed to load career intelligence', err);

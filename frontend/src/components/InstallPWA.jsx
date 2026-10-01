@@ -17,9 +17,9 @@ export default function InstallPWA() {
     
     if (isIosDevice && !isStandalone) {
       setIsIOS(true);
-      setTimeout(() => setShowPrompt(true), 500); 
+      setTimeout(() => setShowPrompt(true), 100); 
     } else if (!isStandalone) {
-      setTimeout(() => setShowPrompt(true), 500); 
+      setTimeout(() => setShowPrompt(true), 100); 
     }
 
     // Listen for Chrome/Android install prompt

@@ -1,4 +1,44 @@
+import re
+import os
 
+# 1. Fix InterviewPage.jsx mobile view
+with open('frontend/src/pages/InterviewPage.jsx', 'r', encoding='utf-8') as f:
+    content = f.read()
+content = content.replace("<div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 340px', gap: 24, alignItems: 'start' }}>",
+                          "<div className=\"interview-container\">")
+with open('frontend/src/pages/InterviewPage.jsx', 'w', encoding='utf-8') as f:
+    f.write(content)
+
+# 2. Add .interview-container CSS to index.css
+with open('frontend/src/index.css', 'a', encoding='utf-8') as f:
+    f.write("""
+/* Responsive Interview Container */
+.interview-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .interview-container {
+    grid-template-columns: 1fr;
+  }
+}
+""")
+
+# 3. Fix ProfileSetupPage.jsx Stepper & padding for Mobile
+with open('frontend/src/pages/ProfileSetupPage.jsx', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+content = content.replace("gridTemplateColumns: 'repeat(4, 1fr)',", "gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',")
+content = content.replace("padding: '36px 32px',", "padding: '36px clamp(16px, 4vw, 32px)',")
+content = content.replace("padding: '40px 24px 80px'", "padding: '40px clamp(12px, 3vw, 24px) 80px'")
+
+with open('frontend/src/pages/ProfileSetupPage.jsx', 'w', encoding='utf-8') as f:
+    f.write(content)
+
+# 4. Enhance Resume LLM Parsing
+parser_code = """
 import logging
 import re
 import json
@@ -28,7 +68,7 @@ class ResumeParser:
             from llm.provider import get_llm_provider
             llm = get_llm_provider()
             
-            prompt = f"""
+            prompt = f\"\"\"
             You are an expert technical recruiter and resume parser.
             Analyze the following resume text and extract the sections and skills.
             If a section is missing, provide an empty string.
@@ -47,7 +87,7 @@ class ResumeParser:
             }}
             Resume Text:
             {raw_text}
-            """
+            \"\"\"
             
             resp = await llm.complete(
                 messages=[{"role": "user", "content": prompt}],
@@ -95,7 +135,7 @@ class ResumeParser:
         try:
             from docx import Document
             doc = Document(path)
-            return "\n".join(para.text for para in doc.paragraphs)
+            return "\\n".join(para.text for para in doc.paragraphs)
         except Exception:
             return ""
 
@@ -108,3 +148,9 @@ class ResumeParser:
 class DemoResumeParser:
     def get_demo_data(self, target_role: str = "Backend Developer") -> Dict:
         return {"skills": [{"skill_name": "Python", "canonical_id": "python", "confidence": 0.9, "source_section": "skills"}]}
+"""
+
+with open('backend/resume/parser.py', 'w', encoding='utf-8') as f:
+    f.write(parser_code)
+
+print("UI and LLM parser fixes applied.")

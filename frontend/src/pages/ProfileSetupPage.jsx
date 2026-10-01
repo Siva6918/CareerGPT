@@ -205,7 +205,7 @@ export default function ProfileSetupPage() {
   };
 
   return (
-    <div style={{ maxWidth: 860, margin: '0 auto', padding: '40px 24px 80px' }}>
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '40px clamp(12px, 3vw, 24px) 80px' }}>
       
       {/* Page Title & Breadcrumb */}
       <div style={{ marginBottom: 32, textAlign: 'center' }}>
@@ -247,7 +247,7 @@ export default function ProfileSetupPage() {
       {/* Stepper Navigation */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
         gap: 12,
         marginBottom: 32
       }}>
@@ -314,7 +314,7 @@ export default function ProfileSetupPage() {
         background: '#ffffff',
         border: '1px solid #e2e8f0',
         borderRadius: 20,
-        padding: '36px 32px',
+        padding: '36px clamp(16px, 4vw, 32px)',
         boxShadow: '0 10px 30px rgba(15, 23, 42, 0.04)'
       }}>
 

@@ -203,12 +203,12 @@ export default function DashboardPage() {
           {/* Placement Readiness Ring Gauge */}
           <div style={{
             background: '#ffffff',
-            padding: '24px 28px',
+            padding: 'clamp(16px, 4vw, 24px) clamp(16px, 4vw, 28px)',
             borderRadius: 18,
             boxShadow: 'var(--shadow-sm)',
             border: 'var(--border-ultra-thin)',
             textAlign: 'center',
-            minWidth: 260
+            minWidth: 'min(260px, 100%)'
           }}>
             <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-tech)', fontWeight: 800, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 12 }}>
               Placement Readiness Index

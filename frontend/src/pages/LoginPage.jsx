@@ -6,38 +6,6 @@ import toast from 'react-hot-toast';
 import { GraduationCap, Eye, EyeOff, LogIn, X, AlertCircle, Key, ArrowRight } from 'lucide-react';
 import { useGoogleLogin } from '@react-oauth/google';
 
-const InputField = ({ label, type, value, onChange, placeholder, id }) => (
-  <div>
-    <label style={{ display: 'block', fontSize: '0.78rem', fontFamily: 'var(--font-tech)', fontWeight: 700, color: '#334155', letterSpacing: '0.04em', marginBottom: 6 }}>
-      {label}
-    </label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      required
-      id={id}
-      style={{
-        width: '100%', padding: '12px 14px', fontSize: '0.95rem', color: '#0f172a',
-        background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 10,
-        outline: 'none', boxSizing: 'border-box',
-        transition: 'border-color 0.2s, box-shadow 0.2s, background 0.2s'
-      }}
-      onFocus={(e) => {
-        e.target.style.background = '#ffffff';
-        e.target.style.borderColor = '#f97316';
-        e.target.style.boxShadow = '0 0 0 3px rgba(249, 115, 22, 0.15)';
-      }}
-      onBlur={(e) => {
-        e.target.style.background = '#f8fafc';
-        e.target.style.borderColor = '#cbd5e1';
-        e.target.style.boxShadow = 'none';
-      }}
-    />
-  </div>
-);
-
 export default function LoginModal({ onClose, onSwitchToRegister }) {
   const { login, loginWithGoogle } = useAuth();
   const navigate = useNavigate();

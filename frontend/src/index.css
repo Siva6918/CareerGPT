@@ -536,3 +536,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/* Responsive Interview Container */
+.interview-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .interview-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media all and (display-mode: standalone) {
+  footer, .footer-container {
+    display: none !important;
+  }
+}

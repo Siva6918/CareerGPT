@@ -69,7 +69,7 @@ async def upload_resume(
     # 3. Parse resume with local parser
     try:
         parser = ResumeParser()
-        parsed = parser.parse(temp_file_path)
+        parsed = await parser.parse_async(temp_file_path)
     except Exception as e:
         logger.error(f"Resume parsing failed: {e}")
         parsed = {"error": str(e), "skills": []}

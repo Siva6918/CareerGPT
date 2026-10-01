@@ -238,14 +238,19 @@ async def reset_password(req: ResetPasswordRequest, db: Session = Depends(get_db
 @router.post("/google", response_model=Token)
 async def google_login(req: GoogleLoginRequest, db: Session = Depends(get_db)):
     import httpx
-    async with httpx.AsyncClient() as client:
-        res = await client.get(
-            "https://www.googleapis.com/oauth2/v3/userinfo",
-            headers={"Authorization": f"Bearer {req.token}"}
-        )
-        if res.status_code != 200:
-            raise HTTPException(status_code=400, detail="Invalid Google token")
-        user_info = res.json()
+    try:
+        async with httpx.AsyncClient() as client:
+            res = await client.get(
+                "https://www.googleapis.com/oauth2/v3/userinfo",
+                headers={"Authorization": f"Bearer {req.token}"}
+            )
+            if res.status_code != 200:
+                logger.error(f"Google API Error: {res.text}")
+                raise HTTPException(status_code=400, detail="Invalid Google token")
+            user_info = res.json()
+    except Exception as e:
+        logger.error(f"Google login HTTP error: {e}")
+        raise HTTPException(status_code=400, detail=f"Google login HTTP error: {e}")
     
     email = user_info.get("email")
     full_name = user_info.get("name")

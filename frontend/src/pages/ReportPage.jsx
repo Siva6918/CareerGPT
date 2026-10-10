@@ -1,9 +1,9 @@
 // CareerGPT - Report Page
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import EmojiLoadingBar from '../components/EmojiLoadingBar';
 import { interviewAPI } from '../services/api';
 import { BarChart3, Brain, CheckCircle, AlertCircle, HelpCircle, Download, ArrowLeft } from 'lucide-react';
-
 
 
 const STATE_COLORS = {
@@ -62,11 +62,7 @@ export default function ReportPage() {
   }, [id]);
 
   if (loading) {
-    return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '60vh' }}>
-        <div className="animate-spin animate-glow" style={{ width: 60, height: 60, border: '3px solid rgba(255,255,255,0.2)', borderTop: '3px solid var(--color-accent)', borderRadius: '50%' }} />
-      </div>
-    );
+    return <EmojiLoadingBar text="Loading evaluation report..." />;
   }
 
   if (!report) return <div className="dashboard-page"><p className="text-tech" style={{ color: '#fff' }}>REPORT NOT FOUND.</p></div>;

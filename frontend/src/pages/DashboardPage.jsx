@@ -1,6 +1,7 @@
 // CareerGPT - Candidate Command Center (Production Dashboard)
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import CodeLoadingScreen from '../components/CodeLoadingScreen';
 import { useAuth } from '../contexts/AuthContext';
 import { profileAPI, interviewAPI, competencyAPI, roadmapAPI, learningGoalsAPI, notificationsAPI } from '../services/api';
 import {
@@ -143,26 +144,7 @@ export default function DashboardPage() {
   const activeTechs = (profile?.preferred_technologies && profile.preferred_technologies.slice(0, 3)) || roadmap?.technologies || [];
 
   if (loading) {
-    return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50vh' }}>
-        <div style={{ textAlign: 'center' }}>
-          <div
-            style={{
-              width: 44,
-              height: 44,
-              border: '3px solid rgba(234, 88, 12, 0.15)',
-              borderTop: '3px solid var(--color-primary)',
-              borderRadius: '50%',
-              animation: 'spin 0.8s linear infinite',
-              margin: '0 auto 16px'
-            }}
-          />
-          <p className="font-tech-black" style={{ fontSize: '0.95rem', color: '#64748b' }}>
-            Synchronizing Connected Career Graph & Telemetry...
-          </p>
-        </div>
-      </div>
-    );
+    return <CodeLoadingScreen pageName="Dashboard" />;
   }
 
   return (

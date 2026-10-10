@@ -1,6 +1,7 @@
 // CareerGPT - Interview Page (Agentic AI Interview Loop)
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import CodeLoadingScreen from '../components/CodeLoadingScreen';
 import { interviewAPI, careerAPI } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
@@ -532,15 +533,7 @@ export default function InterviewPage() {
         {/* Question Card */}
         <div className="card" style={{ padding: '32px 28px' }}>
           {loading && !currentQuestion ? (
-            <div style={{ textAlign: 'center', padding: '32px 0' }}>
-              <div style={{
-                width: 38, height: 38,
-                border: '3px solid rgba(139, 92, 246, 0.2)',
-                borderTop: '3px solid var(--color-violet)',
-                borderRadius: '50%', animation: 'spin 0.8s linear infinite', margin: '0 auto 12px'
-              }} />
-              <p className="font-tech-black">Agent is selecting next optimal question...</p>
-            </div>
+            <CodeLoadingScreen pageName="Interview" />
           ) : currentQuestion ? (
             <div>
               <div style={{ display: 'flex', gap: 8, marginBottom: 14, flexWrap: 'wrap' }}>

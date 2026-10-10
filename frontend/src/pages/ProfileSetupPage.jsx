@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import EmojiLoadingBar from '../components/EmojiLoadingBar';
 import { profileAPI, roadmapAPI, knowledgeAPI, resumeAPI } from '../services/api';
 import toast from 'react-hot-toast';
 import {
@@ -742,8 +743,8 @@ export default function ProfileSetupPage() {
                       })}
                     </div>
                   ) : (
-                    <div style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '8px 0' }}>
-                      Loading roles for this domain...
+                    <div style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '8px 0', textAlign: 'center' }}>
+                      <EmojiLoadingBar text="Loading roles for this domain..." />
                     </div>
                   )}
                 </div>
@@ -954,7 +955,7 @@ export default function ProfileSetupPage() {
               />
               <FileText size={40} color="#94a3b8" style={{ margin: '0 auto 12px' }} />
               <div style={{ fontSize: '1rem', fontWeight: 700, color: '#0f172a', marginBottom: 4 }}>
-                {uploadingResume ? 'Processing & Parsing Resume...' : 'Drop your resume here, or click to browse'}
+                {uploadingResume ? <EmojiLoadingBar text="Processing & Parsing Resume..." /> : 'Drop your resume here, or click to browse'}
               </div>
               <div style={{ fontSize: '0.8rem', color: '#64748b' }}>
                 Supports standard PDF and DOCX files (Up to 10MB)

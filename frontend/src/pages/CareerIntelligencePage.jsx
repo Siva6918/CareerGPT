@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import CodeLoadingScreen from '../components/CodeLoadingScreen';
 import { useAuth } from '../contexts/AuthContext';
 import { Target, Brain, ArrowRight, Zap, Target as TargetIcon, Map, FileText, Activity, Layers, Compass, CheckCircle, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -28,11 +29,7 @@ export default function CareerIntelligencePage() {
   }, []);
 
   if (loading) {
-    return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50vh' }}>
-        <div style={{ width: 40, height: 40, borderRadius: '50%', border: '3px solid #f97316', borderTopColor: 'transparent', animation: 'spin 1s linear infinite' }} />
-      </div>
-    );
+    return <CodeLoadingScreen pageName="CareerIntelligence" />;
   }
 
   if (!data) return <div>Failed to load intelligence data.</div>;

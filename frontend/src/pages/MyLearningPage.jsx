@@ -2,6 +2,7 @@
 // Multi-domain learning goals with shared competency graph
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import EmojiLoadingBar from '../components/EmojiLoadingBar';
 import { learningGoalsAPI, roadmapSourcesAPI } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
@@ -633,11 +634,7 @@ export default function MyLearningPage() {
       </motion.div>
 
       {loading ? (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          {[...Array(3)].map((_, i) => (
-            <div key={i} style={{ height: '120px', borderRadius: '16px', background: '#e2e8f0', animation: 'pulse 1.5s infinite' }} />
-          ))}
-        </div>
+        <EmojiLoadingBar text="Fetching your learning goals..." />
       ) : goals.length === 0 ? (
         <motion.div
           initial={{ opacity: 0 }}

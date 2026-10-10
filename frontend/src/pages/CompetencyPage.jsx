@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Brain, HelpCircle, TrendingUp, BarChart3, Info, Film, Eye, Sparkles, Shield, ArrowRight, Upload } from 'lucide-react';
 import { competencyAPI } from '../services/api';
+import CodeLoadingScreen from '../components/CodeLoadingScreen';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -227,10 +228,7 @@ export default function CompetencyPage() {
 
       {/* Competency Nodes Grid (Clean White Cards, Ultra-Thin Borders) */}
       {loading ? (
-        <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-          <div className="animate-spin" style={{ width: 40, height: 40, border: '3px solid #e2e8f0', borderTop: '3px solid var(--color-orange)', borderRadius: '50%', margin: '0 auto 16px' }} />
-          <p style={{ color: 'var(--text-muted)' }}>Retrieving competency evidence from PostgreSQL...</p>
-        </div>
+        <CodeLoadingScreen pageName="Competency" />
       ) : nodes.length === 0 ? (
         <div className="card" style={{ padding: '60px 24px', background: '#fff', textAlign: 'center' }}>
           <Brain size={48} color="var(--color-orange)" style={{ margin: '0 auto 16px' }} />

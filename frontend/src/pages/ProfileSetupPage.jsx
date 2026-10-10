@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EmojiLoadingBar from '../components/EmojiLoadingBar';
-import { profileAPI, portfolioAPI, roadmapAPI, resumeAPI } from '../services/api';
+import { profileAPI, portfolioAPI, roadmapAPI, resumeAPI, knowledgeAPI } from '../services/api';
 import toast from 'react-hot-toast';
 import {
   User, GraduationCap, Briefcase, Globe, FileText, CheckCircle, Upload, ChevronRight, ChevronLeft, Plus, Trash2, Link, Lock, Eye

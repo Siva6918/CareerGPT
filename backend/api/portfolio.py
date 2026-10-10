@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List, Optional, Dict, Any
 from pydantic import BaseModel
 from database.connection import get_db
-from api.auth import get_current_user, get_optional_user
+from api.auth import get_current_user
 from models.models import User
 from models.portfolio import (
     PortfolioProfile, UserEducation, UserExperience, UserCertification,

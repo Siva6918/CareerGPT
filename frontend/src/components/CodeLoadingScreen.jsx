@@ -135,12 +135,12 @@ export default function CodeLoadingScreen({ pageName = 'Default' }) {
           </code>
         </pre>
         <style>
-          {\`
+          {`
             @keyframes code-cursor-blink {
               0%, 100% { opacity: 1; }
               50% { opacity: 0; }
             }
-          \`}
+          `}
         </style>
       </div>
     </div>

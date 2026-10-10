@@ -55,14 +55,19 @@ export const profileAPI = {
   getMe: () => api.get('/profile/me'),
 };
 
+// ── Portfolio ──────────────────────────────────────────────
+export const portfolioAPI = {
+  getMe: () => api.get('/portfolio/me'),
+  updateMe: (data) => api.post('/portfolio/me', data),
+  getPublic: (slug) => api.get(`/portfolio/public/${slug}`),
+};
+
 // ── Resume ─────────────────────────────────────────────────
 export const resumeAPI = {
   upload: (file) => {
     const form = new FormData();
     form.append('file', file);
-    return api.post('/resume/upload', form, {
-      headers: { 'Content-Type': 'multipart/form-data' }
-    });
+    return api.post('/resume/upload', form);
   },
   get: (id) => api.get(`/resume/${id}`),
   getDemo: () => api.get('/resume/demo/sample'),

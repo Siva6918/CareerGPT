@@ -565,7 +565,7 @@ class PushSubscription(Base):
     user_rel = relationship("User")
 
     __table_args__ = (
-        Index("ix_learning_goal_user", "user_id"),
+        Index("ix_push_subscription_user", "user_id"),
     )
 
 

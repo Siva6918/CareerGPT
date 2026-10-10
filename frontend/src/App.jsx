@@ -14,6 +14,7 @@ import ReportPage from './pages/ReportPage';
 import RoadmapExplorerPage from './pages/RoadmapExplorerPage';
 import MyLearningPage from './pages/MyLearningPage';
 import CareerIntelligencePage from './pages/CareerIntelligencePage';
+import PortfolioPage from './pages/PortfolioPage';
 
 // Layout
 import AppLayout from './layouts/AppLayout';
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<PublicRoute><LandingPage initialModal="login" /></PublicRoute>} />
           <Route path="/register" element={<PublicRoute><LandingPage initialModal="register" /></PublicRoute>} />
+          <Route path="/u/:slug" element={<PortfolioPage />} />
 
           {/* Protected routes - wrapped in AppLayout */}
           <Route path="/" element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>

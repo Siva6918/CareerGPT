@@ -140,9 +140,21 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 # Import and register routers
 from api import auth, resume, profile, interview, roadmap, competency, reports, knowledge
-from api import learning_goals, roadmap_sources, career, system
+from api import learning_goals, roadmap_sources, career, system, notifications
 
 app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
+app.include_router(resume.router, prefix="/resume", tags=["Resume"])
+app.include_router(profile.router, prefix="/profile", tags=["Profile"])
+app.include_router(interview.router, prefix="/interview", tags=["Interview"])
+app.include_router(roadmap.router, prefix="/roadmap", tags=["Roadmap"])
+app.include_router(competency.router, prefix="/competency", tags=["Competency"])
+app.include_router(reports.router, prefix="/reports", tags=["Reports"])
+app.include_router(knowledge.router, prefix="/knowledge", tags=["Knowledge Base"])
+app.include_router(learning_goals.router, prefix="/learning-goals", tags=["Learning Goals"])
+app.include_router(roadmap_sources.router, prefix="/roadmaps", tags=["Roadmap Explorer"])
+app.include_router(career.router, prefix="/api", tags=["Career Intelligence"])
+app.include_router(system.router, tags=["System"])
+app.include_router(notifications.router, prefix="/notifications", tags=["Notifications"])
 app.include_router(resume.router, prefix="/resume", tags=["Resume"])
 app.include_router(profile.router, prefix="/profile", tags=["Profile"])
 app.include_router(interview.router, prefix="/interview", tags=["Interview"])

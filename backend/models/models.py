@@ -552,6 +552,18 @@ class LearningGoal(Base):
     progress_entries = relationship("LearningGoalProgress", back_populates="goal",
                                     cascade="all, delete-orphan")
 
+class PushSubscription(Base):
+    __tablename__ = "push_subscriptions"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, index=True)
+    endpoint = Column(String, nullable=False)
+    p256dh = Column(String, nullable=False)
+    auth_key = Column(String, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    
+    user_rel = relationship("User")
+
     __table_args__ = (
         Index("ix_learning_goal_user", "user_id"),
     )

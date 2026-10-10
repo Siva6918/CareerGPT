@@ -309,10 +309,13 @@ class GeminiProvider(BaseLLMProvider):
 
         for attempt in range(max_retries):
             try:
-                response = await asyncio.to_thread(
-                    self.client.generate_content,
-                    prompt,
-                    generation_config={"temperature": temperature, "max_output_tokens": max_tokens}
+                response = await asyncio.wait_for(
+                    asyncio.to_thread(
+                        self.client.generate_content,
+                        prompt,
+                        generation_config={"temperature": temperature, "max_output_tokens": max_tokens}
+                    ),
+                    timeout=15.0
                 )
                 return LLMResponse(
                     content=response.text,
@@ -320,6 +323,13 @@ class GeminiProvider(BaseLLMProvider):
                     model=self.model,
                     tokens_used=0
                 )
+            except asyncio.TimeoutError:
+                last_error = TimeoutError("Gemini API call timed out after 15 seconds")
+                logger.warning(f"Gemini API timeout (attempt {attempt + 1}/{max_retries}).")
+                if attempt < max_retries - 1:
+                    continue
+                else:
+                    break
             except Exception as e:
                 last_error = e
                 err_str = str(e)

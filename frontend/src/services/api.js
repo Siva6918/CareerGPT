@@ -140,4 +140,9 @@ export const healthAPI = {
   check: () => api.get('/health'),
 };
 
+// ── Notifications ──────────────────────────────────────────
+export const notificationsAPI = {
+  subscribe: (data) => api.post('/notifications/subscribe', data),
+};
+
 export default api;

@@ -57,6 +57,11 @@ class Settings(BaseSettings):
     # Email (Resend)
     resend_api_key: Optional[str] = None
     email_from: str = "onboarding@resend.dev"
+    
+    # Web Push
+    vapid_public_key: Optional[str] = None
+    vapid_private_key: Optional[str] = None
+    vapid_subject_email: str = "hello@careergpt.com"
 
     @property
     def cors_origins(self) -> List[str]:

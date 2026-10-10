@@ -16,7 +16,7 @@ async def main():
             max_questions=3
         )
         print("Session Initialized:", session)
-        q = await agent.decide_next_action()
+        q = await agent.get_next_question("test")
         print("Next Question:", q)
     except Exception as e:
         print("Error:", e)

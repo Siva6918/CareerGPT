@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { profileAPI, interviewAPI, competencyAPI, roadmapAPI, learningGoalsAPI } from '../services/api';
+import { profileAPI, interviewAPI, competencyAPI, roadmapAPI, learningGoalsAPI, notificationsAPI } from '../services/api';
 import {
   Brain, Cpu, Map, Sparkles, ArrowRight, CheckCircle, Clock,
   Layers, Compass, Award, Building2, Calendar, FileText, Upload,
@@ -41,6 +41,31 @@ export default function DashboardPage() {
 
   useEffect(() => {
     loadDashboardData();
+    
+    // Notification setup
+    if ('Notification' in window && Notification.permission !== 'denied' && !localStorage.getItem('push_requested')) {
+      setTimeout(() => {
+        Notification.requestPermission().then(perm => {
+          localStorage.setItem('push_requested', 'true');
+          if (perm === 'granted' && 'serviceWorker' in navigator && 'PushManager' in window) {
+            navigator.serviceWorker.ready.then(reg => {
+              reg.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: 'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
+              }).then(sub => {
+                const subJson = sub.toJSON();
+                notificationsAPI.subscribe({
+                  endpoint: subJson.endpoint,
+                  keys: subJson.keys || {}
+                }).catch(console.error);
+              }).catch(err => {
+                console.error("Push sub error:", err);
+              });
+            });
+          }
+        });
+      }, 5000); // Ask after 5 seconds to be non-intrusive
+    }
   }, []);
 
   const loadDashboardData = async () => {

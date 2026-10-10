@@ -147,10 +147,10 @@ export default function ProfileSetupPage() {
     try {
       const res = await resumeAPI.upload(file);
       setUploadedResume(res.data);
-      toast.success(`Resume uploaded & parsed! ${res.data.skills_extracted?.length || 0} skills detected.`);
-      if (res.data.skills_extracted?.length > 0) {
+      toast.success(`Resume uploaded & parsed! ${res.data.skills_extracted || 0} skills detected.`);
+      if (res.data.skills?.length > 0) {
         // Auto-add extracted skills to preferred technologies if not present
-        const extracted = res.data.skills_extracted.map((s) => s.replace('_', ' ').toUpperCase());
+        const extracted = res.data.skills.map((s) => (s.skill_name || s.name || '').replace('_', ' ').toUpperCase()).filter(Boolean);
         setForm((p) => ({
           ...p,
           preferred_technologies: Array.from(new Set([...p.preferred_technologies, ...extracted]))

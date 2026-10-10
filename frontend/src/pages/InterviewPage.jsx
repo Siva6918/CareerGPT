@@ -6,8 +6,8 @@ import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
 import {
   Cpu, Send, Brain, Activity, ChevronRight, AlertCircle,
-  CheckCircle, HelpCircle, BarChart3, Mic, MicOff,
-  RefreshCw, ArrowRight, Eye, MessageSquare, Zap, Sparkles
+  CheckCircle, HelpCircle, BarChart3, Mic, MicOff, Video, VideoOff,
+  RefreshCw, ArrowRight, Eye, MessageSquare, Zap, Sparkles, StopCircle, PlayCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -58,6 +58,77 @@ export default function InterviewPage() {
   });
   const [loading, setLoading] = useState(false);
   const answerRef = useRef(null);
+
+  // Multimodal states
+  const [stream, setStream] = useState(null);
+  const videoRef = useRef(null);
+  const canvasRef = useRef(null);
+  const [isRecording, setIsRecording] = useState(false);
+  const [frames, setFrames] = useState([]);
+  const recognitionRef = useRef(null);
+  const [recordingDuration, setRecordingDuration] = useState(0);
+
+  useEffect(() => {
+    if (phase === PHASE.ACTIVE && !stream) {
+      navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        .then(s => setStream(s))
+        .catch(err => {
+          console.error(err);
+          toast.error("Camera/Mic permission denied. Text only.");
+        });
+    }
+  }, [phase, stream]);
+
+  useEffect(() => {
+    if (videoRef.current && stream) {
+      videoRef.current.srcObject = stream;
+    }
+  }, [stream, currentQuestion]);
+
+  const toggleRecording = () => {
+    if (isRecording) {
+      setIsRecording(false);
+      clearInterval(window.captureInterval);
+      clearInterval(window.durationInterval);
+      if (recognitionRef.current) recognitionRef.current.stop();
+    } else {
+      setIsRecording(true);
+      setFrames([]);
+      setRecordingDuration(0);
+      
+      window.captureInterval = setInterval(() => {
+        if (videoRef.current && canvasRef.current) {
+          const ctx = canvasRef.current.getContext('2d');
+          ctx.drawImage(videoRef.current, 0, 0, 320, 240);
+          const b64 = canvasRef.current.toDataURL('image/jpeg', 0.6);
+          setFrames(prev => [...prev, b64]);
+        }
+      }, 3000);
+      
+      window.durationInterval = setInterval(() => {
+        setRecordingDuration(p => p + 1);
+      }, 1000);
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        recognitionRef.current = new SpeechRecognition();
+        recognitionRef.current.continuous = true;
+        recognitionRef.current.interimResults = true;
+        let finalTrans = answer;
+        recognitionRef.current.onresult = (e) => {
+          let interim = '';
+          for (let i = e.resultIndex; i < e.results.length; ++i) {
+            if (e.results[i].isFinal) finalTrans += e.results[i][0].transcript + ' ';
+            else interim += e.results[i][0].transcript;
+          }
+          setAnswer(finalTrans + interim);
+        };
+        recognitionRef.current.start();
+      } else {
+        toast.error("Speech Recognition not supported in this browser.");
+      }
+    }
+  };
 
   const [careerIndex, setCareerIndex] = useState({});
   const [availableBranches, setAvailableBranches] = useState([]);
@@ -197,7 +268,8 @@ export default function InterviewPage() {
         question_text: currentQuestion.question_text,
         skill_id: currentQuestion.skill_id,
         answer_text: answer,
-        duration_seconds: 45
+        audio_duration: recordingDuration || 0,
+        frames_base64: frames
       });
 
       const analysis = res.data.evidence_analysis || {};
@@ -487,24 +559,42 @@ export default function InterviewPage() {
         {/* Answer Textarea */}
         {currentQuestion && phase !== PHASE.ANALYZING && (
           <div className="card" style={{ padding: 20 }}>
+            {stream && (
+              <div style={{ position: 'relative', width: '100%', maxWidth: 320, margin: '0 auto 16px', borderRadius: 12, overflow: 'hidden', border: isRecording ? '3px solid var(--color-pink)' : '1px solid #e2e8f0' }}>
+                <video ref={videoRef} autoPlay muted playsInline style={{ width: '100%', display: 'block' }} />
+                <canvas ref={canvasRef} width={320} height={240} style={{ display: 'none' }} />
+                {isRecording && (
+                  <div style={{ position: 'absolute', top: 8, right: 8, background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '2px 8px', borderRadius: 12, fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <div style={{ width: 6, height: 6, background: '#ef4444', borderRadius: '50%', animation: 'pulse 1.5s infinite' }} />
+                    {recordingDuration}s
+                  </div>
+                )}
+              </div>
+            )}
+            
             <textarea
               ref={answerRef}
               className="form-textarea"
-              style={{ minHeight: 160, padding: 16, fontSize: '1rem', resize: 'vertical', border: 'var(--border-subtle)' }}
-              placeholder="Provide a detailed, technical answer with code examples or architectural trade-offs where applicable. Press Ctrl+Enter to submit."
+              style={{ minHeight: 120, padding: 16, fontSize: '1rem', resize: 'vertical', border: 'var(--border-subtle)' }}
+              placeholder="Provide a detailed, technical answer. Use the microphone or type manually."
               value={answer}
               onChange={e => setAnswer(e.target.value)}
               onKeyDown={handleKeyDown}
             />
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12 }}>
-              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--font-tech)' }}>
-                {answer.split(/\s+/).filter(Boolean).length} words • Press Ctrl+Enter to submit
-              </span>
+              <button
+                className={`btn ${isRecording ? 'btn-danger' : 'btn-secondary'}`}
+                onClick={toggleRecording}
+                disabled={loading}
+              >
+                {isRecording ? <><StopCircle size={15} /> Stop Recording</> : <><Mic size={15} /> Start Answering</>}
+              </button>
+
               <button
                 className="btn btn-primary"
                 onClick={submitAnswer}
-                disabled={!answer.trim() || loading}
+                disabled={!answer.trim() || loading || isRecording}
               >
                 <Send size={15} /> Submit Response
               </button>

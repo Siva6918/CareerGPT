@@ -134,6 +134,7 @@ class SubmitAnswerRequest(BaseModel):
     audio_duration: float = 0.0
     expected_concepts: List[str] = []
     evaluation_rubric: Dict = {}
+    frames_base64: List[str] = []
 
 
 class NextQuestionRequest(BaseModel):
@@ -334,6 +335,22 @@ async def submit_answer(
             return _demo_answer_analysis(request)
         raise HTTPException(status_code=404, detail="Interview session not found")
     
+    import base64
+    import os
+    import uuid
+    frame_paths = []
+    if request.frames_base64:
+        for b64 in request.frames_base64:
+            if b64.startswith("data:image"):
+                b64 = b64.split(",", 1)[1]
+            path = f"temp_frame_{uuid.uuid4()}.jpg"
+            try:
+                with open(path, "wb") as f:
+                    f.write(base64.b64decode(b64))
+                frame_paths.append(path)
+            except Exception:
+                pass
+                
     result = await agent.submit_answer(
         interview_id=request.interview_id,
         question_id=request.question_id,
@@ -341,9 +358,15 @@ async def submit_answer(
         skill_id=request.skill_id,
         answer_text=request.answer_text,
         audio_duration=request.audio_duration,
+        frame_paths=frame_paths,
         expected_concepts=request.expected_concepts,
         evaluation_rubric=request.evaluation_rubric
     )
+    
+    # cleanup frames
+    for path in frame_paths:
+        if os.path.exists(path):
+            os.remove(path)
     
     # Check if question exists in DB to prevent ForeignKey IntegrityError
     valid_q_id = None

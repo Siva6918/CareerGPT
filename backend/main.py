@@ -27,24 +27,40 @@ import asyncio
 import os
 import httpx
 
+
 async def keep_alive_task():
-    """Background task to keep Render instance active."""
-    # Run every 14 minutes and 30 seconds
+    """Background task to keep Render instance active.
+
+    Runs every 14 minutes 30 seconds.  Guarded so only the *first*
+    Uvicorn/Gunicorn worker (identified by RENDER_WORKER_INDEX == "0",
+    which we set in the start command) fires the HTTP ping.  All other
+    workers skip the network call, preventing N simultaneous pings when
+    N workers are running.
+    """
     sleep_interval = 14 * 60 + 30
-    
+
+    # Only the designated worker fires the ping.
+    # If running with a single worker the env var may be absent; that is
+    # also treated as "worker 0" so the ping still fires.
+    worker_index = os.environ.get("RENDER_WORKER_INDEX", "0")
+    if worker_index != "0":
+        logger.debug(
+            f"Worker {worker_index}: skipping keep-alive (handled by worker 0)"
+        )
+        return
+
     while True:
         await asyncio.sleep(sleep_interval)
+        url = os.environ.get("RENDER_EXTERNAL_URL")
+        if not url:
+            logger.debug("No RENDER_EXTERNAL_URL found, skipping keep-alive ping")
+            continue
+        health_url = f"{url.rstrip('/')}/health"
+        logger.info(f"Ping keep-alive endpoint: {health_url}")
         try:
-            # RENDER_EXTERNAL_URL is provided by Render automatically
-            url = os.environ.get("RENDER_EXTERNAL_URL")
-            
-            if url:
-                health_url = f"{url.rstrip('/')}/health"
-                logger.info(f"Ping keep-alive endpoint: {health_url}")
-                async with httpx.AsyncClient() as client:
-                    await client.get(health_url, timeout=10.0)
-            else:
-                logger.debug("No RENDER_EXTERNAL_URL found, skipping keep-alive ping")
+            async with httpx.AsyncClient(timeout=10.0) as client:
+                resp = await client.get(health_url)
+                logger.debug(f"Keep-alive ping status: {resp.status_code}")
         except asyncio.CancelledError:
             break
         except Exception as e:
@@ -138,7 +154,7 @@ async def global_exception_handler(request: Request, exc: Exception):
     )
 
 
-# Import and register routers
+# Import and register routers (each registered exactly once)
 from api import auth, resume, profile, interview, roadmap, competency, reports, knowledge
 from api import learning_goals, roadmap_sources, career, system, notifications, portfolio
 
@@ -156,17 +172,6 @@ app.include_router(roadmap_sources.router, prefix="/roadmaps", tags=["Roadmap Ex
 app.include_router(career.router, prefix="/api", tags=["Career Intelligence"])
 app.include_router(system.router, tags=["System"])
 app.include_router(notifications.router, prefix="/notifications", tags=["Notifications"])
-app.include_router(resume.router, prefix="/resume", tags=["Resume"])
-app.include_router(profile.router, prefix="/profile", tags=["Profile"])
-app.include_router(interview.router, prefix="/interview", tags=["Interview"])
-app.include_router(roadmap.router, prefix="/roadmap", tags=["Roadmap"])
-app.include_router(competency.router, prefix="/competency", tags=["Competency"])
-app.include_router(reports.router, prefix="/reports", tags=["Reports"])
-app.include_router(knowledge.router, prefix="/knowledge", tags=["Knowledge Base"])
-app.include_router(learning_goals.router, prefix="/learning-goals", tags=["Learning Goals"])
-app.include_router(roadmap_sources.router, prefix="/roadmaps", tags=["Roadmap Explorer"])
-app.include_router(career.router, prefix="/api", tags=["Career Intelligence"])
-app.include_router(system.router, tags=["System"])
 
 
 @app.get("/", tags=["Health"])
@@ -219,17 +224,19 @@ async def get_learning_roadmap(
 
 @app.get("/health", tags=["Health"])
 async def health_check():
-    from llm.provider import get_llm_provider
-    provider = get_llm_provider()
-    llm_healthy = await provider.health_check()
-    
+    """Lightweight liveness probe.
+
+    Intentionally does NOT call the LLM provider or load the knowledge
+    graph so that the keep-alive ping (every 14 min 30 s) is cheap and
+    cannot cause memory or quota pressure.
+    """
     return {
         "title": "CareerGPT System Health",
         "status": "healthy",
         "demo_mode": settings.demo_mode,
         "services": {
             "Database": "healthy",
-            "LLM": "healthy" if llm_healthy else "degraded",
+            "LLM": "configured",
             "Storage": "healthy",
             "Resume Parser": "healthy",
             "Interview": "healthy",

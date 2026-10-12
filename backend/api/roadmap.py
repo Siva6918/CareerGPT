@@ -7,7 +7,7 @@ from typing import List, Optional, Dict, Any
 from database.connection import get_db
 from api.auth import get_current_user
 from models.models import User, Roadmap, RoadmapNode, RoadmapStage, CompetencyNode
-from roadmap.engine import RoadmapEngine
+from roadmap.engine import get_roadmap_engine
 
 router = APIRouter()
 
@@ -46,7 +46,7 @@ async def generate_roadmap(
                 ]
             }
 
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     roadmap = engine.generate_roadmap(
         branch=request.branch,
         domain=request.domain,
@@ -160,7 +160,7 @@ async def get_current_roadmap(
 @router.get("/knowledge/branches")
 async def get_branches():
     """Get all supported B.Tech branches from authoritative knowledge graph."""
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     branches = engine.get_branches()
     return {"branches": branches}
 
@@ -172,7 +172,7 @@ async def get_all_domains():
     Each domain includes: id, name, branch_id, category, description, role count.
     Grouped by category for the profile setup UI.
     """
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     all_domains = engine.get_all_domains()
     # Group by category
     grouped: dict = {}
@@ -191,7 +191,7 @@ async def get_all_domains():
 @router.get("/knowledge/domains/{branch}")
 async def get_domains(branch: str):
     """Get connected domains for a specific branch."""
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     domains = engine.get_domains(branch)
     return {"branch": branch, "domains": domains}
 
@@ -199,7 +199,7 @@ async def get_domains(branch: str):
 @router.get("/knowledge/roles/{domain:path}")
 async def get_roles(domain: str):
     """Get connected career roles for a domain."""
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     roles = engine.get_roles(domain)
     return {"domain": domain, "roles": roles}
 
@@ -207,7 +207,7 @@ async def get_roles(domain: str):
 @router.get("/knowledge/languages/{role:path}")
 async def get_languages_for_role(role: str):
     """Get ranked programming languages relevant to a role."""
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     languages = engine.get_languages_for_role(role)
     return {"role": role, "languages": languages}
 
@@ -215,7 +215,7 @@ async def get_languages_for_role(role: str):
 @router.get("/knowledge/technologies/{role:path}")
 async def get_technologies_for_role(role: str, language: Optional[str] = None):
     """Get technologies and frameworks compatible with the role and preferred language."""
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     technologies = engine.get_technologies_for_role(role, language)
     return {"role": role, "language": language, "technologies": technologies}
 
@@ -223,7 +223,7 @@ async def get_technologies_for_role(role: str, language: Optional[str] = None):
 @router.get("/knowledge/role/{role:path}")
 async def get_role_details(role: str):
     """Get complete role profile including competencies, 4-tier project ladder, salary, and source."""
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     details = engine.get_role_details(role)
     if not details:
         raise HTTPException(status_code=404, detail=f"Role '{role}' not found in knowledge graph")
@@ -233,7 +233,7 @@ async def get_role_details(role: str):
 @router.get("/knowledge/sources")
 async def get_sources():
     """Get authoritative sources registry."""
-    engine = RoadmapEngine()
+    engine = get_roadmap_engine()
     sources = engine.get_sources()
     return {"sources": sources}
 

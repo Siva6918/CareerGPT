@@ -19,9 +19,8 @@ from models.models import (
     InterviewStatus, CompetencyNode, CompetencyEvidence, CompetencyState,
     Roadmap, RoadmapNode, RoadmapStage
 )
-from roadmap.engine import RoadmapEngine
+from roadmap.engine import get_roadmap_engine
 from agents.interview_agent import InterviewAgent
-from llm.provider import get_llm_provider
 from llm.provider import get_llm_provider
 from config import settings
 from core.security import rate_limit
@@ -471,7 +470,7 @@ async def submit_answer(
                     for n in nodes
                 ]
             }
-            engine = RoadmapEngine()
+            engine = get_roadmap_engine()
             new_roadmap = engine.generate_roadmap(
                 branch=interview.branch,
                 domain=interview.target_domain,

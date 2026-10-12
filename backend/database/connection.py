@@ -17,8 +17,12 @@ if DATABASE_URL.startswith("postgres://"):
 if DATABASE_URL.startswith("postgresql"):
     engine = create_engine(
         DATABASE_URL,
-        pool_size=10,
-        max_overflow=20,
+        # Keep the pool small: on a 512 MB Render instance a single
+        # Uvicorn worker rarely needs more than 3 concurrent DB sessions.
+        # The old defaults (pool_size=10, max_overflow=20) held up to 30
+        # idle connections that consumed memory and Supabase connection slots.
+        pool_size=3,
+        max_overflow=2,
         pool_pre_ping=True,
         pool_recycle=300,
         connect_args={"connect_timeout": 15}

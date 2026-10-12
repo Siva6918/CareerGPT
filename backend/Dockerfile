@@ -31,5 +31,10 @@ USER appuser
 # Expose port
 EXPOSE 8000
 
-# Start server using Gunicorn and Uvicorn workers for production
-CMD sh -c "gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:${PORT:-8000}"
+# Start server using Gunicorn with a single Uvicorn worker.
+# A 512 MB Render instance cannot sustain multiple workers: each
+# worker is a full Python process that reloads all libraries
+# (~100-150 MB each). One worker saturates the limit safely.
+# RENDER_WORKER_INDEX=0 tells the keep-alive task that this is the
+# designated ping worker.
+CMD sh -c "RENDER_WORKER_INDEX=0 gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:${PORT:-8000} --timeout 120 --graceful-timeout 30"

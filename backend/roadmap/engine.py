@@ -478,5 +478,22 @@ class RoadmapEngine:
         }
 
 
-# Global engine singleton
-roadmap_engine = RoadmapEngine()
+# ── Worker-level singleton ────────────────────────────────────
+# The knowledge graph JSON is large; load it exactly once per
+# worker process (lazy) and reuse for every request.
+_engine_instance: Optional["RoadmapEngine"] = None
+
+
+def get_roadmap_engine() -> "RoadmapEngine":
+    """Return the process-level RoadmapEngine singleton.
+
+    Loads ``roadmap_graph.json`` on the first call and caches the
+    instance in module-level ``_engine_instance`` so subsequent
+    requests within the same Uvicorn/Gunicorn worker reuse the
+    already-loaded graph without re-reading the file.
+    """
+    global _engine_instance
+    if _engine_instance is None:
+        logger.info("Initialising RoadmapEngine (first use in this worker)")
+        _engine_instance = RoadmapEngine()
+    return _engine_instance
